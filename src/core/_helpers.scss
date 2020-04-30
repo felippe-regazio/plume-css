@@ -1,0 +1,84 @@
+/**
+* Use this mixin to declare a set of CSS Custom Properties.
+* The variables in $css_variables will be properly prefixed.
+* The use of this mixin is encoraged to keep a good scalability.
+*
+* Usage:
+*
+* @include cssvars((
+* 	
+* 	base-font-size: 65.5%,
+* 	font-family: #{"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif},
+* 
+* 	primary-color: #33b5e5,
+* 	secondary-color: #ff500a,
+* 
+* 	container-max-width: 960px,
+* 	container-padding: 20px,
+* 
+* 	color-warning: #ffbb33,
+* 	color-success: #00c851,
+* 	color-error: #ff4444,
+* ));
+*
+* Will result in
+*
+* root {
+*    --prefix-var-name: value;
+*    --prefix-var-name: value;
+*    --prefix-var-name: value;
+* }
+*
+*/
+@mixin cssvars($css_variables, $prefix: pm) {
+	:root {
+		@each $name, $value in $css_variables {
+			--#{$prefix}-#{$name}: #{$value};
+		}
+	}
+}
+
+/**
+* This mixin is used to change a CSS property value.
+* It will change a declared css variable auto-prefixing it.
+*
+* Usage:
+*
+* .selector {
+*     @include cssvar(primary-color, blue);
+* }
+*/
+@mixin cssvar ($name, $value: '', $prefix: pm) {
+	--#{$prefix}-#{$name}: #{$value};
+}
+	
+/**
+* Retrieve a css variable value with autoprefix
+*
+* Usage
+*
+* .selector {
+*   color: cssva(primary-color);
+* }
+*
+* Will result in
+*
+* .selector {
+*    color: var(--prefix-primary-color);
+* }
+*/
+@function cssvar($name, $prefix: pm) {
+	@return var(--#{$prefix}-#{$name});
+}
+
+/**
+ * The superclass is the appliaction root class that
+ * wraps and scope the lib selectors. Use this class
+ * to wrap the modules in a superclass preserving the
+ * outer scope from the lib effects
+ */
+@mixin superclass ($super: 'plume') {
+	.#{$super} {
+		@content;
+	}
+}

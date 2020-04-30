@@ -1,2 +1,3 @@
-# plume-css
-A highly themeable CSS library for any web project (under-construction)
+# Plume CSS
+
+CSS configurable Boilerplate to start a project.

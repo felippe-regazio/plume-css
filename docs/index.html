@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plume CSS</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/codemirror.min.css">
+  <link id="plume" rel="stylesheet" href="../dist/plume.min.css">
+  <link rel="stylesheet" href="style/main.css"> 
+</head>
+<body class="loading" style="background-color: var(--pm-app-surface-color)">
+  <div class="plume container">
+    <br/><br/>
+
+    <div is="el-accordion" data-summary="Plume CSS" data-expand>
+      <p>
+        Wellcome to Plume CSS, a lightweight and themeble CSS UI Kit. Plume is written purely with CSS and its meant to be the lowest layer of design of an application.
+        Plume was inspired by projects like Skeleton and Milligram, also providing a base style to start your application. In this page you will find documentation, the elements list and a visual theme editor.
+        Most of Plume style is applied directly on the elements with no needing of special classes. Plume can be easily themed tweaking the hundreds of CSS Custom Properties available on its source. 
+        You can doing it using the left side panel on this page, then downloading your Themed-Plume, or adding the plume.min.css on your application and changing the variables on your source.
+      </p>
+    </div>
+
+    <div is="el-accordion" data-summary="Color Palette" data-expand>
+      <div class="color-palette color-palette--light">
+        <span style="background-color: var(--pm-primary-color)"></span>
+        <span style="background-color: var(--pm-primary-color)" data-darken></span>
+        <span style="background-color: var(--pm-secondary-color)"></span>
+        <span style="background-color: var(--pm-secondary-color)" data-darken></span>
+      </div>
+      <div class="color-palette color-palette--dark">
+        <span style="background-color: var(--pm-primary-color)"></span>
+        <span style="background-color: var(--pm-primary-color)" data-darken></span>
+        <span style="background-color: var(--pm-secondary-color)"></span>
+        <span style="background-color: var(--pm-secondary-color)" data-darken></span>        
+      </div>
+    </div>    
+
+    <div is="el-accordion" data-summary="Typography" data-expand>  
+      <h1>This is a Heading</h1>
+      <h2>This is a Heading</h2>
+      <h3>This is a Heading</h3>
+      <h4>This is a Heading</h4>
+      <h5>This is a Heading</h5>
+      <h6>This is a Heading</h6>
+
+      <blockquote>
+        Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while. That's because they were able to connect experiences they've had and synthesize new things.        
+      </blockquote>
+      
+      <p>Deserunt eiusmod ex proident ullamco magna occaecat proident pariatur. Est aute culpa nostrud ut <strong>deserunt esse occaecat nostrud esse nisi</strong> quis excepteur dolore. Occaecat quis sit cillum est ut ipsum elit deserunt. Esse cupidatat ex eu nostrud sit Lorem elit labore laboris dolor elit. </p>
+      <p>Nulla Lorem sint voluptate consequat sint. Proident laborum id irure Lorem dolore reprehenderit sint et Lorem ut sint laborum non. Culpa labore qui nisi enim laborum cillum elit minim nostrud aute. Eiusmod velit aute nulla do minim fugiat irure commodo excepteur. Amet culpa pariatur labore culpa ad et reprehenderit tempor in exercitation tempor mollit deserunt.</p>
+      <hr/>      
+      
+      <p><a href="/">This is a link</a> followed by <a href="/">another link</a></p>
+    </div>
+    
+    <div is="el-accordion" data-summary="Buttons" data-expand>
+      <label>Pure element</label>
+      <button>No Attr</button>
+      
+      <label>.btn-primary</label>
+      
+      <button class='btn-primary'>Primary</button>
+            
+      <label>.btn-secondary</label>
+      
+      <button class='btn-secondary'>Secondary</button>
+            
+      <label>.btn-gradient</label>
+      
+      <button class="btn-gradient">Gradient</button>
+      
+      <label>.btn-[black, white, light]</label>
+      
+      <button class='btn-black'>Black</button>
+      <button class='btn-white'>White</button>    
+      <button class="btn-light">Light</button>
+      
+      <label>.btn-success, .btn-danger, .btn-warning</label>
+      
+      <button class='btn-success'>Success</button>
+      <button class='btn-danger'>Danger</button>    
+      <button class="btn-warning">Warning</button>
+      
+      <label>[disabled] or .disabled</label>
+      
+      <button disabled>Button</button>
+      <button class='btn-primary' disabled>Button</button>    
+      <button class='btn-secondary' disabled>Button</button>
+      <button class='btn-white' disabled>Button</button>
+    </div>
+    
+    <div is="el-accordion" data-summary="Form Controls" data-expand>     
+      <form action="/">
+        <div class="half">
+          <fieldset>
+            <legend class="required">Fieldset</legend>
+          </fieldset>
+
+          <div class="field">
+            <label for="label-required" class="required">Label .required</label>
+            <input type="text" placeholder="Input placeholder" name="label-required">
+          </div>
+          
+          <div class="field">
+            <label for="input-text">Text</label>
+            <input type="text" placeholder="Input placeholder" name="input-text">
+          </div>
+
+          <div class="field">
+            <label for="input-number">Number</label>
+            <input type="number" placeholder="Input placeholder" name="input-number">
+          </div>
+
+          <div class="field">
+            <label for="input-color">Color</label>
+            <input type="color" placeholder="Input placeholder" name="input-color">
+          </div>
+
+          <div class="field">
+            <label for="input-date">Date</label>
+            <input type="date" placeholder="Input placeholder" name="input-date">
+          </div>
+
+          <div class="field">
+            <label for="input-datetime-local">Datetime-local</label>
+            <input type="datetime-local" placeholder="Input placeholder" name="input-datetime-local">
+          </div>
+
+          <div class="field">
+            <label for="input-email">Email</label>
+            <input type="email" placeholder="Input placeholder" name="input-email">
+          </div>
+
+          <div class="field">
+            <label for="input-month">Month</label>
+            <input type="month" placeholder="Input placeholder" name="input-month">
+          </div>
+
+          <div class="field">
+            <label for="input-password">Password</label>
+            <input type="password" placeholder="Input placeholder" name="input-password">
+          </div>
+
+          <div class="field">
+            <label for="input-search">Search</label>
+            <input type="search" placeholder="Input placeholder" name="input-search">
+          </div>
+          
+          <div class="field">
+            <label for="input-tel">Tel</label>
+            <input type="tel" placeholder="Input placeholder" name="input-tel">
+          </div>
+
+          <div class="field">
+            <label for="input-time">Time</label>
+            <input type="time" placeholder="Input placeholder" name="input-time">
+          </div>  
+
+          <div class="field">
+            <label for="input-url">Url</label>
+            <input type="url" placeholder="Input placeholder" name="input-url">
+          </div>
+
+          <div class="field">
+            <label for="input-week">Week</label>
+            <input type="week" placeholder="Input placeholder" name="input-week">
+          </div>
+          
+          <div class="field">
+            <label for="select-test">Select</label>
+            <select name="select-test" id="a-select">
+              <option value="test-a">Test A</option>
+              <option value="test-b">Test B</option>
+              <option value="test-c">Test C</option>
+              <option value="test-d">Test D</option>
+              <option value="test-e">Test E</option>
+            </select>
+          </div>
+          
+          <div class="field">
+            <label for="input-radio-test">Radio</label>
+            <label data-holder>
+              <input type="radio" name="input-radio-test" checked>
+              Input Radio A
+            </label>
+            <label data-holder>
+              <input type="radio" name="input-radio-test">
+              Input Radio B
+            </label>            
+          </div>
+          
+          <div class="field">
+            <label for="input-checkbox-test">Checkbox</label>
+            <label data-holder>
+              <input type="checkbox" name="input-checkbox-test-a" checked>
+              Input Checkbox A
+            </label>
+            <label data-holder>
+              <input type="checkbox" name="input-checkbox-test-b">
+              Input Checkbox B
+            </label>            
+          </div> 
+          
+          <div class="field">
+            <label for="input-toggle">Toggle</label>
+            <label data-holder>
+              <input type="checkbox" name="input-toggle" data-checkbox-toggle>
+              Input Toggle
+            </label>
+          </div> 
+          
+          <div class="field">
+            <label for="input-file">Input file</label>
+            <span class="input-file btn-primary">
+              Upload File
+              <input type="file" placeholder="Input placeholder" name="input-file">
+            </span>
+          </div>
+          
+          <div class="field">
+            <label for="input-range">Input range</label>
+            <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-subs>
+          </div>
+          
+          <div class="field">
+            <label for="input-meter">Meter</label>
+            <meter value="55.93" min="0" max="120.47" title="GB"></meter>
+          </div>
+          
+          <div class="field">
+            <label for="input-progress">Progress</label>
+            <progress value="70" max="100">70 %</progress>
+          </div>
+        </div>
+        
+        <div class="field">
+          <label for="input-textarea">Textarea</label>
+          <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
+        </div>
+        
+        <div class="field" data-info="These input types inherit from buttons, and follow the same rules.">
+          <label for="input-button">Input button</label>
+          <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
+          <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">
+          <input type="reset" placeholder="Input placeholder" name="input-button" value="Reset">
+        </div>
+      </form>
+    </div>
+    
+    <div is="el-accordion" data-summary="Form Input States" data-expand>     
+      <form action="/">
+        <div class="half">
+          <div class="field" data-success="Success message here">
+            <label for="input-success">Input success</label>
+            <input type="text" placeholder="Input placeholder" name="input-success">
+          </div>
+          
+          <div class="field" data-error="Error message here">
+            <label for="input-error">Input error</label>
+            <input type="text" placeholder="Input placeholder" name="input-error">
+          </div>
+          
+          <div class="field" data-warning="Warning message here">
+            <label for="input-warning">Input warning</label>
+            <input type="text" placeholder="Input placeholder" name="input-warning">
+          </div>
+          
+          <div class="field" data-info="Info message here">
+            <label for="input-info">Input info</label>
+            <input type="text" placeholder="Input placeholder" name="input-info">
+          </div>
+        </div>
+      </form>
+    </div>    
+    
+    <div is="el-accordion" data-summary="Table" data-expand>
+      <label>table</label>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>   
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+        </tbody>     
+      </table>      
+    </div>
+    
+    <div is="el-accordion" data-summary="Pre & Code" data-expand>
+      
+      <label>pre</label>
+<pre>This is a text on a pre tag
+another paragraph
+and another</pre>
+        
+        <label>pre > code</label>
+<pre><code>@function cssvar($name, $prefix: pm) {
+  @return var(--#{$prefix}-#{$name});
+}</code></pre>
+          
+      <p>This is and inline code <code>function () {}</code> used in a multiline text. Another line of text with some other works bla bla bla then <code>function () {}</code></p>
+    </div>
+        
+    <div is="el-accordion" data-summary="Lists" data-expand>
+      <label>ul</label>
+      <ul>
+        <li>List Example A</li>
+        <li>List Example B</li>
+        <li>List Example C</li>
+        <li>List Example D</li>
+        <li>List Example E</li>
+      </ul>
+      
+      <label>ol</label>
+      <ol>
+        <li>List Example A</li>
+        <li>List Example B</li>
+        <li>List Example C</li>
+        <li>List Example D</li>
+        <li>List Example E</li>
+      </ol> 
+      
+      <label>dl</label>
+      <dl>
+        <dt>This version:</dt>
+          <dd>http://www.w3.org/TR/2015/WD-css-grid-1-20150917/ </dd>
+        <dt>Editors:</dt>
+          <dd>Tab Atkins Jr. (Google) </dd>
+          <dd>Elika J. Etemad / fantasai (Invited Expert) </dd>
+          <dd>Rossen Atanassov (Microsoft) </dd>
+      </dl>          
+    </div>
+
+    <div is="el-accordion" data-summary="Custom Properties" data-expand>
+      <p>Pipipi Popopo</p>
+      <button onclick="customPropsList('show')">CSS Custom Properties List</button>
+    </div>
+
+    <br/><br/>
+  </div>
+
+  <!-- *** Style Editor *** -->
+
+  <div id="style-editor">
+    <form action="/">
+      <div>
+        <div class="field">
+          <label style="color: #33b5e5">Custom Theme Name</label>
+          <input type="text" name="plume-custom-theme-name" value="My Cool Theme" maxlength="30">
+        </div>
+        <div class="field">
+          <label>Theme Wrapper</label>
+          <input type="text" name="plume-custom-theme-wrapper" value=":root" maxlength="50">
+        </div>          
+      </div>
+    </form>
+  </div>
+
+  <datalist id="propdatalist"></datalist>
+
+  <div id="panel">
+    <button class="preview-theme" onclick="themeSource('show')">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <path style="fill:#25B6D2;" d="M0,260.908l174.648-81.136v38.568l-132.08,57.848v0.728l132.08,57.848v38.568L0,292.212V260.908z"/>
+        <path style="fill:#415E72;" d="M201.6,387.9l77.864-263.8h36.752L238.4,387.9H201.6z"/>
+        <path style="fill:#E04F5F;" d="M512,293.284L337.352,373.34v-38.568l134.992-57.848v-0.728L337.352,218.34v-38.568L512,259.828
+        V293.284z"/>
+      </svg>
+    </button>
+    <button class="download-css">⬇ Download Theme</button>
+  </div>
+
+  <div id="themeSource" is="el-lightbox" data-on:show="showCustomThemeSource" data-boxed>
+    <section>
+      <header>
+        <span>Your Custom Theme</span>
+      </header>
+      <div style="padding:0;border-top: solid 1px #cccccc;border-bottom: solid 1px #cccccc;">
+        <textarea id="custom-theme-code-mirror" name="custom-theme-code-mirror"></textarea>
+      </div>
+      <footer>
+        <button onclick="themeSource('hide')">Ok</button>
+      </footer>
+    </section>
+  </div>
+
+  <div id="customPropsList" is="el-lightbox" data-boxed>
+    <section>
+      <header>
+        <span>Plume CSS Custom Properties</span>
+      </header>
+      <div>
+        <div id="proplist"></div>
+      </div>
+      <footer>
+        <span id="proplist-counter-result"></span>
+        <button onclick="customPropsList('hide')">Ok</button>
+      </footer>
+    </section>
+  </div>  
+
+
+  <script src="vendor/el-accordion.min.js"></script>
+  <script src="vendor/el-lightbox.min.js"></script>
+  <script src="vendor/lz-string.min.js"></script>
+  <script src="vendor/css-beautify.min.js"></script>
+  <script src="vendor/codemirror.min.js"></script>
+  <script src="vendor/codemirror-css.min.js"></script>
+  
+  <script src="script/theme-editor.js"></script>
+  <script src="script/download-theme.js"></script>
+  <script src="script/url-state-handler.js"></script>
+</body>
+</html>
+    

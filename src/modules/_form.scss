@@ -1,0 +1,321 @@
+@include cssvars((
+	// general
+	placeholder-color: #999999,
+	form-field-margin-bottom: 24px,
+	form-caption-font-size: .8em, 
+	// fieldset
+	fieldset-border-style: solid,
+	fieldset-border-width: 1px,
+	fieldset-border-color: rgba(127,127,127,.4),
+	// label
+	label-font-size: 1em,
+	label-font-weight: 600,
+	label-margin-bottom: 24px,
+	label-color: cssvar(app-font-color),
+	// input
+	input-height: 40px,
+	input-box-shadow: none,
+	input-padding: 6px 10px,
+	input-border-style: solid,
+	input-border-radius: none,
+	input-border-width: 0 0 2px 0,
+	input-border-color: rgba(127,127,127,.4),
+	input-background-color: rgba(200,200,200,.1),
+	// radio & checkbox
+	radio-and-checkbox-size: 22px,
+	radio-and-checkbox-border-width: 2px,
+	// toggle
+	toggle-size: 28px,
+	toggle-cursor: pointer,
+	// textarea
+	textarea-padding: 10px,
+	textarea-min-height: 100px,
+	// progress & meter
+	progress-and-meter-height: 12px,
+	progress-and-meter-border-radius: 25px,
+));
+
+@include superclass () {
+
+	fieldset {
+		padding: 12px;
+		border-style: cssvar(fieldset-border-style);
+		border-width: cssvar(fieldset-border-width);
+		border-color: cssvar(fieldset-border-color);
+		border-radius: cssvar(input-border-radius);
+		legend {
+			padding: 0 10px;
+			color: cssvar(primary-color);
+		}
+	}
+
+	.field, fieldset {
+		width: 100%;
+		display: block;
+		margin-bottom: cssvar(form-field-margin-bottom);
+	}
+	
+	label, legend {
+		display: block;
+		color: cssvar(label-color);
+		font-weight: cssvar(label-font-weight);
+		margin-bottom: cssvar(label-margin-bottom);
+		&[data-holder] {
+			font-weight: 300;
+			margin-bottom: 0;
+			align-items: center;
+			display: inline-flex;
+			height: cssvar(input-height);
+		}    
+		&.required {
+			&::after {
+				content: '*';
+				margin-left: 8px;
+				color: cssvar(color-error);
+			}
+		}
+	}
+	
+	// text inputs
+	$text_inputs: "input:not([type="range"]):not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"])";
+	
+	#{$text_inputs}, textarea {
+		appearance: none;
+	}
+	
+	#{$text_inputs}, textarea, select, {
+		width: 100%;
+		display: block;
+		box-sizing: border-box;
+		height: cssvar(input-height);
+		padding: cssvar(input-padding);
+		box-shadow: cssvar(input-box-shadow);
+		border-style: cssvar(input-border-style);
+		border-color: cssvar(input-border-color);   
+		border-width: cssvar(input-border-width);
+		border-radius: cssvar(input-border-radius);
+		background-color: cssvar(input-background-color);
+		&:focus {
+			outline: 0;
+			transition: 100ms;
+			@include cssvar(input-border-color, cssvar(primary-color));
+		}
+	}
+	
+	textarea {
+		display: block;
+		padding: cssvar(textarea-padding);
+		min-height: cssvar(textarea-min-height);
+	}
+
+	// color
+
+	input[type="color"] {
+    border: none;
+		background: none;
+		--pm-input-padding: 0;
+		--pm-input-border-width: 0;
+		--pm-input-background-color: transparent;
+	}
+	
+	// radio & checkbox
+	
+	input[type="radio"],
+	input[type="checkbox"] {
+		margin: 0 8px;
+		appearance: none;
+		position: relative;
+		display: inline-block;
+		width: cssvar(radio-and-checkbox-size);
+		height: cssvar(radio-and-checkbox-size);
+		border: solid cssvar(radio-and-checkbox-border-width) cssvar(input-border-color);
+		&:checked {
+			border-color: cssvar(primary-color);
+			&::before {
+				top: 2px;
+				left: 2px;
+				content: "";
+				position: absolute;
+				background-color: cssvar(primary-color);
+				width: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
+				height: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
+			}
+		}
+	}
+	
+	input[type="radio"],
+	input[type="radio"]:checked::before{
+		border-radius: 100%;
+	}
+	
+	// toggle
+	
+	input[type="checkbox"][data-checkbox-toggle] {
+		border-radius: 25px;
+		height: cssvar(toggle-size);
+		cursor: cssvar(toggle-cursor);
+		width: calc(#{cssvar(toggle-size)} * 2);
+		&::before {
+			top: 2px;
+			left: 2px;
+			content: "";
+			position: absolute;
+			border-radius: 100%;
+			width: calc(#{cssvar(toggle-size)} - 8px);
+			height: calc(#{cssvar(toggle-size)} - 8px);
+			background-color: cssvar(input-border-color);
+		}
+		&:checked {
+			border-color: cssvar(input-border-color);
+			&::before {
+				content: "";
+				top: 2px;
+				right: 2px;
+				left: unset;
+				height: 20px;
+				width: 20px;
+				background-color: cssvar(primary-color);
+			}
+		}
+	}
+	
+	// range input
+	
+	input[type="range"] {
+		width: 100%;
+		appearance: none;
+		position: relative;
+		background: transparent;
+		line-height: cssvar(input-height);
+		&::-moz-focus-outer {
+			border: 0;
+		}
+		@each $vendor in (-ms-track, -moz-range-track, -webkit-slider-runnable-track) {
+			&::#{$vendor} {
+				cursor: default;
+				height: 3px;
+				width: 100%;
+				opacity: .5;
+				background: transparent;
+				transition: all 0.1s ease;
+				background-color: cssvar(input-border-color);
+			}
+		}
+		@each $vendor in (-ms-thumb, -moz-range-thumb, -webkit-slider-thumb) {
+			&::#{$vendor} {
+				width: 24px;
+				height: 24px;
+				cursor: default;
+				appearance: none;
+				margin-top: -10px;
+				border-radius: 100%;
+				border: 2px solid #eceff1;
+				background: cssvar(primary-color);
+			}
+		}
+		&::-ms-fill-lower {
+			appearance: none;
+		}
+		&::-ms-fill-upper {
+			appearance: none;
+		}
+		&::after,
+		&::before {
+			font-weight: 600;
+			color: cssvar(app-font-color);
+		}
+		&[data-subs] {
+			&::before {
+				content: attr(min);
+				margin-right: 6px;
+			}
+			&::after {
+				content: attr(max);
+				margin-left: 6px;
+			}
+			&:focus {
+				&::after,
+				&::before {
+					color: cssvar(primary-color);
+				}
+			}
+		}
+		&:focus {
+			outline: 0;
+			&::-ms-track {
+				background: cssvar(primary-color);
+			}
+			&::-moz-range-track {
+				background: cssvar(primary-color);
+			}
+			&::-webkit-slider-runnable-track {
+				background: cssvar(primary-color);
+			}
+		}
+	}
+	
+	// progress & meter
+	
+	progress, meter {
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		height: cssvar(progress-and-meter-height);
+		border-radius: cssvar(progress-and-meter-border-radius);
+		@each $vendor in (-webkit-meter-optimum-value, -moz-meter-optimum, -webkit-progress-value) {
+			&::#{$vendor} {
+				border-radius: cssvar(progress-and-meter-border-radius);
+				background: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
+			}
+		}
+	}
+	
+	// input file
+	
+	.input-file {
+		cursor: pointer;
+		margin-bottom: 0;
+		position: relative;
+		input[type="file"] {
+			top: 0;
+			left: 0;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+			position: absolute;
+		}
+	}
+	
+	// success / error / warning
+	
+	@each $state in (success, error, warning, info) {
+		
+		[data-#{$state}] {
+			@include cssvar(input-border-color, cssvar(color-#{$state}));
+			label {
+				color: cssvar(color-#{$state});
+			}
+		}
+		
+		[data-#{$state}]:not([data-#{$state}=""]) {
+			&::after {
+				margin: 4px 0;
+				display: block;
+				font-weight: 600;
+				content: attr(data-#{$state});
+				color: cssvar(color-#{$state});
+				font-size: cssvar(form-caption-font-size);
+			}
+		}
+	}
+
+	[data-info]:not([data-info=""]) label {
+		color: cssvar(label-color);
+	}
+	
+	::placeholder {
+		font-size: inherit;
+		color: cssvar(placeholder-color);
+	}
+}

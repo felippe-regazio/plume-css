@@ -1,0 +1,13 @@
+@include cssvars((
+	font-family-primary: #{"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif},
+	font-family-secondary: #{"Noto Serif", "Droid Serif", "Times", "Times New Roman"},	
+));
+
+@include cssvars((
+	primary-color: #33b5e5,
+	secondary-color: #c03ae9,
+	color-warning: #ffa501,
+	color-success: #58b858,
+	color-error: #ff6961,
+	color-info: cssvar(primary-color),
+));

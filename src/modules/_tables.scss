@@ -1,0 +1,37 @@
+@include cssvars((
+	table-text-align: left,
+	table-margin-bottom: 24px,
+	table-head-font-size: 1.8em,
+	table-head-font-weight: 600,
+	table-cell-font-size: 1em,
+	table-cell-padding: 12px 15px,
+	table-cell-border-style: solid,
+	table-cell-border-color: #E1E1E1,
+	table-cell-border-width: 0 0 1px 0,
+	table-cell-hover-color: rgba(100,100,100,.03),
+));
+
+@include superclass () {
+
+	table {
+		width: 100%;
+		text-align: cssvar(table-text-align);
+		margin-bottom: cssvar(table-margin-bottom);
+		thead {
+			font-size: cssvar(table-head-font-size);
+			font-weight: cssvar(table-head-font-weight);
+		}
+		th, td {
+			padding: cssvar(table-cell-padding);
+			border-style: cssvar(table-cell-border-style);
+			border-width: cssvar(table-cell-border-width);
+			border-color: cssvar(table-cell-border-color);
+		}
+		td {
+			font-size: cssvar(table-cell-font-size);
+			&:hover {
+				background-color: cssvar(table-cell-hover-color);
+			}
+		}
+	}
+}

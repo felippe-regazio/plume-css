@@ -1,0 +1,53 @@
+@include cssvars((
+	app-surface-color: transparent,
+	app-font-color: #333,
+	app-base-font-size: 18px,
+	app-line-height: 1.6,
+	app-font-weight: 400,
+	app-container-max-width: 980px,
+	app-container-padding: 14px,	
+));
+
+@include superclass () {
+	
+	box-sizing: border-box;
+	color: cssvar(app-font-color);
+	font-weight: cssvar(app-font-weight);
+	line-height: cssvar(app-line-height);
+	font-size: cssvar(app-base-font-size);
+	font-family: cssvar(font-family-primary);
+	background-color: cssvar(app-surface-color);
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+	
+	[disabled], .disabled {
+		cursor: default !important;
+		filter: opacity(0.4) !important;
+		pointer-events: none !important;
+	}
+	
+	.font-family-primary {
+		font-family: cssvar(font-family-primary) !important;
+	}
+	
+	.font-family-secondary {
+		font-family: cssvar(font-family-secondary) !important;
+	}
+
+	.container, &.container, &-container {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 cssvar(app-container-padding);
+		max-width: cssvar(app-container-max-width);
+		@media (min-width: 400px) {
+			width: 85%;
+			padding: 0;
+		}
+		@media (min-width: 550px) {
+			width: 80%;
+		}
+	}	
+}

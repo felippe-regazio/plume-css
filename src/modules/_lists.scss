@@ -1,0 +1,81 @@
+@include cssvars((
+	lists-font-size: 1em,
+	ul-list-style: circle inside,
+	ol-list-style: decimal inside,
+	li-margin-bottom: 1em,
+	dl-margin-bottom: 24px,
+	dl-hover-color: rgba(100,100,100,.03),
+));
+
+@include superclass () {
+
+	ul {
+		list-style: cssvar(ul-list-style);
+	}
+	
+	ol {
+		list-style: cssvar(ol-list-style);
+	}
+	
+	ol, ul {
+		padding-left: 0;
+		margin-top: 0;
+		font-size: cssvar(lists-font-size);
+	}
+	
+	ul ul,
+	ul ol,
+	ol ol,
+	ol ul {
+		font-size: .9em;
+		margin: 14px 0 15px 30px;
+	}
+	
+	li {
+		margin-bottom: cssvar(li-margin-bottom);
+	}
+	
+	dl {
+		width: 100%;
+		word-break: break-word;
+		margin-bottom: cssvar(dl-margin-bottom);
+		dt, dd {
+			padding: 12px 15px;
+			text-align: left;
+			border-bottom: 1px solid #E1E1E1;
+		}
+		dt {
+			font-size: 1.4em;
+			font-weight: 600;
+		}
+		dd {
+			margin: 0;
+			border: none;
+			position: relative;
+			padding-left: 56px;
+			&::before {
+				content: "";
+				top: 50%;
+				left: 24px;
+				width: 6px;
+				height: 6px;
+				font-size: inherit;
+				position: absolute;
+				border-radius: 100%;
+				transform: translateY(-50%);
+				border: solid 1px currentColor;
+			}
+			&:hover {
+				background-color: cssvar(dl-hover-color);
+			}
+		}
+		@media screen and (max-width: 768px) {
+			dd {
+				padding-left: 34px;
+				&::before {
+					left: 10px;
+				}
+			}	
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "little-wing",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp --watch",
+    "build": "gulp"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Mlabs Front End Engineering",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp-size": "^3.0.0"
+  }
+}

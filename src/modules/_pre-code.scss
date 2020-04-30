@@ -1,0 +1,45 @@
+@include cssvars((
+  pre-code-border-radius: 4px,
+  pre-code-background-color: #444,
+  pre-color: #ffffff,
+  pre-font-size: 1em,
+  pre-max-height: 760px,
+  pre-padding: 20px 10px,
+  code-padding: 0 4px,
+  code-background-color: rgba(100,100,100,.1),
+));
+
+@include superclass () {
+
+  code {
+    overflow: auto;
+    color: inherit;
+    display: inline;
+    font-size: inherit;
+    font-family: inherit;
+    white-space: inherit;
+    padding: cssvar(code-padding);
+    border-radius: cssvar(pre-code-border-radius);
+    background-color: cssvar(code-background-color);
+  }
+  
+  pre {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    white-space: pre;
+    position: relative;
+    word-wrap: break-word;
+    font-family: monospace, monospace;
+    color: cssvar(pre-color);
+    padding: cssvar(pre-padding);
+    font-size: cssvar(pre-font-size);
+    max-height: cssvar(pre-max-height);
+    border-radius: cssvar(pre-code-border-radius);
+    line-height: calc(#{cssvar(pre-font-size)} + 10px);
+    background-color: cssvar(pre-code-background-color);
+    code {
+      background-color: transparent;
+    }
+  }
+}
