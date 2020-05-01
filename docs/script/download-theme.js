@@ -41,7 +41,7 @@
   }
 
   const getTheme = () => {
-    const wrapper = document.querySelector('[name="plume-custom-theme-wrapper"]').value || ':root';
+    const wrapper = document.querySelector('[name="plume-custom-theme-scope"]').value || ':root';
     return `${wrapper} { ${document.documentElement.style.cssText} }`;
   }
 })();

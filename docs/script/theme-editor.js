@@ -175,12 +175,13 @@
   }
 
   const getTheme = () => {
-    const wrapper = document.querySelector('[name="plume-custom-theme-wrapper"]').value || ':root';
+    const wrapper = document.querySelector('[name="plume-custom-theme-scope"]').value || ':root';
     return `${wrapper} { ${document.documentElement.style.cssText} }`;
   }
 
   const CM = CodeMirror.fromTextArea(document.getElementById('custom-theme-code-mirror'), {
     mode: 'css',
+    readOnly: true,
     lineNumbers: true,
   });
   CM.setSize("100%", "100%");
@@ -193,13 +194,13 @@
     console.log(theme.indexOf('--pm-'));
     if (theme.indexOf('--pm-') < 0) {
       theme = "/* You didn't modified any default property. */";
-    }    
+    }
     CM.setValue(theme);
     CM.refresh();
-  }
-  
+  } 
+
   // -------------------------------------------------------------------------
   
-  renderStyleEditor(document.querySelector('#style-editor form')); 
+  renderStyleEditor(document.querySelector('#theme-editor form')); 
 
 })(window);

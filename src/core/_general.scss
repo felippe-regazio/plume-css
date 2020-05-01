@@ -42,12 +42,8 @@
 		margin: 0 auto;
 		padding: 0 cssvar(app-container-padding);
 		max-width: cssvar(app-container-max-width);
-		@media (min-width: 400px) {
-			width: 85%;
-			padding: 0;
-		}
-		@media (min-width: 550px) {
-			width: 80%;
+		@media screen and (max-width: 760px) {
+			padding: 0 calc(#{cssvar(app-container-padding)} / 2);
 		}
 	}	
 }

@@ -1,0 +1,30 @@
+body > .plume.container {
+  transform: translateX(200px);
+}
+
+[is="el-accordion"] .el-ac-summary {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+[is="el-accordion"] .el-ac-content {
+  background-color: rgba(200,200,200,.1) !important;
+}
+
+.half {
+  display: grid;
+  grid-column-gap: 26px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .half {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  body .plume.container {
+    transform: none;
+  }
+}

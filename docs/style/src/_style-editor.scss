@@ -1,0 +1,136 @@
+#theme-editor-toggler {
+  appearance: none;
+  border: none;
+  padding: none;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background-color: #eeeeee;
+  color: #444;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+  opacity: .8;
+  svg {
+    width: 100%;
+    max-width: 56px;
+    max-height: 70%;
+  }   
+}
+
+[is="el-sidebar"].theme-editor-holder {
+  max-width: 400px;
+  header,
+  footer {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      appearance: none;
+      border: none;
+      padding: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      background-color: #eeeeee;
+      color: #444;
+      text-align: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      svg {
+        width: 100%;
+        max-width: 56px;
+        max-height: 70%;
+      }      
+      &.preview-theme {
+        padding: 10px;
+        max-width: 56px;
+        border-right: solid 1px #cccccc;
+      }
+      &:hover {
+        background-color: #dddddd;
+      }
+    }
+  }
+  header {
+    border-bottom: solid 1px #cccccc;
+    @media screen and (min-width: 1500px) {
+      button {
+        display: none;
+      }
+    }
+  }  
+  footer {
+    border-top: solid 1px #cccccc;
+  }
+  > section {
+    width: 100%;    
+    max-width: 400px;
+    border-right: solid 1px #cccccc;
+  }
+  #theme-editor {
+    width: 100%;
+    overflow: auto;
+    max-height: 100%;
+    label, input {
+      display: block;
+      font-size: 16px;
+      width: 100%;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+    input {
+      box-sizing: border-box;
+      margin-bottom: 18px;
+      padding: 8px;
+      border-radius: 4px;
+      border-left-width: 6px;
+      border: solid 0.5px #aaaaaa;
+      border-left-width: 8px;
+      position: relative;
+      box-shadow: 0px 0px 1px 1px #cccccc;
+      &.not-default {
+        border-color:#000000;
+      }
+      &[type="color"] {
+        padding: 0;
+        min-height: 40px;
+        border: 0;
+        outline: 0;
+      }
+    }
+    form > div {
+      padding: 20px 10px;
+      .field:last-child input {
+        margin: 0;
+      }
+      &:nth-child(odd) {
+        background-color: rgba(180,180,180,.1);
+      }
+      &:not(:last-child) {
+        border-bottom: dashed #cccccc 2px;
+      }
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    opacity: 1 !important;
+    visibility: visible !important;
+    > section {
+      transform: translateX(0) !important;
+    }
+  }
+}
+

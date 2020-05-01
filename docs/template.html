@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plume CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link id="plume" rel="stylesheet" href="../dist/plume.min.css">
+  <link rel="stylesheet" href="vendor/codemirror.min.css">
+  <link rel="stylesheet" href="style/main.min.css"> 
+</head>
+<body style="background-color: var(--pm-app-surface-color)">
+
+  <!-- automatically filled by js -->
+  
+  <datalist id="propdatalist"></datalist>
+
+  <!-- imports from ./html/ -->
+
+  <div class="plume container">
+    @import "plume-css.html"
+    @import "color-palette.html"
+    @import "buttons.html"
+    @import "form-controls.html"
+    @import "input-states.html"
+    @import "table.html"
+    @import "pre-code.html"
+    @import "lists.html"
+    @import "custom-props.html"
+  </div>
+
+  @import "theme-editor.html"
+  @import "theme-code-lightbox.html"
+  @import "custom-props-lightbox.html"
+
+  <!-- vendor -->
+
+  <script src="vendor/el-accordion.min.js"></script>
+  <script src="vendor/el-lightbox.min.js"></script>
+  <script src="vendor/el-sidebar.min.js"></script>
+  <script src="vendor/lz-string.min.js"></script>
+  <script src="vendor/css-beautify.min.js"></script>
+  <script src="vendor/codemirror.min.js"></script>
+  <script src="vendor/codemirror-css.min.js"></script>
+  
+  <!-- app -->
+
+  <script src="script/theme-editor.js"></script>
+  <script src="script/download-theme.js"></script>
+  <script src="script/url-state-handler.js"></script>
+</body>
+</html>
+    

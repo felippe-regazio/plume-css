@@ -1,6 +1,6 @@
 (function () {
 
-  const STYLE_EDITOR_FORM = document.querySelector('#style-editor form')
+  const STYLE_EDITOR_FORM = document.querySelector('#theme-editor form')
   
   const clearState = (error = 'Malformed theme string') => {
     alert(`Error while loading Plume Theme from URL data. The default theme will be used instead. \n\nERROR: ${error}`);
