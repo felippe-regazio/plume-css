@@ -2,14 +2,12 @@
   counter-reset: plume-custom-props;
   #proplist {
     padding: 20px;
-    border-radius: 4px;
-    columns: 300px;
-    .css-custom-property {
+    > div > div {
       counter-increment: plume-custom-props;  
     }
     > div {
-      padding: 20px 0px;
       position: relative;
+      padding: 20px 0px;
       &:first-child {
         padding-top: 0;
       }
@@ -21,6 +19,9 @@
         position: absolute;
         top: 0;
         left: 0;
+      }
+      &:last-of-type {
+        padding-bottom: 0;
       }
     }
   }

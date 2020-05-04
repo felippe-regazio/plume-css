@@ -25,6 +25,7 @@ class ThemeEditor {
     
     this._addThemePreviewAction('.preview-theme');
     this._addDownloadThemeAction('.download-theme');
+    this._addCssCustomPropsIndex('#proplist');
   }
 
   // -------------------------------------------------------------
@@ -191,5 +192,24 @@ class ThemeEditor {
     a.click();
     window.URL.revokeObjectURL(url);
     a.remove();
-  }  
+  }
+
+  /**
+   * Adds all the plume css custom props available on the given holder
+   * @param {String} holder Element selector to add the list
+   * @return void
+   */
+  _addCssCustomPropsIndex (holder) {
+    holder = document.querySelector(holder);
+    this.CSS_CUSTOM_PROPS.forEach(propset => {
+      const div = document.createElement('div');
+      propset.forEach(prop => {
+        const propDiv = Object.assign(document.createElement('div'), {
+          innerText: prop.name
+        });
+        div.append(propDiv);
+        holder.append(div);
+      });
+    });
+  }
 }

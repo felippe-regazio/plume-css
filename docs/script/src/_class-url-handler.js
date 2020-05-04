@@ -26,7 +26,7 @@ class URLHandler {
    */
   _clearState (warn) {
     if (warn) {
-      console.warning(`WARN: A problem occurred while loading Plume Theme from URL data. Default theme loaded.\nError Ref: ${warn}`);
+      console.warn(`PLUME CSS WARN: A problem occurred while loading Plume Theme from URL data. Default theme loaded.\nError Ref: ${warn}`);
     }
     window.history.pushState({}, document.title, window.location.href.split('?')[0]);
   }
@@ -57,7 +57,7 @@ class URLHandler {
         decompressedQuery ? this._loadFormData(decompressedQuery) : this._clearState('Malformed theme string');
       }
     } catch (error) {
-      _clearState(error);
+      this._clearState(error);
     }
   }  
 

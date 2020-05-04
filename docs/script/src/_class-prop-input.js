@@ -49,6 +49,7 @@ class PropInput {
     
     const label = document.createElement('label');
     label.innerText = this._normalizePropName(input.name);
+    label.title = input.name;
 
     [label, input].forEach(el => field.append(el));
     return field;
