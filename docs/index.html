@@ -10,10 +10,6 @@
 </head>
 <body style="background-color: var(--pm-app-surface-color)">
 
-  <!-- automatically filled by js -->
-  
-  <datalist id="propdatalist"></datalist>
-
   <!-- imports from ./html/ -->
 
   <div class="plume container">
@@ -401,7 +397,7 @@ and another</pre>
     </g>
   </svg>
 </button>
-  <div id="themeSource" is="el-lightbox" data-on:show="showCustomThemeSource" data-boxed>
+  <div id="themeSource" is="el-lightbox" data-boxed>
   <section>
     <header>
       <span>Your Custom Theme</span>
@@ -441,9 +437,23 @@ and another</pre>
   
   <!-- app -->
 
-  <script src="script/theme-editor.js"></script>
+  <script src="script/src/_class-theme-utils.js"></script>
+  <script src="script/src/_class-prop-input.js"></script>
+  <script src="script/src/_class-theme-editor.js"></script>
+  
   <script src="script/download-theme.js"></script>
   <script src="script/url-state-handler.js"></script>
+
+
+  <script>
+    const propset = ThemeUtils.getCustomPropsFromStyleSheet('plume', ':root');
+
+    new ThemeEditor({
+      propset: propset, 
+      form: '#theme-editor form',
+    });
+
+  </script>
 </body>
 </html>
     

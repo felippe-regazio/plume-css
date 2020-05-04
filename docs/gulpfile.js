@@ -10,12 +10,12 @@ const clean_css = require('gulp-clean-css');
 const prefix = require('gulp-autoprefixer');
 
 gulp.task('build-js', function(){
-	return gulp.src('./js/src/**/*.js')
+	return gulp.src('./script/src/**/*.js')
 	.pipe(plumber(true))
 	.pipe(babel({presets: ['@babel/preset-env']}))
-	.pipe(concat('dist.min.js'))
+	.pipe(concat('main.min.js'))
 	.pipe(uglify_js())
-	.pipe(gulp.dest('./js/'));
+	.pipe(gulp.dest('./script/'));
 });
 
 gulp.task('build-css', function(){
