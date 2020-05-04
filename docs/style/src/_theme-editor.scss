@@ -120,7 +120,7 @@
       &:nth-child(odd) {
         background-color: rgba(180,180,180,.1);
       }
-      &:not(:last-child) {
+      &:not(:last-of-type) {
         border-bottom: dashed #cccccc 2px;
       }
     }
