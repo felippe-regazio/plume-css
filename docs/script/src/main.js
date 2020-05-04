@@ -1,4 +1,5 @@
 (function () {
+  
   const propset = ThemeUtils.getCustomPropsFromStyleSheet('plume', ':root');
 
   new ThemeEditor({
@@ -9,4 +10,5 @@
   new URLHandler({
     form: '#theme-editor form'
   });
+
 })();
