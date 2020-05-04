@@ -5,4 +5,8 @@
     propset: propset, 
     form: '#theme-editor form',
   });
+
+  new URLHandler({
+    form: '#theme-editor form'
+  });
 })();

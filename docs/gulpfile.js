@@ -38,7 +38,7 @@ gulp.task('build-html', function () {
 gulp.task('watch', function(done) {
 	if (process.argv.includes('--watch')) {
 		console.log(`Watching docs directory, press Ctrl+C to exit`);
-		gulp.watch(['./style/**/*.scss', './script/**/*.js', './html/**/*.html'], gulp.series('build-js', 'build-css', 'build-html'));
+		gulp.watch(['./style/src/**/*.scss', './script/src/**/*.js', './html/**/*.html'], gulp.series('build-js', 'build-css', 'build-html'));
 	} else {
 		done();
 	}
