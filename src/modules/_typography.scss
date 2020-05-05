@@ -55,6 +55,9 @@
 			line-height: cssvar(#{$h}-line-height);
 			font-weight: cssvar(#{$h}-font-weight);
 			letter-spacing: cssvar(#{$h}-letter-spacing);
+			@media screen and (max-width: 1023px) {
+				font-size: calc((#{cssvar(#{$h}-font-size)} / 2) + 1.5vw);
+			}
 		}
 	}
 	
@@ -90,7 +93,7 @@
 		margin: 0;
 		padding: 20px;
 		margin: 30px 0;
-		font-size: 1em;
+		font-size: cssvar(--paragraph-font-size);
 		font-family: cssvar(font-family-primary);
 		border-left: solid 4px cssvar(primary-color);
 		background-color: rgba(180,180,180,.1);
