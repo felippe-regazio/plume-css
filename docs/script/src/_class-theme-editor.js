@@ -26,6 +26,7 @@ class ThemeEditor {
     this._addThemePreviewAction('.preview-theme');
     this._addDownloadThemeAction('.download-theme');
     this._addCssCustomPropsIndex('#proplist');
+    this._addReloadAppBtnEvents('.reload-app');
   }
 
   // -------------------------------------------------------------
@@ -75,6 +76,10 @@ class ThemeEditor {
     return new PropInput(prop);
   }
 
+  /**
+   * Create a holder element. Commonly used to wrap a set of inputs
+   * @return {Element} The holder element (div)
+   */
   _createHolder () {
     return document.createElement('div');
   }
@@ -209,6 +214,20 @@ class ThemeEditor {
         });
         div.append(propDiv);
         holder.append(div);
+      });
+    });
+  }
+
+  /**
+   * Reset the application to its original state by reloading page;
+   * The action will accour when clicked on the given target
+   * @return void
+   */
+  _addReloadAppBtnEvents (target) {
+    document.querySelectorAll(target).forEach(e => {
+      e.addEventListener('click', e => {
+        e.preventDefault();
+        ThemeUtils.reloadApp();
       });
     });
   }

@@ -72,5 +72,14 @@ class ThemeUtils {
     }
 
     return theme;
-  }  
+  }
+
+  /**
+   * Reset theme state by reloading the page withou query string,
+   * @return void
+   */
+  static reloadApp () {
+    window.history.pushState({}, document.title, window.location.href.split('?')[0]);
+    window.location.reload();
+  }
 }
