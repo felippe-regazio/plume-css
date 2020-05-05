@@ -5,6 +5,9 @@ body > .plume.container {
   [is="el-accordion"] .el-ac-summary {
     font-size: 36px;
     font-weight: 600;
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
   }
   
   [is="el-accordion"] .el-ac-content {

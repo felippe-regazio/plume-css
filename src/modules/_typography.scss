@@ -56,11 +56,11 @@
 			font-weight: cssvar(#{$h}-font-weight);
 			letter-spacing: cssvar(#{$h}-letter-spacing);
 			@media screen and (max-width: 1023px) {
-				font-size: calc((#{cssvar(#{$h}-font-size)} / 2) + 1.5vw);
+				font-size: calc((#{cssvar(#{$h}-font-size)} / 1.8) + 1.5vw);
 			}
 		}
 	}
-	
+
 	hr {
 		opacity: .2;
 		margin: 46px 0;
