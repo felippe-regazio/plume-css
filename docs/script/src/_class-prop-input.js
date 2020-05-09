@@ -4,8 +4,6 @@ class PropInput {
     return this._wrappedInput(prop);
   }
 
-  // -------------------------------------------
-
   /**
    * Convert the given prop object to a labeled field wrapped input
    * @param {Object} prop A css custom property like {name: '', value: ''}
@@ -27,6 +25,7 @@ class PropInput {
       value: prop.value,
     });
     
+    input.classList.add('custom-prop-input');
     input.dataset.defaultValue = prop.value;
     input.dataset.prop = JSON.stringify(prop);
 
@@ -100,6 +99,10 @@ class PropInput {
     input.removeAttribute('list');
     this._updateDatalist(input);
     input.removeAttribute('data-current-value');
+    if (!input.value.trim().length) {
+      input.value = input.dataset.defaultValue;
+      input.dispatchEvent(new Event('input'));
+    }
   }
 
   /**

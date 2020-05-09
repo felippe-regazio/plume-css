@@ -27,6 +27,7 @@ class ThemeEditor {
     this._addDownloadThemeAction('.download-theme');
     this._addCssCustomPropsIndex('#proplist');
     this._addReloadAppBtnEvents('.reload-app');
+    this._addSearchPropBtnEvents('#search-custom-props');
   }
 
   // -------------------------------------------------------------
@@ -230,5 +231,59 @@ class ThemeEditor {
         ThemeUtils.reloadApp();
       });
     });
+  }
+
+  _addSearchPropBtnEvents (target) {
+    target = document.querySelector(target)
+    target.addEventListener('input', e => {
+      e.preventDefault();
+      clearTimeout(target._TYPING);
+      this.FORM.style.opacity = '.5';
+      target._TYPING = setTimeout(() => {
+        this._filterInputsByQuery(target.value);
+        this.FORM.style.opacity = '1';
+      }, 500);
+    });
+    target.addEventListener('focus', () => {
+      target.setSelectionRange(0, target.value.length);
+    });
+  }
+
+  _filterInputsByQuery (query) {
+
+    this.FORM.classList.remove('searching');
+    this.FORM.querySelectorAll('input.custom-prop-input').forEach(input => {
+      input.classList.remove('keep');
+      input.parentElement.style.display = 'block';
+    });
+    this.FORM.querySelectorAll(':scope > div').forEach(holder => {
+      holder.style.display = 'block';
+    });
+
+    if (query.trim().length) {
+      this.FORM.querySelectorAll('input.custom-prop-input').forEach(input => {
+        this.FORM.classList.add('searching');
+        input.classList.remove('keep');
+        input.parentElement.style.display = 'none';
+        
+        const corpus = [
+          input.name,
+          input.value,
+          input.dataset.prop,
+          input.dataset.defaultValue,
+          input.parentElement.querySelector('label').innerText
+        ];
+
+        if (corpus.join(' ').toUpperCase().indexOf(query.toUpperCase()) > 0) {
+          input.classList.add('keep');
+          input.parentElement.style.display = 'block';
+        }
+      });
+      this.FORM.querySelectorAll(':scope > div').forEach(holder => {
+        if (!holder.querySelectorAll('.keep').length) {
+          holder.style.display = 'none';
+        }
+      });
+    }
   }
 }

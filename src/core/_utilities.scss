@@ -1,0 +1,115 @@
+@include superclass() {
+  
+  [disabled], .disabled {
+		cursor: default !important;
+		filter: opacity(0.4) !important;
+		pointer-events: none !important;
+  }
+  
+  .surface {
+    background-color: cssvar(app-surface-color) !important;
+  }
+
+  .is-hidden {
+    display: none !important;
+  }
+
+  .is-invisible {
+    visibility: hidden;
+    opacity: 0 !important;
+  }
+
+  .no-padding {
+    padding: 0px !important;
+  }
+
+  .no-margin {
+    margin: 0px !important;
+  }
+
+  .no-border {
+    border: none;
+  }
+
+  .text-black {
+    color: #000000 !important;
+  }
+
+  .text-white {
+    color: #ffffff !important;
+  }
+
+  .text-light {
+    color: #cccccc !important;
+  }
+
+  .text-app {
+    color: cssvar(app-font-color) !important;
+  }
+
+  .text-upper {
+    text-transform: uppercase !important;
+  }
+
+  .text-lower {
+    text-transform: lowercase !important;
+  }
+
+  .text-capitalize {
+    text-transform: capitalize !important;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .bg-light {
+    background-color: rgba(200,200,200,.1) !important;
+  }  
+
+  @each $level in (primary, secondary) {
+    .font-#{$level} {
+      font-family: cssvar(font-family-#{$level}) !important;
+    }
+      
+    .text-#{$level} {
+      color: cssvar(#{$level}-color) !important;
+    }
+    
+    .bg-#{$level} {
+      background-color: cssvar(#{$level}-color) !important;
+    }
+
+    .bc-#{$level} {
+      border-color: cssvar(#{$level}-color) !important;
+    }    
+  }
+
+  @each $state in (success, error, warning, info) {
+    .text-#{$state} {
+      color: cssvar(#{$state}-color) !important;
+    }
+
+    .bg-#{$state} {
+      background-color: cssvar(#{$state}-color) !important;
+    }
+
+    .bc-#{$state} {
+      border-color: cssvar(#{$state}-color) !important;
+    }    
+  }
+
+  @media print {
+    .dont-print {
+      display: none;
+    }
+  }  
+}

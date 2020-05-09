@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="vendor/codemirror.min.css">
   <link rel="stylesheet" href="style/main.min.css"> 
 </head>
-<body style="background-color: var(--pm-app-surface-color)">
+<body style="background-color: var(--pm-app-surface-color)" class="no-javascript">
 
+  <script>document.body.classList.remove('no-javascript');</script>
+  
   <!-- imports from ./html/ -->
 
   <div class="plume container">
@@ -20,12 +22,13 @@
     @import "form-controls.html"
     @import "input-states.html"
     @import "table.html"
-    @import "pre-code.html"
     @import "lists.html"
+    @import "pre-code.html"
     @import "custom-props.html"
   </div>
 
   @import "theme-editor.html"
+  @import "toggle-source.html"
   @import "theme-code-lightbox.html"
   @import "custom-props-lightbox.html"
 
@@ -38,6 +41,8 @@
   <script src="vendor/css-beautify.min.js"></script>
   <script src="vendor/codemirror.min.js"></script>
   <script src="vendor/codemirror-css.min.js"></script>
+  <script src="vendor/codemirror-xml.min.js"></script>
+  <script src="vendor/codemirror-mixed.min.js"></script>
   
   <!-- app -->
   <script src="script/main.min.js"></script>

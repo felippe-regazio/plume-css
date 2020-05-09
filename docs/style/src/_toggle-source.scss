@@ -1,0 +1,50 @@
+.el-ac-code-preview {
+  z-index: 100;
+  overflow: auto;
+  border: solid 1px #ccc;
+  display: none;
+  margin-top: 36px;
+  &.visible {
+    display: block;
+  }
+}
+
+[is="el-accordion"]:not([data-expand]) {
+  .el-ac-code-preview {
+    display: none;
+  }
+}
+
+#toggle-source {
+  outline: none;
+  appearance: none;
+  border: none;
+  padding: none;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background-color: #444;
+  color: #fff;
+  border-top: solid 1px #fff;
+  border-left: solid 1px #fff;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 0;
+  right: 0; 
+  opacity: .7;
+  font-size: 20px;
+  &:hover {
+    opacity: 1;
+  }
+  &::after {
+    content: '</>'
+  }
+  &.active {
+    background-color: #4bb543;
+  }
+}

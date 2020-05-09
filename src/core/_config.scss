@@ -6,8 +6,8 @@
 @include cssvars((
 	primary-color: #33b5e5,
 	secondary-color: #c03ae9,
-	color-warning: #ffa501,
 	color-success: #58b858,
 	color-error: #ff6961,
+	color-warning: #ffa501,
 	color-info: cssvar(primary-color),
 ));

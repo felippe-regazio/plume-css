@@ -11,4 +11,9 @@
     form: '#theme-editor form'
   });
 
+  new ToggleSource({
+    trigger: '#toggle-source',
+    targets: '[data-toggle-source] .el-ac-content',
+  });  
+
 })();

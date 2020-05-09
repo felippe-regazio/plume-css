@@ -90,9 +90,9 @@
 			}
 		}
 		&.btn-light {
-			border-color: #f1f1f1;
-			background-color: #f1f1f1;
-			color: #000000;
+			color: cssvar(app-font-color);
+			border-color: rgba(200,200,200,.3);
+			background-color: rgba(200,200,200,.3);
 			&:hover {
 				filter: brightness(0.9);
 			}

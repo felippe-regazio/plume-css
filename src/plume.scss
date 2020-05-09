@@ -4,12 +4,13 @@
 @import './core/normalize';
 @import './core/config';
 @import './core/general';
+@import './core/utilities';
 
 // elements ----------------------------
 
 @import './modules/typography';
-@import './modules/pre-code';
 @import './modules/buttons';
 @import './modules/form';
-@import './modules/lists';
 @import './modules/tables';
+@import './modules/lists';
+@import './modules/pre-code';

@@ -17,6 +17,7 @@
   bottom: 0;
   left: 0; 
   opacity: .8;
+  z-index: 100;
   svg {
     width: 100%;
     max-width: 56px;
@@ -63,11 +64,24 @@
     }
   }
   header {
+    justify-content: space-between;
     border-bottom: solid 1px #cccccc;
-    @media screen and (min-width: 1500px) {
-      button {
+    button {
+      width: 56px;
+      height: 56px;
+      border-right: solid 1px #cccccc;
+      @media screen and (min-width: 1500px) {
         display: none;
       }
+    }
+    #search-custom-props {
+      width: 100%;
+      height: calc(100% - 2px);
+      border: none;
+      box-sizing: border-box;
+      padding: 10px;
+      outline: none;
+      color: #666;
     }
   }  
   footer {
@@ -113,16 +127,18 @@
         outline: 0;
       }
     }
-    form > div {
-      padding: 20px 10px;
-      .field:last-child input {
-        margin: 0;
-      }
-      &:nth-child(odd) {
-        background-color: rgba(180,180,180,.1);
-      }
-      &:not(:last-of-type) {
-        border-bottom: dashed #cccccc 2px;
+    form {
+      > div {
+        padding: 20px 10px;
+        .field:last-child input {
+          margin: 0;
+        }
+        &:nth-child(odd) {
+          background-color: rgba(180,180,180,.1);
+        }
+        &:not(:last-of-type) {
+          border-bottom: dashed #cccccc 2px;
+        }
       }
     }
     .clear-theme-holder {

@@ -18,22 +18,8 @@
 	font-family: cssvar(font-family-primary);
 	background-color: cssvar(app-surface-color);
 
-	*, *:before, *:after {
+	*, *::before, *::after {
 		box-sizing: inherit;
-	}
-	
-	[disabled], .disabled {
-		cursor: default !important;
-		filter: opacity(0.4) !important;
-		pointer-events: none !important;
-	}
-	
-	.font-family-primary {
-		font-family: cssvar(font-family-primary) !important;
-	}
-	
-	.font-family-secondary {
-		font-family: cssvar(font-family-secondary) !important;
 	}
 
 	.container, &.container, &-container {
@@ -45,5 +31,5 @@
 		@media screen and (max-width: 760px) {
 			padding: 0 calc(#{cssvar(app-container-padding)} / 2);
 		}
-	}	
+	}
 }

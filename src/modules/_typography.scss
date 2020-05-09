@@ -1,14 +1,14 @@
 @include cssvars((
 	
 	paragraph-font-size: 1em,
-	paragraph-margin-bottom: 1.2em,
+	paragraph-margin-bottom: 36px,
 	paragraph-font-family: cssvar(font-family-secondary),
 
 	link-text-decoration: none,
 	link-color: cssvar(primary-color),	
 
-	all-headings-margin: 0 0 24px 0,
-	all-heading-font-family: cssvar(--font-family-primary),
+	all-headings-margin: 0 0 36px 0,
+	all-headings-font-family: cssvar(--font-family-primary),
 
 	h1-font-size: 4.44em,
 	h1-line-height: 1.2,
@@ -39,6 +39,10 @@
 	h6-line-height: 1.6,
 	h6-font-weight: 300,
 	h6-letter-spacing: 0.15px,
+
+	mark-padding: 0 4px,
+	mark-border-radius: 2px,
+	mark-background-color: rgba(180,180,180,.2),
 ));
 
 @include superclass () {
@@ -46,7 +50,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		margin-top: 0;
 		margin: cssvar(all-headings-margin);
-		font-family: cssvar(all-heading-font-family);
+		font-family: cssvar(all-headings-font-family);
 	}
 	
 	@each $h in (h1, h2, h3, h4, h5, h6) {
@@ -63,7 +67,7 @@
 
 	hr {
 		opacity: .2;
-		margin: 46px 0;
+		margin: 36px 0;
 		border-width: 0;
 		border-top: 1px solid cssvar(app-font-color);
 	}
@@ -87,15 +91,44 @@
 				filter: none;
 			}
 		}
+		@media print {	
+			&:not([href^="#"]):not([href^="javascript"])::after{
+				content: " (" attr(href) ") ";
+			}
+		}		
 	}
 	
 	blockquote {
 		margin: 0;
 		padding: 20px;
-		margin: 30px 0;
+		margin: cssvar(all-headings-margin);
 		font-size: cssvar(--paragraph-font-size);
 		font-family: cssvar(font-family-primary);
 		border-left: solid 4px cssvar(primary-color);
 		background-color: rgba(180,180,180,.1);
 	}
+
+	mark {
+    color: inherit;
+    display: inline;
+    font-size: inherit;
+    font-family: inherit;
+    white-space: inherit;
+    padding: cssvar(mark-padding);
+    border-radius: cssvar(mark-border-radius);
+    background-color: cssvar(mark-background-color);
+	}
+
+	hgroup {
+		margin: cssvar(all-headings-margin);
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 14px;
+		}
+	}
+
+	kbd {
+    padding: 0px 4px;
+    border-radius: 2px;
+    background-color: rgba(180,180,180,.2);
+	}	
 }

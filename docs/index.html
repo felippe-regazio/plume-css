@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="vendor/codemirror.min.css">
   <link rel="stylesheet" href="style/main.min.css"> 
 </head>
-<body style="background-color: var(--pm-app-surface-color)">
+<body style="background-color: var(--pm-app-surface-color)" class="no-javascript">
 
+  <script>document.body.classList.remove('no-javascript');</script>
+  
   <!-- imports from ./html/ -->
 
   <div class="plume container">
@@ -49,6 +51,15 @@
     (there is no html imposition, the elements are styled in its pure state, you decide your html archtecture)
 
   </p>
+
+  <noscript>
+    <div class="no-javascript-warning">
+      WARNING: You are running this page without JavaScript. Plume is a pure CSS micro-framework, so you will see its content normaly.
+      However, the following helpful features of this page will be unavailable: Theme Editor, Custom Properties Automatic Lists, Toggle Examples Source Code.
+      Also, if you loaded a Plume Theme URL, the theme that you are trying to see wont be loaded. Instead, Plume default theme will be used.
+      To see the available properties to customize Plume, use your inspector and look at the :root scope.
+    </div>
+  </noscript>
 </div>
     <div is="el-accordion" data-summary="Color Palette" data-expand>
   <div class="color-palette color-palette--light">
@@ -64,7 +75,7 @@
     <span style="background-color: var(--pm-secondary-color)" data-darken></span>        
   </div>
 </div>  
-    <div is="el-accordion" data-summary="Typography" data-expand>  
+    <div is="el-accordion" data-summary="Typography" data-expand data-toggle-source>  
   <h1>This is a Heading</h1>
   <h2>This is a Heading</h2>
   <h3>This is a Heading</h3>
@@ -76,48 +87,50 @@
     Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while. That's because they were able to connect experiences they've had and synthesize new things.        
   </blockquote>
   
+  <p>This is an example of <mark>mark</mark> tag in a paragraph, you can use them along text elements, and this is a kbd example <kbd>alt</kbd> + <kbd>f4</kbd> representing a keyboard combination</p>
   <p>Deserunt eiusmod ex proident ullamco magna occaecat proident pariatur. Est aute culpa nostrud ut <strong>deserunt esse occaecat nostrud esse nisi</strong> quis excepteur dolore. Occaecat quis sit cillum est ut ipsum elit deserunt. Esse cupidatat ex eu nostrud sit Lorem elit labore laboris dolor elit. </p>
+
+  <hgroup>
+    <h3>Heading Group</h3>
+    <h4>This is an example of hgroup</h4>
+  </hgroup>
+
   <p>Nulla Lorem sint voluptate consequat sint. Proident laborum id irure Lorem dolore reprehenderit sint et Lorem ut sint laborum non. Culpa labore qui nisi enim laborum cillum elit minim nostrud aute. Eiusmod velit aute nulla do minim fugiat irure commodo excepteur. Amet culpa pariatur labore culpa ad et reprehenderit tempor in exercitation tempor mollit deserunt.</p>
+  
   <hr/>      
   
   <p><a href="/">This is a link</a> followed by <a href="/">another link</a></p>
 </div>
-    <div is="el-accordion" data-summary="Buttons" data-expand>
+    <div is="el-accordion" data-summary="Buttons" data-expand data-toggle-source>
   <label>Pure element</label>
   <button>No Attr</button>
   
   <label>.btn-primary</label>
-  
   <button class='btn-primary'>Primary</button>
         
   <label>.btn-secondary</label>
-  
   <button class='btn-secondary'>Secondary</button>
         
   <label>.btn-gradient</label>
-  
   <button class="btn-gradient">Gradient</button>
   
   <label>.btn-[black, white, light]</label>
-  
   <button class='btn-black'>Black</button>
   <button class='btn-white'>White</button>    
   <button class="btn-light">Light</button>
   
   <label>.btn-success, .btn-danger, .btn-warning</label>
-  
   <button class='btn-success'>Success</button>
   <button class='btn-danger'>Danger</button>    
   <button class="btn-warning">Warning</button>
   
   <label>[disabled] or .disabled</label>
-  
   <button disabled>Button</button>
   <button class='btn-primary' disabled>Button</button>    
   <button class='btn-secondary' disabled>Button</button>
   <button class='btn-white' disabled>Button</button>
 </div>
-    <div is="el-accordion" data-summary="Form Controls" data-expand>     
+    <div is="el-accordion" data-summary="Form Controls" data-expand data-toggle-source>
   <form action="/">
     <div class="half">
       <fieldset>
@@ -274,7 +287,7 @@
     </div>
   </form>
 </div>
-    <div is="el-accordion" data-summary="Form Input States" data-expand>     
+    <div is="el-accordion" data-summary="Form Input States" data-expand data-toggle-source>     
   <form action="/">
     <div class="half">
       <div class="field" data-success="Success message here">
@@ -299,7 +312,7 @@
     </div>
   </form>
 </div>
-    <div is="el-accordion" data-summary="Table" data-expand>
+    <div is="el-accordion" data-summary="Table" data-expand data-toggle-source>
   <label>table</label>
   <table>
     <thead>
@@ -333,21 +346,7 @@
     </tbody>     
   </table>      
 </div>
-    <div is="el-accordion" data-summary="Pre & Code" data-expand>
-      
-  <label>pre</label>
-<pre>This is a text on a pre tag
-another paragraph
-and another</pre>
-    
-    <label>pre > code</label>
-<pre><code>@function cssvar($name, $prefix: pm) {
-  @return var(--#{$prefix}-#{$name});
-}</code></pre>
-      
-  <p>This is and inline code <code>function () {}</code> used in a multiline text. Another line of text with some other works bla bla bla then <code>function () {}</code></p>
-</div>
-    <div is="el-accordion" data-summary="Lists" data-expand>
+    <div is="el-accordion" data-summary="Lists" data-expand data-toggle-source>
   <label>ul</label>
   <ul>
     <li>List Example A</li>
@@ -376,7 +375,23 @@ and another</pre>
       <dd>Hilda Hilst</dd>
   </dl>          
 </div>
-    <div is="el-accordion" data-summary="Custom Properties" data-expand>
+    <div is="el-accordion" data-summary="Pre & Code" data-expand data-toggle-source>
+      
+  <label>pre</label>
+<pre>This is a text on a pre tag
+another paragraph
+and another</pre>
+    
+    <label>pre > code</label>
+<pre><code>@function cssvar($name, $prefix: pm) {
+  @return var(--#{$prefix}-#{$name});
+}</code></pre>
+      
+  <p>
+    This is an inline code <code>function () {}</code> used in a paragraph.
+  </p>
+</div>
+    <div is="el-accordion" data-summary="Custom Properties" class="custom-props-list-accordion" data-expand>
   <p>Pipipi Popopo</p>
   <button onclick="customPropsList('show')">Custom Properties List</button>
 </div>
@@ -400,31 +415,31 @@ and another</pre>
           </g>
         </svg>   
       </button>
+      <input type="text" id="search-custom-props" placeholder="Search a property ...">
     </header>
     
-    <!-- <div> -->
-      <div id="theme-editor">
-        <form action="/">
-          <div>
-            <div class="field">
-              <label style="color: #33b5e5">Custom Theme Name</label>
-              <span class="clear-theme-holder">
-                <input type="text" class="static" name="plume-custom-theme-name" value="Default" maxlength="30" onblur="if (!this.value) this.value='Default'" data-default-value="Default">
-                <button class="clear-theme-state reload-app" title="Reset theme properties to default">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-                    <g><g transform="matrix(1 0 0 -1 0 1536)"><path d="M377.5,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7C375.6,1148.9,377.5,1144,377.5,1138.1z M540.8,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7S540.8,1144,540.8,1138.1z M704.2,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7s8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7C702.3,1148.9,704.2,1144,704.2,1138.1z M785.8,676.2V1281H214.2V676.2c0-9.4,1.5-18,4.5-25.8c3-7.9,6.1-13.6,9.3-17.2c3.2-3.6,5.4-5.4,6.7-5.4h530.8c1.3,0,3.5,1.8,6.7,5.4c3.2,3.6,6.3,9.4,9.3,17.2C784.3,658.2,785.8,666.8,785.8,676.2z M357.1,1362.7h285.8l-30.6,74.6c-3,3.8-6.6,6.2-10.8,7H399.2c-4.3-0.9-7.9-3.2-10.8-7L357.1,1362.7z M949.2,1342.2v-40.8c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-61.3V676.2c0-35.3-10-65.8-30-91.6c-20-25.7-44-38.6-72.1-38.6H234.6c-28.1,0-52.1,12.4-72.1,37.3c-20,24.9-30,55-30,90.3V1281H71.3c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v40.8c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h197.1l44.7,106.5c6.4,15.7,17.9,29.1,34.5,40.2c16.6,11.1,33.4,16.6,50.4,16.6h204.2c17,0,33.8-5.5,50.4-16.6c16.6-11.1,28.1-24.5,34.5-40.2l44.7-106.5h197.2c6,0,10.8-1.9,14.7-5.7C947.3,1353.1,949.2,1348.2,949.2,1342.2z"/></g></g>
-                  </svg>
-                </button>
-              </span>
-            </div>
-            <div class="field">
-              <label>Theme Scope</label>
-              <input type="text" class="static" name="plume-custom-theme-scope" value=":root" maxlength="50" data-default-value=":root">
-            </div>          
+    <div id="theme-editor">
+      <form action="/">
+        <div class="static-settings">
+          <div class="field">
+            <label style="color: #33b5e5">Custom Theme Name</label>
+            <span class="clear-theme-holder">
+              <input type="text" class="static" name="plume-custom-theme-name" value="Default" maxlength="30" data-default-value="Default" onblur="if (!this.value) this.value='Default'">
+              <button class="clear-theme-state reload-app" title="Reset theme properties to default">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                  <g><g transform="matrix(1 0 0 -1 0 1536)"><path d="M377.5,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7C375.6,1148.9,377.5,1144,377.5,1138.1z M540.8,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7S540.8,1144,540.8,1138.1z M704.2,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7s8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7C702.3,1148.9,704.2,1144,704.2,1138.1z M785.8,676.2V1281H214.2V676.2c0-9.4,1.5-18,4.5-25.8c3-7.9,6.1-13.6,9.3-17.2c3.2-3.6,5.4-5.4,6.7-5.4h530.8c1.3,0,3.5,1.8,6.7,5.4c3.2,3.6,6.3,9.4,9.3,17.2C784.3,658.2,785.8,666.8,785.8,676.2z M357.1,1362.7h285.8l-30.6,74.6c-3,3.8-6.6,6.2-10.8,7H399.2c-4.3-0.9-7.9-3.2-10.8-7L357.1,1362.7z M949.2,1342.2v-40.8c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-61.3V676.2c0-35.3-10-65.8-30-91.6c-20-25.7-44-38.6-72.1-38.6H234.6c-28.1,0-52.1,12.4-72.1,37.3c-20,24.9-30,55-30,90.3V1281H71.3c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v40.8c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h197.1l44.7,106.5c6.4,15.7,17.9,29.1,34.5,40.2c16.6,11.1,33.4,16.6,50.4,16.6h204.2c17,0,33.8-5.5,50.4-16.6c16.6-11.1,28.1-24.5,34.5-40.2l44.7-106.5h197.2c6,0,10.8-1.9,14.7-5.7C947.3,1353.1,949.2,1348.2,949.2,1342.2z"/></g></g>
+                </svg>
+              </button>
+            </span>
           </div>
-        </form>
-      </div>
-    <!-- </div> -->
+          <div class="field">
+            <label>Theme Scope</label>
+            <input type="text" class="static" name="plume-custom-theme-scope" value=":root" maxlength="50" data-default-value=":root" onblur="if (!this.value) this.value=':root'">
+          </div>          
+        </div>
+        <!-- !automatic generated content goes here -->
+      </form>
+    </div>
     
     <footer>
       <button class="preview-theme" onclick="themeSource('show')" title="Preview custom theme source code">
@@ -451,6 +466,7 @@ and another</pre>
     </g>
   </svg>
 </button>
+  <button id="toggle-source" title="Toggle examples source code"></button>
   <div id="themeSource" is="el-lightbox" data-boxed>
   <section>
     <header>
@@ -488,6 +504,8 @@ and another</pre>
   <script src="vendor/css-beautify.min.js"></script>
   <script src="vendor/codemirror.min.js"></script>
   <script src="vendor/codemirror-css.min.js"></script>
+  <script src="vendor/codemirror-xml.min.js"></script>
+  <script src="vendor/codemirror-mixed.min.js"></script>
   
   <!-- app -->
   <script src="script/main.min.js"></script>
