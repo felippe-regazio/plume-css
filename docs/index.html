@@ -17,38 +17,102 @@
   <div class="plume container">
     <div is="el-accordion" data-summary="Plume CSS" data-expand>
   <p>
-    Welcome to Plume CSS, a lightweight and highly themeble CSS Micro-Framwork. Plume is meant to be the lowest design layer on your application, helping you to grow solid and change easily when needed.
-    Plume was inspired by projects like Skeleton, Milligram, MiniCss and Material, encompassing practices found in all of them. Here are some Plume's most important characteristics:
+    Welcome to Plume CSS, a lightweight and highly themeble CSS Micro-Framwork. Plume is meant to be the lowest design layer on your application, helping you to grow solid and change easily.
+    Plume was inspired by projects like Skeleton, Milligram, MiniCss and Material, encompassing some practices found in all of them. You can use plume as a lib, framework or a boilerplate.
+    In this page you will find a Plume's interactive theme editor, download and documentation links, visual reference documentation, and a list of utilities and custom propeties. 
+    To start experimenting, on the left panel, try to change the "App Surface Color" to #000 and the "App Font Color" to #fff and you will have a dark theme.
+    Here are some Plume's most important characteristics:
+  <p></p>
     
-    # ridiculously small
+    <dl>
+      <dt>📦 &nbsp; ridiculously small</dt>
+        <dd>
+          ~ 5.5 kb gzipped, or 25 kb
+        </dd>
+  
+      <dt>🔌 &nbsp; plug and play</dt>
+        <dd>
+          load the lib, load the theme if you want, you're ready to go
+        </dd>
+  
+      <dt>🖌 &nbsp; highly themeble</dt>
+        <dd>
+          plume is minimal and easy to modify and extend, also it has 100+ css custom props to customize, and a theme constructor app.
+          if you grow from plume and using and extending its custom props, you also grows themeble
+        </dd>
+  
+      <dt>∈ &nbsp; completely scoped</dt>
+        <dd>
+          styles are applied under the class "plume" and custom properties are prefixed. 
+          so you can add plume on an existent project, on a container, or on your entire app by adding the "plume" class on the body.
+        </dd>
+  
+      <dt>💎 &nbsp; decoupled themes</dt>
+        <dd>
+          themes are loaded as separated modules. they are simply an scoped collection of css custom props in a file. you can scope them and have multiple themes for the same application.
+        </dd>
+  
+      <dt>⟷ &nbsp; fluid typography</dt>
+        <dd>
+          typography is based on Material guidelines, and scales with the viewport width
+        </dd>
+  
+      <dt>⛔ &nbsp; no javascript</dt>
+        <dd>
+          plume is completly javascript free. is just pure and simple css. you can test it by disabling javascript and reloading this page. the theme editor wont load, but plume styles will be intact.
+        </dd>
+  
+      <dt>📐 &nbsp; no grid system</dt>
+        <dd>
+          css has evolved well enough to allow easy and powerfull layout definitions without libs. you can use flex or grid, for example. 
+          if you still want to use a grid system, there are a plenty of thema avaible as bootstrap grid system, flexbox grid etc. 
+          you can download them and use on your project. in face of that, would be a wast of size to add a grid system on plume.
+        </dd>
+  
+      <dt>🎯 &nbsp; no bunch of classes</dt>
+        <dd>
+          styles are applyied on pure elements, with no classes. so plume is also a design preset for your application. 
+          there are some utilitiles, but they are not mandatory. 
+          so, you dont need to memorize a lot of classess and properties to style your application.
+          since you loaded plume (and some theme, if you want) you just code and all will be already styled.
+          that doesnt harm the root layor of your application cause plume is scoped.
+        </dd>
+  
+      <dt>🔨 &nbsp; easily extensible</dt>
+        <dd>
+          with a lot of css custom properties, and just a few classes, its really easy to extend plume. 
+          if you also use plume's custom properties to grow your application, you grow naturally themeable.
+        </dd>
 
-    # plug and play
+      <dt>💡 &nbsp; lib, framework or boilerplate</dt>
+        <dd>
+          you can use plume as a lib, by adding it on your application as a start point. as a framework, by growing your application from plume
+          using its custom properties and custom themes, or as a boilerplate, by cloning the entrire project and growing your application from sources.
+          the last mode is particurlaly useful cause you already have a robust architecture and this auto-documenting theme editor.
+        </dd>
 
-    # highly themeble
+      <dt>🚧 &nbsp; critical css for free</dt>
+        <dd>
+          because plume apply styles on pure elements and is on the design bottom layer on your application, since you load plume before any style,
+          it will act like critical css.
+        </dd>
 
-    (if you grow from plume and using and extending its custom props, you also grows themeble)
+      <dt>♿ &nbsp; accessible</dt>
+        <dd>
+          you can easily create theme togglers to turn your application fully accessible in terms of design, like colors, sizes and fontfaces. we also kept the outline in an elegant manner, so its easy to navigate using the keyboard
+        </dd>
+  
+      <dt>✪ &nbsp; unopinionated architecture</dt>
+        <dd>
+          there is no html imposition, just pure and simple elements style. you decide your html archtecture.
+          there are just a few features that depends on specific structures.
+        </dd>
+    </dl>
 
-    # completely scoped    
-
-    # decoupled themes
-
-    # fluid typography
-
-    # no javascript
-
-    # no grid system
-
-    # no classes
-
-    (added on pure alements, so you can extend and modify more easily addding your classes)
-
-    # easily extensible
-
-    # critical css for free
-
-    # unopinionated architecture
-
-    (there is no html imposition, the elements are styled in its pure state, you decide your html archtecture)
+    <div class="actions">
+      <button>DOCMENTATION</button>
+      <button class="btn-primary">DOWNLOAD PLUME</button>
+    </div>
 
   </p>
 
@@ -101,7 +165,7 @@
   
   <p><a href="/">This is a link</a> followed by <a href="/">another link</a></p>
 </div>
-    <div is="el-accordion" data-summary="Buttons" data-expand data-toggle-source>
+    <div is="el-accordion" data-summary="Buttons Family" data-expand data-toggle-source>
   <label>Pure element</label>
   <button>No Attr</button>
   
@@ -128,7 +192,25 @@
   <button disabled>Button</button>
   <button class='btn-primary' disabled>Button</button>    
   <button class='btn-secondary' disabled>Button</button>
-  <button class='btn-white' disabled>Button</button>
+</div>
+
+<div is="el-accordion" data-summary="Buttons Types" data-expand data-toggle-source>
+  
+  <label>.btn-text</label>
+  <button class="btn-text btn-primary">Button Text</button>
+  <button class="btn-text text-secondary">Button Text</button>
+  <button class="btn-text text-success">Button Text</button>  
+
+  <label>.btn-round</label>
+  <button class="btn-round">A</button>
+  <button class="btn-round btn-primary">A</button>
+  <button class="btn-round btn-secondary">B</button>
+  <button class="btn-round btn-gradient">C</button>
+
+  <p>
+    ¹ When use the <code>btn-text</code> button type, you can use the text color utilities to change the color. <br/>
+    ² For rounded buttons, you can use the <code>btn-round</code> modifier with any button from buttons family
+  </p>
 </div>
     <div is="el-accordion" data-summary="Form Controls" data-expand data-toggle-source>
   <form action="/">
@@ -251,18 +333,10 @@
       </div> 
       
       <div class="field">
-        <label for="input-file">Input file</label>
-        <span class="input-file btn-primary">
-          Upload File
-          <input type="file" placeholder="Input placeholder" name="input-file">
-        </span>
-      </div>
-      
-      <div class="field">
         <label for="input-range">Input range</label>
         <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-subs>
-      </div>
-      
+      </div> 
+
       <div class="field">
         <label for="input-meter">Meter</label>
         <meter value="55.93" min="0" max="120.47" title="GB"></meter>
@@ -279,7 +353,15 @@
       <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
     </div>
     
-    <div class="field" data-info="These input types inherit from buttons, and follow the same rules.">
+    <div class="field" data-info="Wrap your input type file in a span.input-file.btn-primary">
+      <label for="input-file">Input file</label>
+      <span class="input-file btn-primary">
+        Upload File
+        <input type="file" placeholder="Input placeholder" name="input-file">
+      </span>
+    </div>
+    
+    <div class="field" data-info="These input types inherit from buttons, and follow the same rules.">      
       <label for="input-button">Input button</label>
       <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
       <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">
@@ -391,7 +473,7 @@ and another</pre>
     This is an inline code <code>function () {}</code> used in a paragraph.
   </p>
 </div>
-    <div is="el-accordion" data-summary="Custom Properties" class="custom-props-list-accordion" data-expand>
+    <div is="el-accordion" data-summary="Theming" class="custom-props-list-accordion" data-expand>
   <p>Pipipi Popopo</p>
   <button onclick="customPropsList('show')">Custom Properties List</button>
 </div>

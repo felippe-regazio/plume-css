@@ -1,11 +1,13 @@
 @include cssvars((
 	app-surface-color: transparent,
 	app-font-color: #333,
+	app-selection-color: cssvar(primary-color),
+	app-selection-text-color: #ffffff,
 	app-base-font-size: 18px,
 	app-line-height: 1.6,
 	app-font-weight: 400,
+	app-container-padding: 14px,
 	app-container-max-width: 980px,
-	app-container-padding: 14px,	
 ));
 
 @include superclass () {
@@ -20,6 +22,12 @@
 
 	*, *::before, *::after {
 		box-sizing: inherit;
+		outline-color: cssvar(primary-color);
+	}
+
+	::selection {
+		color: cssvar(app-selection-text-color);
+		background: cssvar(app-selection-color);
 	}
 
 	.container, &.container, &-container {

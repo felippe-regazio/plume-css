@@ -60,15 +60,15 @@
   }
 
   .text-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .text-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .text-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .bg-light {
@@ -95,7 +95,7 @@
 
   @each $state in (success, error, warning, info) {
     .text-#{$state} {
-      color: cssvar(#{$state}-color) !important;
+      color: cssvar(color-#{$state}) !important;
     }
 
     .bg-#{$state} {
@@ -104,12 +104,12 @@
 
     .bc-#{$state} {
       border-color: cssvar(#{$state}-color) !important;
-    }    
+    }  
   }
 
   @media print {
     .dont-print {
-      display: none;
+      display: none !important;
     }
   }  
 }

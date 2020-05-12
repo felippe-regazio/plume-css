@@ -97,7 +97,6 @@
 		background-color: cssvar(input-background-color);
 		&:focus {
 			outline: 0;
-			transition: 100ms;
 			@include cssvar(input-border-color, cssvar(primary-color));
 		}
 	}
@@ -129,16 +128,22 @@
 		width: cssvar(radio-and-checkbox-size);
 		height: cssvar(radio-and-checkbox-size);
 		border: solid cssvar(radio-and-checkbox-border-width) cssvar(input-border-color);
+		&::before {
+			top: 2px;
+			left: 2px;
+			content: "";
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			background-color: cssvar(primary-color);
+			width: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
+			height: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
+		}
 		&:checked {
 			border-color: cssvar(primary-color);
 			&::before {
-				top: 2px;
-				left: 2px;
-				content: "";
-				position: absolute;
-				background-color: cssvar(primary-color);
-				width: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
-				height: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}
@@ -159,6 +164,8 @@
 			top: 2px;
 			left: 2px;
 			content: "";
+			opacity: 1;
+			visibility: visible;
 			position: absolute;
 			border-radius: 100%;
 			width: calc(#{cssvar(toggle-size)} - 8px);
@@ -170,10 +177,7 @@
 			&::before {
 				content: "";
 				top: 2px;
-				right: 2px;
-				left: unset;
-				height: 20px;
-				width: 20px;
+				left: calc(#{cssvar(toggle-size)} + 2px);
 				background-color: cssvar(primary-color);
 			}
 		}
@@ -193,13 +197,17 @@
 		@each $vendor in (-ms-track, -moz-range-track, -webkit-slider-runnable-track) {
 			&::#{$vendor} {
 				cursor: default;
-				height: 3px;
+				height: 2px;
 				width: 100%;
-				opacity: .5;
 				background: transparent;
-				transition: all 0.1s ease;
 				background-color: cssvar(input-border-color);
 			}
+			&:focus {
+				outline: 0;
+				&::#{$vendor} {
+					background-color: cssvar(primary-color);
+				}
+			}			
 		}
 		@each $vendor in (-ms-thumb, -moz-range-thumb, -webkit-slider-thumb) {
 			&::#{$vendor} {
@@ -207,7 +215,7 @@
 				height: 24px;
 				cursor: default;
 				appearance: none;
-				margin-top: -10px;
+				margin-top: -12px;
 				border-radius: 100%;
 				border: 2px solid #eceff1;
 				background: cssvar(primary-color);
@@ -219,12 +227,12 @@
 		&::-ms-fill-upper {
 			appearance: none;
 		}
-		&::after,
-		&::before {
-			font-weight: 600;
-			color: cssvar(app-font-color);
-		}
 		&[data-subs] {
+			&::after,
+			&::before {
+				font-weight: 600;
+				color: cssvar(app-font-color);
+			}
 			&::before {
 				content: attr(min);
 				margin-right: 6px;
@@ -238,18 +246,6 @@
 				&::before {
 					color: cssvar(primary-color);
 				}
-			}
-		}
-		&:focus {
-			outline: 0;
-			&::-ms-track {
-				background: cssvar(primary-color);
-			}
-			&::-moz-range-track {
-				background: cssvar(primary-color);
-			}
-			&::-webkit-slider-runnable-track {
-				background: cssvar(primary-color);
 			}
 		}
 	}
@@ -274,8 +270,11 @@
 	
 	.input-file {
 		cursor: pointer;
-		margin-bottom: 0;
 		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: cssvar(button-margin-bottom);
 		input[type="file"] {
 			top: 0;
 			left: 0;

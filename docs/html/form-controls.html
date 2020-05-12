@@ -119,18 +119,10 @@
       </div> 
       
       <div class="field">
-        <label for="input-file">Input file</label>
-        <span class="input-file btn-primary">
-          Upload File
-          <input type="file" placeholder="Input placeholder" name="input-file">
-        </span>
-      </div>
-      
-      <div class="field">
         <label for="input-range">Input range</label>
         <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-subs>
-      </div>
-      
+      </div> 
+
       <div class="field">
         <label for="input-meter">Meter</label>
         <meter value="55.93" min="0" max="120.47" title="GB"></meter>
@@ -147,7 +139,15 @@
       <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
     </div>
     
-    <div class="field" data-info="These input types inherit from buttons, and follow the same rules.">
+    <div class="field" data-info="Wrap your input type file in a span.input-file.btn-primary">
+      <label for="input-file">Input file</label>
+      <span class="input-file btn-primary">
+        Upload File
+        <input type="file" placeholder="Input placeholder" name="input-file">
+      </span>
+    </div>
+    
+    <div class="field" data-info="These input types inherit from buttons, and follow the same rules.">      
       <label for="input-button">Input button</label>
       <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
       <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">

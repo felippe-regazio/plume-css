@@ -14,6 +14,8 @@
 	button-letter-spacing: 0.30px,
 	button-justify-content: center,
 	button-text-transform: uppercase,
+	button-text-padding: 0 2ch,
+	button-round-size: 52px,
 ));
 
 @include superclass () {
@@ -45,14 +47,12 @@
 		letter-spacing: cssvar(button-letter-spacing);
 		text-transform: cssvar(button-text-transform);
 		justify-content: cssvar(button-justify-content);
-		&.focus, &:focus,
-		&.hover, &:hover {
-			outline: 0;
-			filter: saturate(cssvar(button-hover-darken));
-		}
 		&.btn-block {
-			display: block;
+			display: flex;
 			width: 100%;
+		}
+		&.btn-br {
+			display: flex;
 		}
 		&.btn-primary {
 			color: cssvar(button-primary-text-color);
@@ -94,7 +94,7 @@
 			border-color: rgba(200,200,200,.3);
 			background-color: rgba(200,200,200,.3);
 			&:hover {
-				filter: brightness(0.9);
+				background-color: rgba(200,200,200,.2)
 			}
 		}
 		&.btn-success {
@@ -112,12 +112,25 @@
 			background-color: cssvar(color-warning);
 			border-color: cssvar(color-warning);		
 		}
-		&.btn-big {
-			@include cssvar(button-height, 56px);
+		&.btn-round {
+			padding: 0;
+			min-width: unset;
+			min-height: unset;
+			align-items: center;
+			border-radius: 100%;
+			display: inline-flex;
+			justify-content: center;
+			width: cssvar(button-round-size);
+			height: cssvar(button-round-size);;
 		}
-		&.btn-small {
-			@include cssvar(button-height, 32px);
-			@include cssvar(button-padding, 0 16px);
+		&.btn-text {
+			border: none;
+			background: none;
+			box-shadow: none;
+			min-width: unset;
+			min-height: unset;
+			color: cssvar(primary-color);
+			padding: cssvar(button-text-padding);
 		}
 	}
 }

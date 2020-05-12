@@ -1,0 +1,87 @@
+@include superclass() {
+  &:not(.plume-no-effects) {
+
+    button, [class*="btn-"] {
+      overflow: hidden;
+      &.focus, &:focus,
+      &.hover, &:hover {
+        /*for a strange reason, have any ransform
+        in the focus/hover states allow us to use
+        :not(:active) as a click state in a way 
+        that the animation goes till the end*/
+        opacity: .8;
+        transform: translateX(0);
+      }      
+      &::before {
+        content: '';
+        width: 0px;
+        height: 0px;
+        bottom: 0%;
+        left: 70%;
+        z-index: 0;
+        border-radius: 50%;
+        position: absolute;
+        background-color: rgba(120,120,120,.2);
+      }
+      &.btn-white::before {
+        background-color: rgba(255,255,255, .3);
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+      &:not(:active)::before {
+        animation: explode 0.35s ease-in-out;
+      }
+      @keyframes explode {
+        from {
+          width: 0px;
+          height: 0px;
+          opacity: 1;
+        }
+        to {
+          opacity: .65;
+          width: 120px;
+          height: 120px;
+          transform: translate(-60px, 60px);
+        }
+      }
+    }
+
+    button, [class*="btn-"],
+    input, textarea, select {
+      &:focus {
+        transition: .1s;
+      }
+    }
+    
+    input[type="radio"], input[type="checkbox"] {
+      &::before, &::after {
+        transition: .1s;
+      }
+    }
+
+    input[type="reset"],
+    input[type="button"],
+    input[type="submit"] {
+      &:active {
+        transform: translateY(2px);
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    @each $state in (success, error, warning, info) {
+      [data-#{$state}]:not([data-#{$state}=""]) {
+        &::after {
+          animation: slide-down .3s ease-out;
+        }
+      }
+    }
+
+    @keyframes slide-down {
+      0% { opacity: 0; transform: translateY(-100%); }   
+      100% { opacity: 1; transform: translateY(0); }
+    }    
+  }
+}
