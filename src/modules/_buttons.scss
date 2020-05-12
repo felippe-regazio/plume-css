@@ -26,6 +26,7 @@
 	input[type="submit"],
 	input[type="reset"] {
 		user-select: none;
+		position: relative;
 		align-items: center;
 		white-space: nowrap;
 		display: inline-flex;

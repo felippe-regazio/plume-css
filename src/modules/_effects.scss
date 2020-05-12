@@ -29,7 +29,7 @@
       &:active {
         transform: translateY(2px);
       }
-      &:not(:active)::before {
+      &:focus:not(:active)::before {
         animation: explode 0.35s ease-in-out;
       }
       @keyframes explode {
