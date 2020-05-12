@@ -2,7 +2,7 @@
 	lists-font-size: 1em,
 	ul-list-style: circle inside,
 	ol-list-style: decimal inside,
-	li-margin-bottom: 1em,
+	li-margin-bottom: 24px,
 	dl-margin-bottom: 24px,
 	dl-hover-color: rgba(100,100,100,.03),
 ));
@@ -53,6 +53,7 @@
 			border: none;
 			position: relative;
 			padding-left: 56px;
+			font-family: cssvar(font-family-secondary);
 			&::before {
 				content: "";
 				top: 50%;
