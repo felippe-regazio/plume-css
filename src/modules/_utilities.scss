@@ -11,11 +11,11 @@
   }
 
   .padded {
-    padding: 16px;
+    padding: 16px !important;
   }
 
   .stacked {
-    margin-bottom: 32px;
+    margin-bottom: 32px !important;
   }
 
   .is-hidden, [hidden] {
@@ -36,8 +36,10 @@
   }
 
   .no-border {
-    border: none;
+    border: none !important;
   }
+
+  // COLORS
 
   .text-black {
     color: #000000 !important;
@@ -58,6 +60,24 @@
   .text-app {
     color: cssvar(app-font-color) !important;
   }
+
+  .bg-black {
+    background-color: #000000 !important;
+  }
+
+  .bg-white {
+    background-color: #ffffff !important;
+  }
+
+  .bg-dark {
+    background-color: #444444 !important;
+  }
+
+  .bg-light {
+    background-color: rgba(200,200,200,.1) !important;
+  }  
+
+  // TEXT
 
   .text-upper {
     text-transform: uppercase !important;
@@ -83,21 +103,7 @@
     text-align: right !important;
   }
 
-  .bg-black {
-    background-color: #000000 !important;
-  }
-
-  .bg-white {
-    background-color: #ffffff !important;
-  }
-
-  .bg-dark {
-    background-color: #444444 !important;
-  }
-
-  .bg-light {
-    background-color: rgba(200,200,200,.1) !important;
-  }  
+  // PRIMARY / SECONDARY
 
   @each $level in (primary, secondary) {
     .font-#{$level} {
@@ -116,6 +122,8 @@
       border-color: cssvar(#{$level}-color) !important;
     }    
   }
+
+  // STATE CLASSES
 
   @each $state in (success, error, warning, info) {
     .text-#{$state} {

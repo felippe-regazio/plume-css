@@ -6,25 +6,41 @@ html {
 
 body {
   margin: 0;
+  overflow: auto !important;
+  &.theme-editor-visible > .plume.container {
+    transform: translateX(200px);
+  }
 }
 
 body > .plume.container {
-  
-  transform: translateX(200px);
-
+  padding-top: 60px;
+  .logo {
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 56px 0;
+    svg {
+      fill: var(--pm-app-font-color);
+    }
+  }
   .half {
     display: grid;
     grid-column-gap: 26px;
     grid-template-columns: 1fr 1fr;
   }
-
   .doc-title {
     padding: 40px 0;
     h2 {
       margin: 0;
     }
   }
-  
+  .el-ac-content {
+    background: transparent;
+  }
+  .el-ac-summary {
+    border: none;
+    padding: 16px 0;
+    color: var(--pm-primary-color);
+  }  
   @media (max-width: 768px) {
     .half {
       display: block;
@@ -37,29 +53,37 @@ body > .plume.container {
     justify-content: center;
     button {
       margin: 0 8px;
+      min-width: 232px;
     }
-  }  
+    @media screen and (max-width: 980px) {
+      display: block;
+      text-align: center;
+      button {
+        margin-bottom: 16px;
+      }
+    }
+  } 
+  footer {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
+    button {
+      min-width: 232px;
+      margin: 0 !important;
+    }
+    @media screen and (max-width: 768px) {
+      display: block !important;
+      text-align: center;
+      button {
+        margin: 16px 0 !important;
+      }
+    }
+  } 
 }
 
 @media screen and (max-width: 1500px) {
-  body .plume.container {
+  body.theme-editor-visible > .plume.container {
     transform: none;
-  }
-}
-
-footer {
-  display: flex !important;
-  align-items: center;
-  justify-content: space-between;
-  padding: 32px 0;
-  button {
-    margin: 0 !important;
-  }
-  @media screen and (max-width: 768px) {
-    display: block !important;
-    text-align: center;
-    button {
-      margin: 16px 0 !important;
-    }
   }
 }

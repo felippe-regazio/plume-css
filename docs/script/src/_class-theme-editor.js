@@ -26,7 +26,7 @@ class ThemeEditor {
     this._addThemePreviewAction('.preview-theme');
     this._addDownloadThemeAction('.download-theme');
     this._addCssCustomPropsIndex('#proplist');
-    this._addReloadAppBtnEvents('.reload-app');
+    this._addResetAppBtnEvents('.reload-app');
     this._addSearchPropBtnEvents('#search-custom-props');
   }
 
@@ -224,7 +224,7 @@ class ThemeEditor {
    * The action will accour when clicked on the given target
    * @return void
    */
-  _addReloadAppBtnEvents (target) {
+  _addResetAppBtnEvents (target) {
     document.querySelectorAll(target).forEach(e => {
       e.addEventListener('click', e => {
         e.preventDefault();

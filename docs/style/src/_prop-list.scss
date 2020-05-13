@@ -1,6 +1,13 @@
 #proplist {
+  columns: 2;
+  @media screen and (max-width: 760px) {
+    columns: unset;
+  }
   > div > div {
-    counter-increment: plume-custom-props;  
+    counter-increment: plume-custom-props;
+    @media screen and (max-width: 1024) {
+      width: 100%;
+    }
   }
   > div {
     position: relative;

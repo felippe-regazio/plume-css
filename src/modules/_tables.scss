@@ -1,6 +1,6 @@
 @include cssvars((
 	table-text-align: left,
-	table-margin-bottom: 24px,
+	table-margin-bottom: 32px,
 	table-head-font-size: 1.1em,
 	table-head-font-weight: 600,
 	table-cell-font-size: 1em,
@@ -28,6 +28,15 @@
 		}
 		td {
 			font-size: cssvar(table-cell-font-size);
+		}
+		@media screen and (max-width: 980px) {
+			display: block;
+			overflow: auto;
+			&.nowrap {
+				th, td {
+					white-space: nowrap;
+				}
+			}
 		}
 	}
 }

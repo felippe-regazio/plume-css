@@ -1,4 +1,4 @@
-<div is="el-sidebar" id="themeEditorSidebar" class="theme-editor-holder" data-visible>
+<div is="el-sidebar" id="themeEditorSidebar" data-on:open="bodyClass" data-on:close="bodyClass" class="theme-editor-holder">
   <section>
     
     <header>
@@ -67,3 +67,11 @@
     </g>
   </svg>
 </button>
+
+<!-- body info -->
+
+<script>
+  function bodyClass (el) {
+    document.body.classList[el.hasAttribute('data-visible') ? 'add' : 'remove']('theme-editor-visible');
+  }
+</script>

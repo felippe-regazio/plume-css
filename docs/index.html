@@ -20,13 +20,34 @@
 </div>
 
 <div class="bg-light padded">
+
+  <div class="logo">
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 466 466" style="enable-background:new 0 0 466 466;" xml:space="preserve">
+    <path d="M263.59,347.349c34.743-33.373,53.882-51.755,53.882-89.82V84.472C317.472,37.894,279.578,0,233,0
+      c-46.574,0-84.465,37.888-84.471,84.461c0,0.005,0,0.011,0,0.016v55.656c0,0.003,0,0.007,0,0.01v117.385
+      c0,38.065,19.139,56.448,53.882,89.82c6.769,6.502,14.372,13.807,22.59,21.976v13.387c-20.484-20.415-41.119-40.864-41.372-41.115
+      c-3.139-3.109-8.203-3.086-11.313,0.052s-3.087,8.204,0.052,11.313c0.3,0.297,29.269,29.005,52.634,52.353v13.396
+      c-20.484-20.415-41.119-40.864-41.372-41.115c-3.139-3.109-8.203-3.087-11.313,0.052c-3.11,3.138-3.087,8.204,0.052,11.313
+      c0.3,0.297,29.269,29.005,52.634,52.353V458c0,4.418,3.582,8,8,8s8-3.582,8-8v-16.685c23.363-23.346,52.331-52.053,52.631-52.35
+      c3.139-3.11,3.162-8.175,0.052-11.313c-3.109-3.139-8.175-3.161-11.313-0.052c-0.253,0.25-20.886,20.698-41.369,41.112v-13.397
+      c23.363-23.346,52.331-52.053,52.631-52.35c3.139-3.11,3.162-8.175,0.052-11.313c-3.109-3.139-8.175-3.161-11.313-0.052
+      c-0.253,0.25-20.886,20.698-41.369,41.112v-13.387C249.218,361.156,256.82,353.85,263.59,347.349z M301.472,84.472v173.057
+      c0,31.248-15.345,45.987-48.966,78.281c-3.61,3.468-7.455,7.162-11.506,11.094V216.614c0-0.003,0-0.007,0-0.01v-55.656
+      c0-0.003,0-0.007,0-0.01V16.483C274.998,20.459,301.472,49.424,301.472,84.472z M225,16.483v125.146l-14.579-14.579
+      c-3.125-3.124-8.189-3.124-11.314,0c-3.124,3.124-3.124,8.189,0,11.313L225,164.257v33.038l-60.472-60.471v-33.039l14.581,14.581
+      c1.563,1.563,3.609,2.343,5.657,2.343s4.095-0.781,5.657-2.343c3.124-3.124,3.124-8.189,0-11.313L164.61,81.24
+      C166.179,47.657,192.053,20.336,225,16.483z M213.494,335.809c-33.621-32.294-48.966-47.033-48.966-78.281v-98.077L225,219.923
+      v126.98C220.949,342.971,217.104,339.277,213.494,335.809z"/>
+    </svg>
+  </div>
+
   <p>
-    Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framwork. 
-    Plume is meant to be the lowest design layer on your application, helping you to grow solid and change easily.
-    Dont wait a huge all-ready-made package, but a complete, friendly, solid and highly customizable design preset to start to code and grow your application with no hassle. 
-    Plume was inspired by projects like Skeleton, Milligram, MiniCss and Material, encompassing some practices found in all of them. You can use plume as a lib, a framework or a boilerplate.
-    In this page you will find an interactive theme editor, documentation links and overview, visual reference, and a list of utilities and custom propeties.
-    Here are some Plume's most important characteristics:
+    Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framwork. Plume is meant to be the lowest design layer on your application, 
+    helping you to grow solid and change easily. You should use Plume if you dont want to bring all the larger frameworks features to your application, 
+    or if you want to code everything by yourself and need a solid and highly customizable start point. Plume was inspired by projects like Skeleton, Milligram, 
+    MiniCss and Material, encompassing some practices found in all of them. In this page you will find an interactive Theme Editor, features overview, 
+    visual reference and a list of utilities and custom properties. Here are some Plume's important characteristics:
   <p></p>
     
     <dl>
@@ -74,8 +95,7 @@
   
       <dt>🎯 &nbsp; No bunch of classes</dt>
         <dd>
-          Styles are applyied on pure elements, with just a few utility classes to create variations or helpers. 
-          This let you free to create your classes, extend and grow your application as you want.
+          Despite a large set of utilities, Plume applies the style on bare elements, classes and custom attributes are used to alter the default style and behavior.
         </dd>
 
       <dt>💡 &nbsp; Lib, framework or boilerplate</dt>
@@ -98,7 +118,7 @@
     </dl>
 
     <div class="actions">
-      <button>DOCMENTATION</button>
+      <button>FULL DOCS</button>
       <button class="btn-primary">DOWNLOAD PLUME</button>
     </div>
 
@@ -502,196 +522,339 @@ and another</pre>
 </div>
 
 <div class="bg-light padded">
-  <table>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Description</th>
-      </tr>
-    </thead>   
-    <tbody>
-      <tr>
-        <td>container</td>
-        <td>Centered padded application container</td>
-      </tr>
-      <tr>
-        <td>padded</td>
-        <td>Applies padding: 16px</td>
-      </tr>
-      <tr>
-        <td>stacked</td>
-        <td>Applies margin-bottom: 32px</td>
-      </tr>            
-      <tr>
-        <td>disabled</td>
-        <td>Applies disabled style on element. Alias for [disabled], but with no semantic value</td>
-      </tr>
-      <tr>
-        <td>is-hidden</td>
-        <td>Applies display:none !important style on element. Alias for [hidden], but with no semantic value</td>
-      </tr>
-      <tr>
-        <td>is-invisible</td>
-        <td>Applies visibility: hidden !important; opacity: 0 !important;</td>
-      </tr>        
-      <tr>
-        <td>surface</td>
-        <td>Applies the application surface color (--pm-app-surface-color) as background-color</td>
-      </tr> 
-      <tr>
-        <td>no-padding</td>
-        <td>Applies padding: 0px !important</td>
-      </tr>
-      <tr>
-        <td>no-margin</td>
-        <td>Applies margin: 0px !important</td>
-      </tr> 
-      <tr>
-        <td>no-border</td>
-        <td>Applies border: none !important</td>
-      </tr> 
-      <tr>
-        <td>text-black</td>
-        <td>Sets color to #000000 by default</td>
-      </tr>
-      <tr>
-        <td>text-white</td>
-        <td>Sets color to #ffffff by default</td>
-      </tr>
-      <tr>
-        <td>text-light</td>
-        <td>Sets color to #cccccc by default</td>
-      </tr>
-      <tr>
-        <td>text-dark</td>
-        <td>Sets color to #444444 by default</td>
-      </tr>        
-      <tr>
-        <td>text-app</td>
-        <td>Sets color to the application font color (--pm-app-font-color)</td>
-      </tr>
-      <tr>
-        <td>text-upper</td>
-        <td>Sets text transform to uppercase</td>
-      </tr>
-      <tr>
-        <td>text-lower</td>
-        <td>Sets text transform to lowercase</td>
-      </tr>
-      <tr>
-        <td>text-capitalize</td>
-        <td>Sets text transform to capitalize</td>
-      </tr>
-      <tr>
-        <td>text-center</td>
-        <td>Sets text align to center</td>
-      </tr>
-      <tr>
-        <td>text-left</td>
-        <td>Sets text align to left</td>
-      </tr>
-      <tr>
-        <td>text-right</td>
-        <td>Sets text align to right</td>
-      </tr> 
-      <tr>
-        <td>bg-black</td>
-        <td>Sets background-color to #000000</td>
-      </tr> 
-      <tr>
-        <td>bg-white</td>
-        <td>Sets background-color to #ffffff</td>
-      </tr>
-      <tr>
-        <td>bg-dark</td>
-        <td>Sets background-color to #444444</td>
-      </tr>
-      <tr>
-        <td>bg-light</td>
-        <td>Sets background-color to rgba(200,200,200,.1)</td>
-      </tr>
-      <tr>
-        <td>font-primary</td>
-        <td>Sets font-family to the application primary font (--pm-font-family-primary)</td>
-      </tr>
-      <tr>
-        <td>font-secondary</td>
-        <td>Sets font-family to the application secondary font (--pm-font-family-secondary)</td>
-      </tr>
-      <tr>
-        <td>text-primary</td>
-        <td>Sets color to the application primary-color (--pm-primary-color)</td>
-      </tr>
-      <tr>
-        <td>text-secondary</td>
-        <td>Sets color to the application secondary-color (--pm-secondary-color)</td>
-      </tr> 
-      <tr>
-        <td>bg-primary</td>
-        <td>Sets background-color to the application primary-color (--pm-primary-color)</td>
-      </tr>
-      <tr>
-        <td>bg-secondary</td>
-        <td>Sets background-color to the application secondary-color (--pm-secondary-color)</td>
-      </tr>
-      <tr>
-        <td>bc-primary</td>
-        <td>Sets border-color to the application primary-color (--pm-primary-color)</td>
-      </tr>
-      <tr>
-        <td>bc-secondary</td>
-        <td>Sets border-color to the application secondary-color (--pm-secondary-color)</td>
-      </tr>  
-      <tr>
-        <td>text-success</td>
-        <td>Sets text-color to the application success-color (--pm-color-success)</td>
-      </tr> 
-      <tr>
-        <td>text-error</td>
-        <td>Sets text-color to the application error-color (--pm-color-error)</td>
-      </tr> 
-      <tr>
-        <td>text-warning</td>
-        <td>Sets text-color to the application warning-color (--pm-color-warning)</td>
-      </tr> 
-      <tr>
-        <td>text-info</td>
-        <td>Sets text-color to the application info-color (--pm-color-info)</td>
-      </tr>  
-      <tr>
-        <td>bg-success</td>
-        <td>Sets background-color to the application success-color (--pm-color-success)</td>
-      </tr> 
-      <tr>
-        <td>bg-error</td>
-        <td>Sets background-color to the application error-color (--pm-color-error)</td>
-      </tr> 
-      <tr>
-        <td>bg-warning</td>
-        <td>Sets background-color to the application warning-color (--pm-color-warning)</td>
-      </tr> 
-      <tr>
-        <td>bg-info</td>
-        <td>Sets background-color to the application info-color (--pm-color-info)</td>
-      </tr> 
-      <tr>
-        <td>bc-success</td>
-        <td>Sets border-color to the application success-color (--pm-color-success)</td>
-      </tr> 
-      <tr>
-        <td>bc-error</td>
-        <td>Sets border-color to the application error-color (--pm-color-error)</td>
-      </tr> 
-      <tr>
-        <td>bc-warning</td>
-        <td>Sets border-color to the application warning-color (--pm-color-warning)</td>
-      </tr> 
-      <tr>
-        <td>bc-info</td>
-        <td>Sets border-color to the application info-color (--pm-color-info)</td>
-      </tr>                                          
-    </tbody>      
-  </table>
+
+  <p>
+    Plume has a large set of utilities that helps you to alter elements style and behavior, and are pretty useful to avoid code repetition. 
+    You can check the complete list on the link below:
+  </p>
+
+  <div is="el-accordion" data-summary="Click to see the Complete Utilities List">
+    <table>
+      <thead>
+        <tr>
+          <th>Attr</th>
+          <th>Description</th>
+        </tr>
+      </thead>   
+      <tbody>
+        <tr>
+          <td>.container</td>
+          <td>Centered padded application container</td>
+        </tr>
+        <tr>
+          <td>.surface</td>
+          <td>Applies the application surface color (--pm-app-surface-color) as background-color</td>
+        </tr> 
+        <tr>
+          <td>.font-primary</td>
+          <td>Sets font-family to the application primary font (--pm-font-family-primary)</td>
+        </tr>
+        <tr>
+          <td>.font-secondary</td>
+          <td>Sets font-family to the application secondary font (--pm-font-family-secondary)</td>
+        </tr>            
+        <tr>
+          <td>.padded</td>
+          <td>Applies padding: 16px</td>
+        </tr>
+        <tr>
+          <td>.stacked</td>
+          <td>Applies margin-bottom: 32px</td>
+        </tr>            
+        <tr>
+          <td>.disabled</td>
+          <td>Applies disabled style on element. Alias for [disabled], but with no semantic value</td>
+        </tr>
+        <tr>
+          <td>.is-hidden</td>
+          <td>Applies display:none !important style on element. Alias for [hidden], but with no semantic value</td>
+        </tr>
+        <tr>
+          <td>.is-invisible</td>
+          <td>Applies visibility: hidden !important; opacity: 0 !important;</td>
+        </tr>
+        <tr>
+          <td>.no-padding</td>
+          <td>Applies padding: 0px !important</td>
+        </tr>
+        <tr>
+          <td>.no-margin</td>
+          <td>Applies margin: 0px !important</td>
+        </tr> 
+        <tr>
+          <td>.no-border</td>
+          <td>Applies border: none !important</td>
+        </tr>
+        <tr>
+          <td>.dont-print</td>
+          <td>Will hide the element from @print layout</td>
+        </tr>        
+      </tbody>
+    </table>
+  
+    <h4>Text</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <td>.text-black</td>
+          <td>Sets color to #000000 by default</td>
+        </tr>
+        <tr>
+          <td>.text-app</td>
+          <td>Sets color to the application font color (--pm-app-font-color)</td>
+        </tr>
+        <tr>
+          <td>.text-white</td>
+          <td>Sets color to #ffffff by default</td>
+        </tr>
+        <tr>
+          <td>.text-light</td>
+          <td>Sets color to #cccccc by default</td>
+        </tr>
+        <tr>
+          <td>.text-dark</td>
+          <td>Sets color to #444444 by default</td>
+        </tr>        
+        <tr>
+          <td>.text-upper</td>
+          <td>Sets text transform to uppercase</td>
+        </tr>
+        <tr>
+          <td>.text-lower</td>
+          <td>Sets text transform to lowercase</td>
+        </tr>
+        <tr>
+          <td>.text-capitalize</td>
+          <td>Sets text transform to capitalize</td>
+        </tr>
+        <tr>
+          <td>.text-center</td>
+          <td>Sets text align to center</td>
+        </tr>
+        <tr>
+          <td>.text-left</td>
+          <td>Sets text align to left</td>
+        </tr>
+        <tr>
+          <td>.text-right</td>
+          <td>Sets text align to right</td>
+        </tr>
+        <tr>
+          <td>.text-primary</td>
+          <td>Sets color to the application primary-color (--pm-primary-color)</td>
+        </tr>
+        <tr>
+          <td>.text-secondary</td>
+          <td>Sets color to the application secondary-color (--pm-secondary-color)</td>
+        </tr>
+        <tr>
+          <td>.text-success</td>
+          <td>Sets text-color to the application success-color (--pm-color-success)</td>
+        </tr> 
+        <tr>
+          <td>.text-error</td>
+          <td>Sets text-color to the application error-color (--pm-color-error)</td>
+        </tr> 
+        <tr>
+          <td>.text-warning</td>
+          <td>Sets text-color to the application warning-color (--pm-color-warning)</td>
+        </tr> 
+        <tr>
+          <td>.text-info</td>
+          <td>Sets text-color to the application info-color (--pm-color-info)</td>
+        </tr>
+        <tr>
+          <td>.link</td>
+          <td>Applies the link style to the text</td>
+        </tr>      
+      </tbody> 
+    </table>
+  
+    <h4>Background</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <td>.bg-black</td>
+          <td>Sets background-color to #000000</td>
+        </tr> 
+        <tr>
+          <td>.bg-white</td>
+          <td>Sets background-color to #ffffff</td>
+        </tr>
+        <tr>
+          <td>.bg-dark</td>
+          <td>Sets background-color to #444444</td>
+        </tr>
+        <tr>
+          <td>.bg-light</td>
+          <td>Sets background-color to rgba(200,200,200,.1)</td>
+        </tr>      
+        <tr>
+          <td>.bg-primary</td>
+          <td>Sets background-color to the application primary-color (--pm-primary-color)</td>
+        </tr>
+        <tr>
+          <td>.bg-secondary</td>
+          <td>Sets background-color to the application secondary-color (--pm-secondary-color)</td>
+        </tr>
+        <tr>
+          <td>.bg-success</td>
+          <td>Sets background-color to the application success-color (--pm-color-success)</td>
+        </tr> 
+        <tr>
+          <td>.bg-error</td>
+          <td>Sets background-color to the application error-color (--pm-color-error)</td>
+        </tr> 
+        <tr>
+          <td>.bg-warning</td>
+          <td>Sets background-color to the application warning-color (--pm-color-warning)</td>
+        </tr> 
+        <tr>
+          <td>.bg-info</td>
+          <td>Sets background-color to the application info-color (--pm-color-info)</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h4>Border</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <td>.bc-primary</td>
+          <td>Sets border-color to the application primary-color (--pm-primary-color)</td>
+        </tr>
+        <tr>
+          <td>.bc-secondary</td>
+          <td>Sets border-color to the application secondary-color (--pm-secondary-color)</td>
+        </tr>      
+        <tr>
+          <td>.bc-success</td>
+          <td>Sets border-color to the application success-color (--pm-color-success)</td>
+        </tr> 
+        <tr>
+          <td>.bc-error</td>
+          <td>Sets border-color to the application error-color (--pm-color-error)</td>
+        </tr> 
+        <tr>
+          <td>.bc-warning</td>
+          <td>Sets border-color to the application warning-color (--pm-color-warning)</td>
+        </tr> 
+        <tr>
+          <td>.bc-info</td>
+          <td>Sets border-color to the application info-color (--pm-color-info)</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h4>Buttons</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <td>.btn-block</td>
+          <td>Sets display block + width 100% on a button</td>
+        </tr>
+        <tr>
+          <td>.btn-primary</td>
+          <td>Applies the primary button style</td>
+        </tr>
+        <tr>
+          <td>.btn-secondary</td>
+          <td>Applies the secondary button style</td>
+        </tr>
+        <tr>
+          <td>.btn-gradient</td>
+          <td>Applies the gradient button style</td>
+        </tr>
+        <tr>
+          <td>.btn-gradient</td>
+          <td>Applies the gradient button style</td>
+        </tr>
+        <tr>
+          <td>.btn-black</td>
+          <td>Applies the black button style</td>
+        </tr>
+        <tr>
+          <td>.btn-white</td>
+          <td>Applies the white button style</td>
+        </tr>  
+        <tr>
+          <td>.btn-light</td>
+          <td>Applies the light button style</td>
+        </tr>
+        <tr>
+          <td>.btn-success</td>
+          <td>Applies the success button style (--pm-color-success)</td>
+        </tr>
+        <tr>
+          <td>.btn-error</td>
+          <td>Applies the error button style (--pm-color-error)</td>
+        </tr>
+        <tr>
+          <td>.btn-danger</td>
+          <td>Alias for btn-error</td>
+        </tr>
+        <tr>
+          <td>.btn-warning</td>
+          <td>Applies the warning button style (--pm-color-warning)</td>
+        </tr>   
+        <tr>
+          <td>.btn-round</td>
+          <td>Applies the round button style (--pm-color-round)</td>
+        </tr>  
+        <tr>
+          <td>.btn-text</td>
+          <td>Applies the text button style</td>
+        </tr>                         
+      </tbody>      
+    </table>
+  
+    <h4>Form Controls</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <td>.field</td>
+          <td>Blocked level wrapper for form controls (fieldset inherits this style)</td>
+        </tr>
+        <tr>
+          <td>.required</td>
+          <td>Must be applied on labels, .field or fieldsets to add a red asterisk (*) on text</td>
+        </tr>
+        <tr>
+          <td>.input-file</td>
+          <td>Use this class in a span element with an input type file inside for prettify.</td>
+        </tr>
+        <tr>
+          <td>[data-holder]</td>
+          <td>Must be applied on labels when wrapping elements</td>
+        </tr>
+        <tr>
+          <td>[data-subs]</td>
+          <td>Must be applied on range elements to show range max/min as legend</td>
+        </tr>
+        <tr>
+          <td>[data-success]</td>
+          <td>Show a success message on the given element bottom. Use it like data-success="message"</td>
+        </tr>
+        <tr>
+          <td>[data-error]</td>
+          <td>Show a error message on the given element bottom. Use it like data-error="message"</td>
+        </tr>
+        <tr>
+          <td>[data-warning]</td>
+          <td>Show a warning message on the given element bottom. Use it like data-warning="message"</td>
+        </tr>
+        <tr>
+          <td>[data-info]</td>
+          <td>Show a info message on the given element bottom. Use it like data-info="message"</td>
+        </tr>                  
+      </tbody>
+    </table>
+  </div>
 </div>
     <div class="doc-title">
   <h2>Theming</h2>
@@ -700,44 +863,41 @@ and another</pre>
 <div class="bg-light padded">
 
   <p>
-    Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme.
-    You can write your own theme from scratch by overriding classes on your code, or you can use the Theme Editor 
-    on the left side of this page.
-  </p>
-
-  <p>
-    When using the Theme Editor, you can just tune the inputs to get an imediate visual feedback. 
-    Your modifications will be saved on the URL, so you can share your theme, or save its URL as a documentation. 
-  </p>
-  
-  <p>
-    To start experimenting, try to change the <code>App Surface Color</code> to <code>#000000</code> and the <code>App Font Color</code> to  <code>#ffffff</code> 
-    and voilá, you have a dark theme. 
-  </p>
-    
-  <p>
-    You can download your theme by clicking on the "Download Theme" button or by copying its source code on the "Source Code" button. 
-    Now you just need to load the theme CSS file on your application 
-  </p>
-
-  <p>
-    If you prefer to code your theme, or just want to override some custom props, there is a complete reference below. 
-    For advanced usage, please read the github repository documentation.
+    Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme. 
+    To start experimenting, open the Theme Editor by clicking on the fixed top left button on this page. 
+    Now try to change the <code>App Surface Color</code> to <code>#000000</code> and  the <code>App Font Color</code> to  
+    <code>#ffffff</code> on the editor, and voilá: you have a Dark Theme. Click on the link below to know more about themes 
+    or check the complete Custom Properties List.
   </p>
 
   <div class="no-js-hidden">
-    <h4>Custom properties</h4>
-    <div id="proplist"><!-- filled by js --></div>
+    <div is="el-accordion" data-summary="Theming & Custom Properties List">
+
+      <p>
+        You can write your own theme from scratch by overriding classes on your code, or you can use the Theme Editor 
+        on the left side of this page. When using the Theme Editor, you can just tune the inputs to get an imediate visual feedback. 
+        Your modifications will be saved on the URL, so you can share your theme, or save its URL as a documentation. 
+        You can download your theme by clicking on the "Download Theme" button or by copying its source code on the "Source Code" button. 
+        Now you just need to load the theme CSS file on your application. If you prefer to code your theme, or just want to override some custom props, 
+        you will find a complete reference list below. For advanced usage, please read the github repository documentation.
+      </p>
+
+      <h4>Custom Properties</h4>
+
+      <div id="proplist"><!-- filled by js --></div>
+    </div>
   </div>
   
 </div>
     <footer>
-  <div>PlumeCSS by Felippe Regazio, under GPL License</div>
+  <div>
+    PlumeCSS by Felippe Regazio, under GPL License    
+  </div>
   <div><button class="btn-secondary">❤️ Donate</button></div>
 </footer>
   </div>
 
-  <div is="el-sidebar" id="themeEditorSidebar" class="theme-editor-holder" data-visible>
+  <div is="el-sidebar" id="themeEditorSidebar" data-on:open="bodyClass" data-on:close="bodyClass" class="theme-editor-holder">
   <section>
     
     <header>
@@ -806,6 +966,14 @@ and another</pre>
     </g>
   </svg>
 </button>
+
+<!-- body info -->
+
+<script>
+  function bodyClass (el) {
+    document.body.classList[el.hasAttribute('data-visible') ? 'add' : 'remove']('theme-editor-visible');
+  }
+</script>
   <button id="toggle-source" title="Toggle examples source code"></button>
   <div id="themeSource" is="el-lightbox" data-boxed>
   <section>

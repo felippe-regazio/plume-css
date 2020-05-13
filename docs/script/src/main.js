@@ -13,7 +13,7 @@
 
   new ToggleSource({
     trigger: '#toggle-source',
-    targets: '[data-toggle-source] .el-ac-content',
+    targets: '[data-toggle-source]',
   });  
 
 })();

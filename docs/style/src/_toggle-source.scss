@@ -10,7 +10,7 @@
 }
 
 #toggle-source {
-  outline: none;
+  cursor: pointer;
   appearance: none;
   border: none;
   padding: none;
@@ -20,18 +20,17 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  background-color: #444;
-  color: #fff;
-  border-top: solid 1px #fff;
-  border-left: solid 1px #fff;
+  background-color: #eeeeee;
+  color: #444;
   text-align: center;
   font-size: 16px;
+  font-weight: 800;
   text-transform: uppercase;
   position: fixed;
   bottom: 0;
   right: 0; 
-  opacity: .7;
-  font-size: 20px;
+  opacity: .8;
+  z-index: 100;
   &:hover {
     opacity: 1;
   }
@@ -39,6 +38,7 @@
     content: '</>'
   }
   &.active {
+    color: #fff;
     background-color: #4bb543;
   }
 }

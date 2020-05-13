@@ -1,4 +1,5 @@
 #theme-editor-toggler {
+  cursor: pointer;
   appearance: none;
   border: none;
   padding: none;
@@ -14,7 +15,7 @@
   font-size: 16px;
   text-transform: uppercase;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0; 
   opacity: .8;
   z-index: 100;
@@ -27,6 +28,7 @@
 
 [is="el-sidebar"].theme-editor-holder {
   max-width: 400px;
+  background: transparent;
   header,
   footer {
     padding: 0px;
@@ -70,9 +72,6 @@
       width: 56px;
       height: 56px;
       border-right: solid 1px #cccccc;
-      @media screen and (min-width: 1500px) {
-        display: none;
-      }
     }
     #search-custom-props {
       width: 100%;
@@ -171,13 +170,6 @@
       input {
         padding-right: 46px;
       }
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    opacity: 1 !important;
-    visibility: visible !important;
-    > section {
-      transform: translateX(0) !important;
     }
   }
 }
