@@ -9,12 +9,6 @@
   }
 }
 
-[is="el-accordion"]:not([data-expand]) {
-  .el-ac-code-preview {
-    display: none;
-  }
-}
-
 #toggle-source {
   outline: none;
   appearance: none;

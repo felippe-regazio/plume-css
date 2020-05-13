@@ -5,45 +5,10 @@
       overflow: hidden;
       &.focus, &:focus,
       &.hover, &:hover {
-        /*for a strange reason, have any ransform
-        in the focus/hover states allow us to use
-        :not(:active) as a click state in a way 
-        that the animation goes till the end*/
         opacity: .8;
-        transform: translateX(0);
       }      
-      &::before {
-        content: '';
-        width: 0px;
-        height: 0px;
-        bottom: 0%;
-        left: 70%;
-        z-index: 0;
-        border-radius: 50%;
-        position: absolute;
-        background-color: rgba(120,120,120,.2);
-      }
-      &.btn-white::before {
-        background-color: rgba(255,255,255, .3);
-      }
       &:active {
         transform: translateY(2px);
-      }
-      &:focus:not(:active)::before {
-        animation: explode 0.35s ease-in-out;
-      }
-      @keyframes explode {
-        from {
-          width: 0px;
-          height: 0px;
-          opacity: 1;
-        }
-        to {
-          opacity: .65;
-          width: 120px;
-          height: 120px;
-          transform: translate(-60px, 60px);
-        }
       }
     }
 

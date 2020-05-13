@@ -15,7 +15,11 @@
   <!-- imports from ./html/ -->
 
   <div class="plume container">
-    <div is="el-accordion" data-summary="Plume CSS" data-expand>
+    <div class="doc-title">
+  <h2>Plume CSS</h2>
+</div>
+
+<div class="bg-light padded">
   <p>
     Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framwork. 
     Plume is meant to be the lowest design layer on your application, helping you to grow solid and change easily.
@@ -109,7 +113,11 @@
     </div>
   </noscript>
 </div>
-    <div is="el-accordion" data-summary="Color Palette" data-expand>
+    <div class="doc-title">
+  <h2>Colors Palette</h2>
+</div>
+
+<div class="bg-light padded">
   <div class="color-palette color-palette--light">
     <span style="background-color: var(--pm-primary-color)"></span>
     <span style="background-color: var(--pm-primary-color)" data-darken></span>
@@ -123,7 +131,11 @@
     <span style="background-color: var(--pm-secondary-color)" data-darken></span>        
   </div>
 </div>  
-    <div is="el-accordion" data-summary="Typography" data-expand data-toggle-source>  
+    <div class="doc-title">
+  <h2>Typography</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>  
   <h1>This is a Heading</h1>
   <h2>This is a Heading</h2>
   <h3>This is a Heading</h3>
@@ -138,10 +150,10 @@
   <p>This is an example of <mark>mark</mark> tag in a paragraph, you can use them along text elements, and this is a kbd example <kbd>alt</kbd> + <kbd>f4</kbd> representing a keyboard combination</p>
   <p>Deserunt eiusmod ex proident ullamco magna occaecat proident pariatur. Est aute culpa nostrud ut <strong>deserunt esse occaecat nostrud esse nisi</strong> quis excepteur dolore. Occaecat quis sit cillum est ut ipsum elit deserunt. Esse cupidatat ex eu nostrud sit Lorem elit labore laboris dolor elit. </p>
 
-  <hgroup>
+  <div class="hgroup">
     <h3>Heading Group</h3>
-    <h4>This is an example of hgroup</h4>
-  </hgroup>
+    <h4>Example of grouped Headings</h4>
+  </div>
 
   <p>Nulla Lorem sint voluptate consequat sint. Proident laborum id irure Lorem dolore reprehenderit sint et Lorem ut sint laborum non. Culpa labore qui nisi enim laborum cillum elit minim nostrud aute. Eiusmod velit aute nulla do minim fugiat irure commodo excepteur. Amet culpa pariatur labore culpa ad et reprehenderit tempor in exercitation tempor mollit deserunt.</p>
   
@@ -149,7 +161,11 @@
   
   <p><a href="/">This is a link</a> followed by <a href="/">another link</a></p>
 </div>
-    <div is="el-accordion" data-summary="Buttons Family" data-expand data-toggle-source>
+    <div class="doc-title">
+  <h2>Buttons Family</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>
   <label>Pure element</label>
   <button>No Attr</button>
   
@@ -178,7 +194,11 @@
   <button class='btn-secondary' disabled>Button</button>
 </div>
 
-<div is="el-accordion" data-summary="Buttons Types" data-expand data-toggle-source>
+<div class="doc-title">
+  <h2>Buttons Types</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>
   
   <label>.btn-text</label>
   <button class="btn-text btn-primary">Button Text</button>
@@ -196,7 +216,11 @@
     ² For rounded buttons, you can use the <code>btn-round</code> modifier with any button from buttons family
   </p>
 </div>
-    <div is="el-accordion" data-summary="Form Controls" data-expand data-toggle-source>
+    <div class="doc-title">
+  <h2>Form Controls</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>
   <form action="/">
     <div class="half">
       <fieldset>
@@ -353,7 +377,11 @@
     </div>
   </form>
 </div>
-    <div is="el-accordion" data-summary="Form Input States" data-expand data-toggle-source>     
+    <div class="doc-title">
+  <h2>Input States</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>     
   <form action="/">
     <div class="half">
       <div class="field" data-success="Success message here">
@@ -378,7 +406,11 @@
     </div>
   </form>
 </div>
-    <div is="el-accordion" data-summary="Table" data-expand data-toggle-source>
+    <div class="doc-title">
+  <h2>Table</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>
   <label>table</label>
   <table>
     <thead>
@@ -412,7 +444,11 @@
     </tbody>     
   </table>      
 </div>
-    <div is="el-accordion" data-summary="Lists" data-expand data-toggle-source>
+    <div class="doc-title">
+  <h2>Lists</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>
   <label>ul</label>
   <ul>
     <li>List Example A</li>
@@ -441,7 +477,11 @@
       <dd>Hilda Hilst</dd>
   </dl>          
 </div>
-    <div is="el-accordion" data-summary="Pre & Code" data-expand data-toggle-source>
+    <div class="doc-title">
+  <h2>Pre & Code</h2>
+</div>
+
+<div class="bg-light padded" data-toggle-source>
       
   <label>pre</label>
 <pre>This is a text on a pre tag
@@ -457,38 +497,244 @@ and another</pre>
     This is an inline code <code>function () {}</code> used in a paragraph.
   </p>
 </div>
-    <div is="el-accordion" data-summary="Theming" class="custom-props-list-accordion" data-expand>
-
-  <ul class="font-secondary">
-    <li>
-      Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme.
-      You can write your own theme from scratch by overriding classes on your code, or you can use the Theme Editor 
-      on the left side of this page.
-    </li>
-  
-    <li>
-      When using the Theme Editor, you can just tune the inputs to get an imediate visual feedback. 
-      Your modifications will be saved on the URL, so you can share your theme, or save its URL as a documentation. 
-    </li>
-    
-    <li>
-      To start experimenting, try to change the <code>App Surface Color</code> to <code>#000000</code> and the <code>App Font Color</code> to  <code>#ffffff</code> 
-      and voilá, you have a dark theme. 
-    </li>
-      
-    <li>
-      You can download your theme by clicking on the "Download Theme" button or by copying its source code on the "Source Code" button. 
-      Now you just need to load the theme CSS file on your application 
-    </li>
-  
-    <li>
-      If you prefer to code your theme, or just want to override some custom props, there is a complete reference below. 
-      For advanced usage, please read the github repository documentation.
-    </li>
-  </ul>
-
-  <button onclick="customPropsList('show')">Custom Properties List</button>
+    <div class="doc-title">
+  <h2>Utilities</h2>
 </div>
+
+<div class="bg-light padded">
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+    </thead>   
+    <tbody>
+      <tr>
+        <td>container</td>
+        <td>Centered padded application container</td>
+      </tr>
+      <tr>
+        <td>padded</td>
+        <td>Applies padding: 16px</td>
+      </tr>
+      <tr>
+        <td>stacked</td>
+        <td>Applies margin-bottom: 32px</td>
+      </tr>            
+      <tr>
+        <td>disabled</td>
+        <td>Applies disabled style on element. Alias for [disabled], but with no semantic value</td>
+      </tr>
+      <tr>
+        <td>is-hidden</td>
+        <td>Applies display:none !important style on element. Alias for [hidden], but with no semantic value</td>
+      </tr>
+      <tr>
+        <td>is-invisible</td>
+        <td>Applies visibility: hidden !important; opacity: 0 !important;</td>
+      </tr>        
+      <tr>
+        <td>surface</td>
+        <td>Applies the application surface color (--pm-app-surface-color) as background-color</td>
+      </tr> 
+      <tr>
+        <td>no-padding</td>
+        <td>Applies padding: 0px !important</td>
+      </tr>
+      <tr>
+        <td>no-margin</td>
+        <td>Applies margin: 0px !important</td>
+      </tr> 
+      <tr>
+        <td>no-border</td>
+        <td>Applies border: none !important</td>
+      </tr> 
+      <tr>
+        <td>text-black</td>
+        <td>Sets color to #000000 by default</td>
+      </tr>
+      <tr>
+        <td>text-white</td>
+        <td>Sets color to #ffffff by default</td>
+      </tr>
+      <tr>
+        <td>text-light</td>
+        <td>Sets color to #cccccc by default</td>
+      </tr>
+      <tr>
+        <td>text-dark</td>
+        <td>Sets color to #444444 by default</td>
+      </tr>        
+      <tr>
+        <td>text-app</td>
+        <td>Sets color to the application font color (--pm-app-font-color)</td>
+      </tr>
+      <tr>
+        <td>text-upper</td>
+        <td>Sets text transform to uppercase</td>
+      </tr>
+      <tr>
+        <td>text-lower</td>
+        <td>Sets text transform to lowercase</td>
+      </tr>
+      <tr>
+        <td>text-capitalize</td>
+        <td>Sets text transform to capitalize</td>
+      </tr>
+      <tr>
+        <td>text-center</td>
+        <td>Sets text align to center</td>
+      </tr>
+      <tr>
+        <td>text-left</td>
+        <td>Sets text align to left</td>
+      </tr>
+      <tr>
+        <td>text-right</td>
+        <td>Sets text align to right</td>
+      </tr> 
+      <tr>
+        <td>bg-black</td>
+        <td>Sets background-color to #000000</td>
+      </tr> 
+      <tr>
+        <td>bg-white</td>
+        <td>Sets background-color to #ffffff</td>
+      </tr>
+      <tr>
+        <td>bg-dark</td>
+        <td>Sets background-color to #444444</td>
+      </tr>
+      <tr>
+        <td>bg-light</td>
+        <td>Sets background-color to rgba(200,200,200,.1)</td>
+      </tr>
+      <tr>
+        <td>font-primary</td>
+        <td>Sets font-family to the application primary font (--pm-font-family-primary)</td>
+      </tr>
+      <tr>
+        <td>font-secondary</td>
+        <td>Sets font-family to the application secondary font (--pm-font-family-secondary)</td>
+      </tr>
+      <tr>
+        <td>text-primary</td>
+        <td>Sets color to the application primary-color (--pm-primary-color)</td>
+      </tr>
+      <tr>
+        <td>text-secondary</td>
+        <td>Sets color to the application secondary-color (--pm-secondary-color)</td>
+      </tr> 
+      <tr>
+        <td>bg-primary</td>
+        <td>Sets background-color to the application primary-color (--pm-primary-color)</td>
+      </tr>
+      <tr>
+        <td>bg-secondary</td>
+        <td>Sets background-color to the application secondary-color (--pm-secondary-color)</td>
+      </tr>
+      <tr>
+        <td>bc-primary</td>
+        <td>Sets border-color to the application primary-color (--pm-primary-color)</td>
+      </tr>
+      <tr>
+        <td>bc-secondary</td>
+        <td>Sets border-color to the application secondary-color (--pm-secondary-color)</td>
+      </tr>  
+      <tr>
+        <td>text-success</td>
+        <td>Sets text-color to the application success-color (--pm-color-success)</td>
+      </tr> 
+      <tr>
+        <td>text-error</td>
+        <td>Sets text-color to the application error-color (--pm-color-error)</td>
+      </tr> 
+      <tr>
+        <td>text-warning</td>
+        <td>Sets text-color to the application warning-color (--pm-color-warning)</td>
+      </tr> 
+      <tr>
+        <td>text-info</td>
+        <td>Sets text-color to the application info-color (--pm-color-info)</td>
+      </tr>  
+      <tr>
+        <td>bg-success</td>
+        <td>Sets background-color to the application success-color (--pm-color-success)</td>
+      </tr> 
+      <tr>
+        <td>bg-error</td>
+        <td>Sets background-color to the application error-color (--pm-color-error)</td>
+      </tr> 
+      <tr>
+        <td>bg-warning</td>
+        <td>Sets background-color to the application warning-color (--pm-color-warning)</td>
+      </tr> 
+      <tr>
+        <td>bg-info</td>
+        <td>Sets background-color to the application info-color (--pm-color-info)</td>
+      </tr> 
+      <tr>
+        <td>bc-success</td>
+        <td>Sets border-color to the application success-color (--pm-color-success)</td>
+      </tr> 
+      <tr>
+        <td>bc-error</td>
+        <td>Sets border-color to the application error-color (--pm-color-error)</td>
+      </tr> 
+      <tr>
+        <td>bc-warning</td>
+        <td>Sets border-color to the application warning-color (--pm-color-warning)</td>
+      </tr> 
+      <tr>
+        <td>bc-info</td>
+        <td>Sets border-color to the application info-color (--pm-color-info)</td>
+      </tr>                                          
+    </tbody>      
+  </table>
+</div>
+    <div class="doc-title">
+  <h2>Theming</h2>
+</div>
+
+<div class="bg-light padded">
+
+  <p>
+    Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme.
+    You can write your own theme from scratch by overriding classes on your code, or you can use the Theme Editor 
+    on the left side of this page.
+  </p>
+
+  <p>
+    When using the Theme Editor, you can just tune the inputs to get an imediate visual feedback. 
+    Your modifications will be saved on the URL, so you can share your theme, or save its URL as a documentation. 
+  </p>
+  
+  <p>
+    To start experimenting, try to change the <code>App Surface Color</code> to <code>#000000</code> and the <code>App Font Color</code> to  <code>#ffffff</code> 
+    and voilá, you have a dark theme. 
+  </p>
+    
+  <p>
+    You can download your theme by clicking on the "Download Theme" button or by copying its source code on the "Source Code" button. 
+    Now you just need to load the theme CSS file on your application 
+  </p>
+
+  <p>
+    If you prefer to code your theme, or just want to override some custom props, there is a complete reference below. 
+    For advanced usage, please read the github repository documentation.
+  </p>
+
+  <div class="no-js-hidden">
+    <h4>Custom properties</h4>
+    <div id="proplist"><!-- filled by js --></div>
+  </div>
+  
+</div>
+    <footer>
+  <div>PlumeCSS by Felippe Regazio, under GPL License</div>
+  <div><button class="btn-secondary">❤️ Donate</button></div>
+</footer>
   </div>
 
   <div is="el-sidebar" id="themeEditorSidebar" class="theme-editor-holder" data-visible>
@@ -571,20 +817,6 @@ and another</pre>
     </div>
     <footer>
       <button onclick="themeSource('hide')">Ok</button>
-    </footer>
-  </section>
-</div> 
-  <div id="customPropsList" is="el-lightbox" data-boxed>
-  <section>
-    <header>
-      <span>Plume CSS Custom Properties</span>
-    </header>
-    <div>
-      <div id="proplist"><!-- filled by js --></div>
-    </div>
-    <footer>
-      <span id="proplist-counter-result"></span>
-      <button onclick="customPropsList('hide')">Ok</button>
     </footer>
   </section>
 </div> 

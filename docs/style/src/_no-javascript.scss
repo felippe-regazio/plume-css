@@ -1,0 +1,24 @@
+.no-javascript {
+  #themeSource, 
+  .no-js-hidden,
+  #toggle-source
+  #customPropsList, 
+  .theme-editor-holder, 
+  .utilities-accordion,
+  #theme-editor-toggler,
+  .custom-props-list-accordion {
+    display: none;
+  }
+  .plume.container {
+    transform: none !important;
+    padding-top: 36px;
+    padding-bottom: 36px;    
+    .no-javascript-warning {
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #ff0100;
+    }
+  }
+}

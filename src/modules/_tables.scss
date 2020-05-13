@@ -4,11 +4,10 @@
 	table-head-font-size: 1.1em,
 	table-head-font-weight: 600,
 	table-cell-font-size: 1em,
-	table-cell-padding: 12px 15px,
+	table-cell-padding: 16px,
 	table-cell-border-style: solid,
 	table-cell-border-color: #E1E1E1,
 	table-cell-border-width: 0 0 1px 0,
-	table-cell-hover-color: rgba(100,100,100,.03),
 ));
 
 @include superclass () {
@@ -29,9 +28,6 @@
 		}
 		td {
 			font-size: cssvar(table-cell-font-size);
-			&:hover {
-				background-color: cssvar(table-cell-hover-color);
-			}
 		}
 	}
 }

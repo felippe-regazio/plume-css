@@ -10,12 +10,20 @@
     background-color: cssvar(app-surface-color) !important;
   }
 
-  .is-hidden {
+  .padded {
+    padding: 16px;
+  }
+
+  .stacked {
+    margin-bottom: 32px;
+  }
+
+  .is-hidden, [hidden] {
     display: none !important;
   }
 
   .is-invisible {
-    visibility: hidden;
+    visibility: hidden !important;
     opacity: 0 !important;
   }
 
@@ -37,6 +45,10 @@
 
   .text-white {
     color: #ffffff !important;
+  }
+
+  .text-dark {
+    color: #444444 !important;
   }
 
   .text-light {
@@ -71,6 +83,18 @@
     text-align: right !important;
   }
 
+  .bg-black {
+    background-color: #000000 !important;
+  }
+
+  .bg-white {
+    background-color: #ffffff !important;
+  }
+
+  .bg-dark {
+    background-color: #444444 !important;
+  }
+
   .bg-light {
     background-color: rgba(200,200,200,.1) !important;
   }  
@@ -99,11 +123,11 @@
     }
 
     .bg-#{$state} {
-      background-color: cssvar(#{$state}-color) !important;
+      background-color: cssvar(color-#{$state}) !important;
     }
 
     .bc-#{$state} {
-      border-color: cssvar(#{$state}-color) !important;
+      border-color: cssvar(color-#{$state}) !important;
     }  
   }
 

@@ -3,19 +3,18 @@
 	button-secondary-text-color: #ffffff,
 	button-height: auto,
 	button-cursor: pointer,
-	button-padding: 0 30px,
+	button-padding: 0 32px,
 	button-font-size: 14px,
 	button-min-width: 140px,
 	button-min-height: 40px,
 	button-font-weight: 600,
-	button-hover-darken: .8,
 	button-border-radius: 4px,
 	button-margin-bottom: 24px,
 	button-letter-spacing: 0.30px,
 	button-justify-content: center,
 	button-text-transform: uppercase,
 	button-text-padding: 0 2ch,
-	button-round-size: 52px,
+	button-rounded-size: 52px,
 ));
 
 @include superclass () {
@@ -51,9 +50,6 @@
 		&.btn-block {
 			display: flex;
 			width: 100%;
-		}
-		&.btn-br {
-			display: flex;
 		}
 		&.btn-primary {
 			color: cssvar(button-primary-text-color);
@@ -121,8 +117,8 @@
 			border-radius: 100%;
 			display: inline-flex;
 			justify-content: center;
-			width: cssvar(button-round-size);
-			height: cssvar(button-round-size);;
+			width: cssvar(button-rounded-size);
+			height: cssvar(button-rounded-size);;
 		}
 		&.btn-text {
 			border: none;

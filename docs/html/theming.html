@@ -1,32 +1,38 @@
-<div is="el-accordion" data-summary="Theming" class="custom-props-list-accordion" data-expand>
+<div class="doc-title">
+  <h2>Theming</h2>
+</div>
 
-  <ul class="font-secondary">
-    <li>
-      Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme.
-      You can write your own theme from scratch by overriding classes on your code, or you can use the Theme Editor 
-      on the left side of this page.
-    </li>
+<div class="bg-light padded">
+
+  <p>
+    Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme.
+    You can write your own theme from scratch by overriding classes on your code, or you can use the Theme Editor 
+    on the left side of this page.
+  </p>
+
+  <p>
+    When using the Theme Editor, you can just tune the inputs to get an imediate visual feedback. 
+    Your modifications will be saved on the URL, so you can share your theme, or save its URL as a documentation. 
+  </p>
   
-    <li>
-      When using the Theme Editor, you can just tune the inputs to get an imediate visual feedback. 
-      Your modifications will be saved on the URL, so you can share your theme, or save its URL as a documentation. 
-    </li>
+  <p>
+    To start experimenting, try to change the <code>App Surface Color</code> to <code>#000000</code> and the <code>App Font Color</code> to  <code>#ffffff</code> 
+    and voilá, you have a dark theme. 
+  </p>
     
-    <li>
-      To start experimenting, try to change the <code>App Surface Color</code> to <code>#000000</code> and the <code>App Font Color</code> to  <code>#ffffff</code> 
-      and voilá, you have a dark theme. 
-    </li>
-      
-    <li>
-      You can download your theme by clicking on the "Download Theme" button or by copying its source code on the "Source Code" button. 
-      Now you just need to load the theme CSS file on your application 
-    </li>
-  
-    <li>
-      If you prefer to code your theme, or just want to override some custom props, there is a complete reference below. 
-      For advanced usage, please read the github repository documentation.
-    </li>
-  </ul>
+  <p>
+    You can download your theme by clicking on the "Download Theme" button or by copying its source code on the "Source Code" button. 
+    Now you just need to load the theme CSS file on your application 
+  </p>
 
-  <button onclick="customPropsList('show')">Custom Properties List</button>
+  <p>
+    If you prefer to code your theme, or just want to override some custom props, there is a complete reference below. 
+    For advanced usage, please read the github repository documentation.
+  </p>
+
+  <div class="no-js-hidden">
+    <h4>Custom properties</h4>
+    <div id="proplist"><!-- filled by js --></div>
+  </div>
+  
 </div>

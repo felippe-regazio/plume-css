@@ -4,7 +4,6 @@
 	ol-list-style: decimal inside,
 	li-margin-bottom: 24px,
 	dl-margin-bottom: 24px,
-	dl-hover-color: rgba(100,100,100,.03),
 ));
 
 @include superclass () {
@@ -28,7 +27,7 @@
 	ol ol,
 	ol ul {
 		font-size: .9em;
-		margin: 14px 0 15px 30px;
+		margin: 16px 0 16px 32px;
 	}
 	
 	li {
@@ -40,7 +39,7 @@
 		word-break: break-word;
 		margin-bottom: cssvar(dl-margin-bottom);
 		dt, dd {
-			padding: 12px 15px;
+			padding: 16px;
 			text-align: left;
 			border-bottom: 1px solid #E1E1E1;
 		}
@@ -66,13 +65,10 @@
 				transform: translateY(-50%);
 				border: solid 1px currentColor;
 			}
-			&:hover {
-				background-color: cssvar(dl-hover-color);
-			}
 		}
 		@media screen and (max-width: 768px) {
 			dd {
-				padding-left: 34px;
+				padding-left: 32px;
 				&::before {
 					left: 10px;
 				}

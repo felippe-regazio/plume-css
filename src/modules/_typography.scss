@@ -1,13 +1,13 @@
 @include cssvars((
 	
 	paragraph-font-size: 1em,
-	paragraph-margin-bottom: 36px,
+	paragraph-margin-bottom: 32px,
 	paragraph-font-family: cssvar(font-family-secondary),
 
 	link-text-decoration: none,
 	link-color: cssvar(primary-color),	
 
-	all-headings-margin: 0 0 36px 0,
+	all-headings-margin: 0 0 32px 0,
 	all-headings-font-family: cssvar(--font-family-primary),
 
 	h1-font-size: 4.44em,
@@ -67,7 +67,7 @@
 
 	hr {
 		opacity: .2;
-		margin: 36px 0;
+		margin: 32px 0;
 		border-width: 0;
 		border-top: 1px solid cssvar(app-font-color);
 	}
@@ -82,15 +82,6 @@
 	a, .link {
 		color: cssvar(link-color);
 		text-decoration: cssvar(link-text-decoration);
-		&:hover {
-			filter: saturate(0.5);
-			button, [class*=btn-],
-			input[type="button"],
-			input[type="submit"],
-			input[type="reset"] {
-				filter: none;
-			}
-		}
 		@media print {	
 			&:not([href^="#"]):not([href^="javascript"])::after{
 				content: " (" attr(href) ") ";
@@ -100,7 +91,7 @@
 	
 	blockquote {
 		margin: 0;
-		padding: 20px;
+		padding: 16px;
 		margin: cssvar(all-headings-margin);
 		font-size: cssvar(--paragraph-font-size);
 		font-family: cssvar(font-family-primary);
@@ -119,10 +110,10 @@
     background-color: cssvar(mark-background-color);
 	}
 
-	hgroup {
+	.hgroup {
 		margin: cssvar(all-headings-margin);
 		h1, h2, h3, h4, h5, h6 {
-			margin-bottom: 14px;
+			margin-bottom: 8px;
 		}
 	}
 
