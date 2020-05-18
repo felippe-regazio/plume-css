@@ -81,7 +81,7 @@ module.exports = class {
   }
 
   static _extractPseudoAttrs (cssText) {
-    return this._unique(cssText.match(/\attr\(data(.*)\)/g));
+    return this._unique(cssText.match(/attr\(data-(.*?)(\))/g));
   }
 
   static _extractCustomProps (cssText) {
