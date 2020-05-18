@@ -69,7 +69,7 @@
 		opacity: .2;
 		margin: 32px 0;
 		border-width: 0;
-		border-top: 1px solid cssvar(app-font-color);
+		border-top: 1px solid cssvar(app-text-color);
 	}
 	
 	p {
@@ -108,13 +108,6 @@
     padding: cssvar(mark-padding);
     border-radius: cssvar(mark-border-radius);
     background-color: cssvar(mark-background-color);
-	}
-
-	.hgroup {
-		margin: cssvar(all-headings-margin);
-		h1, h2, h3, h4, h5, h6 {
-			margin-bottom: 8px;
-		}
 	}
 
 	kbd {

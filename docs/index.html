@@ -14,12 +14,12 @@
   
   <!-- imports from ./html/ -->
 
-  <div class="plume container">
+  <div class="plume pm-container">
     <div class="doc-title">
   <h2>Plume CSS</h2>
 </div>
 
-<div class="bg-light padded">
+<div class="pm-ground pm-padded">
 
   <div class="logo">
     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -43,11 +43,11 @@
   </div>
 
   <p>
-    Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framwork. Plume is meant to be the lowest design layer on your application, 
-    helping you to grow solid and change easily. You should use Plume if you dont want to bring all the larger frameworks features to your application, 
-    or if you want to code everything by yourself and need a solid and highly customizable start point. Plume was inspired by projects like Skeleton, Milligram, 
-    MiniCss and Material, encompassing some practices found in all of them. In this page you will find an interactive Theme Editor, features overview, 
-    visual reference and a list of utilities and custom properties. Here are some Plume's important characteristics:
+    Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. Plume is meant to be the lowest design layer on your app, 
+    helping you to grow solid and change easily. You should use Plume if you don't want to bring all the larger frameworks features to your application, 
+    or if you want to code everything by yourself and need a solid and highly customizable start point. Plume was inspired by projects such as Skeleton, Milligram, 
+    MiniCss and Material, encompassing some practices found in all of them. On this page you'll find an interactive Theme Editor, features overview, 
+    visual reference and a list of utilities and custom properties. Here are some of Plume's coolest characteristics:
   <p></p>
     
     <dl>
@@ -63,12 +63,12 @@
   
       <dt>🔌 &nbsp; Plug and play</dt>
         <dd>
-          Load the lib, load your custom theme if you want, and you're ready to go. Already normalized. You can start to build your application with a minimal and solid design foundation.
+          Load the lib, load your custom theme if you have one, and you're ready to go. Plume is already normalized. You can start to build your application with a minimal and solid design foundation.
         </dd>
 
       <dt>🖌 &nbsp; Highly themeble</dt>
         <dd>
-         Builded with 100+ CSS custom properties (vars). Minimal and easy to extend and customize. Theme constructor with imediate visual feedback available.
+         Builded with 100+ CSS custom properties (vars). Minimal and easy to extend and customize. Theme constructor with imediate visual feedback available (Button on the top left corner).
         </dd>
   
       <dt>∈ &nbsp; Completely scoped</dt>
@@ -95,19 +95,19 @@
   
       <dt>🎯 &nbsp; No bunch of classes</dt>
         <dd>
-          Despite a large set of utilities, Plume applies the style on bare elements, classes and custom attributes are used to alter the default style and behavior.
+          Despite a large set of utilities, Plume applies the style on bare elements. Classes and custom attributes are used to alter the default style and behavior.
         </dd>
 
       <dt>💡 &nbsp; Lib, framework or boilerplate</dt>
         <dd>
-          You can use plume as a lib, by adding it on your application as base design. As a framework, by growing from plume, 
+          You can use plume as a lib, by adding it on your application as a base design layer. As a framework, by growing from Plume, 
           or as a boilerplate, by cloning Plume's source code and starting from there.
         </dd>
 
       <dt>♿ &nbsp; Accessible</dt>
         <dd>
-          The outlines were preserved. The open architecture lets you free to apply accessible best pratices, 
-          and Plume has a ready made accessible custom theme that you can toggle on your apps. 
+          The outlines were preserved. The open architecture lets you freely to apply accessible best pratices and semantic HTML, 
+          and Plume has a ready made Accessible Custom Theme that you can toggle on your apps. 
         </dd>
   
       <dt>✪ &nbsp; Unopinionated architecture</dt>
@@ -117,8 +117,17 @@
         </dd>
     </dl>
 
+    <h4>Getting Started</h4>
+
+    <p>
+      You can download Plume on the button below, then add the plume.min.css file on the dist folder to your project. 
+      Or you can add via NPM, then import Plume on your project. For examples and advanced load methods, please check the Documentation.
+    </p>
+
+    <pre><code>npm install plume-css</code></pre>
+
     <div class="actions">
-      <button>FULL DOCS</button>
+      <button>DOCUMENTATION</button>
       <button class="btn-primary">DOWNLOAD PLUME</button>
     </div>
 
@@ -137,7 +146,7 @@
   <h2>Colors Palette</h2>
 </div>
 
-<div class="bg-light padded">
+<div class="pm-ground pm-padded">
   <div class="color-palette color-palette--light">
     <span style="background-color: var(--pm-primary-color)"></span>
     <span style="background-color: var(--pm-primary-color)" data-darken></span>
@@ -155,7 +164,7 @@
   <h2>Typography</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>  
+<div class="pm-ground pm-padded" data-toggle-source>  
   <h1>This is a Heading</h1>
   <h2>This is a Heading</h2>
   <h3>This is a Heading</h3>
@@ -170,7 +179,7 @@
   <p>This is an example of <mark>mark</mark> tag in a paragraph, you can use them along text elements, and this is a kbd example <kbd>alt</kbd> + <kbd>f4</kbd> representing a keyboard combination</p>
   <p>Deserunt eiusmod ex proident ullamco magna occaecat proident pariatur. Est aute culpa nostrud ut <strong>deserunt esse occaecat nostrud esse nisi</strong> quis excepteur dolore. Occaecat quis sit cillum est ut ipsum elit deserunt. Esse cupidatat ex eu nostrud sit Lorem elit labore laboris dolor elit. </p>
 
-  <div class="hgroup">
+  <div class="pm-hgroup">
     <h3>Heading Group</h3>
     <h4>Example of grouped Headings</h4>
   </div>
@@ -185,139 +194,139 @@
   <h2>Buttons Family</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>
+<div class="pm-ground pm-padded" data-toggle-source>
   <label>Pure element</label>
   <button>No Attr</button>
   
-  <label>.btn-primary</label>
-  <button class='btn-primary'>Primary</button>
+  <label>.pm-btn-primary</label>
+  <button class='pm-btn-primary'>Primary</button>
         
-  <label>.btn-secondary</label>
-  <button class='btn-secondary'>Secondary</button>
+  <label>.pm-btn-secondary</label>
+  <button class='pm-btn-secondary'>Secondary</button>
         
-  <label>.btn-gradient</label>
-  <button class="btn-gradient">Gradient</button>
+  <label>.pm-btn-gradient</label>
+  <button class="pm-btn-gradient">Gradient</button>
   
-  <label>.btn-[black, white, light]</label>
-  <button class='btn-black'>Black</button>
-  <button class='btn-white'>White</button>    
-  <button class="btn-light">Light</button>
+  <label>.pm-btn-[black, white, light]</label>
+  <button class='pm-btn-black'>Black</button>
+  <button class='pm-btn-white'>White</button>    
+  <button class="pm-btn-light">Light</button>
   
-  <label>.btn-success, .btn-danger, .btn-warning</label>
-  <button class='btn-success'>Success</button>
-  <button class='btn-danger'>Danger</button>    
-  <button class="btn-warning">Warning</button>
+  <label>.pm-btn-success, .pm-btn-danger, .pm-btn-warning</label>
+  <button class='pm-btn-success'>Success</button>
+  <button class='pm-btn-danger'>Danger</button>    
+  <button class="pm-btn-warning">Warning</button>
   
   <label>[disabled] or .disabled</label>
   <button disabled>Button</button>
-  <button class='btn-primary' disabled>Button</button>    
-  <button class='btn-secondary' disabled>Button</button>
+  <button class='pm-btn-primary' disabled>Button</button>    
+  <button class='pm-btn-secondary' disabled>Button</button>
 </div>
 
 <div class="doc-title">
   <h2>Buttons Types</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>
+<div class="pm-ground pm-padded" data-toggle-source>
   
-  <label>.btn-text</label>
-  <button class="btn-text btn-primary">Button Text</button>
-  <button class="btn-text text-secondary">Button Text</button>
-  <button class="btn-text text-success">Button Text</button>  
+  <label>.pm-btn-text</label>
+  <button class="pm-btn-text pm-btn-primary">Button Text</button>
+  <button class="pm-btn-text text-secondary">Button Text</button>
+  <button class="pm-btn-text text-success">Button Text</button>  
 
-  <label>.btn-round</label>
-  <button class="btn-round">A</button>
-  <button class="btn-round btn-primary">A</button>
-  <button class="btn-round btn-secondary">B</button>
-  <button class="btn-round btn-gradient">C</button>
+  <label>.pm-btn-round</label>
+  <button class="pm-btn-round">A</button>
+  <button class="pm-btn-round pm-btn-primary">A</button>
+  <button class="pm-btn-round pm-btn-secondary">B</button>
+  <button class="pm-btn-round pm-btn-gradient">C</button>
 
   <p>
-    ¹ When use the <code>btn-text</code> button type, you can use the text color utilities to change the color. <br/>
-    ² For rounded buttons, you can use the <code>btn-round</code> modifier with any button from buttons family
+    ¹ When use the <code>pm-btn-text</code> button type, you can use the text color utilities to change the color. <br/>
+    ² For rounded buttons, you can use the <code>pm-btn-round</code> modifier with any button from buttons family
   </p>
 </div>
     <div class="doc-title">
   <h2>Form Controls</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>
+<div class="pm-ground pm-padded" data-toggle-source>
   <form action="/">
     <div class="half">
       <fieldset>
-        <legend class="required">Fieldset</legend>
+        <legend class="pm-required">Fieldset</legend>
       </fieldset>
 
-      <div class="field">
-        <label for="label-required" class="required">Label .required</label>
+      <div class="pm-field">
+        <label for="label-required" class="pm-required">Label .required</label>
         <input type="text" placeholder="Input placeholder" name="label-required">
       </div>
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-text">Text</label>
         <input type="text" placeholder="Input placeholder" name="input-text">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-number">Number</label>
         <input type="number" placeholder="Input placeholder" name="input-number">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-color">Color</label>
         <input type="color" placeholder="Input placeholder" name="input-color">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-date">Date</label>
         <input type="date" placeholder="Input placeholder" name="input-date">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-datetime-local">Datetime-local</label>
         <input type="datetime-local" placeholder="Input placeholder" name="input-datetime-local">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-email">Email</label>
         <input type="email" placeholder="Input placeholder" name="input-email">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-month">Month</label>
         <input type="month" placeholder="Input placeholder" name="input-month">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-password">Password</label>
         <input type="password" placeholder="Input placeholder" name="input-password">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-search">Search</label>
         <input type="search" placeholder="Input placeholder" name="input-search">
       </div>
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-tel">Tel</label>
         <input type="tel" placeholder="Input placeholder" name="input-tel">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-time">Time</label>
         <input type="time" placeholder="Input placeholder" name="input-time">
       </div>  
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-url">Url</label>
         <input type="url" placeholder="Input placeholder" name="input-url">
       </div>
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-week">Week</label>
         <input type="week" placeholder="Input placeholder" name="input-week">
       </div>
       
-      <div class="field">
+      <div class="pm-field">
         <label for="select-test">Select</label>
         <select name="select-test" id="a-select">
           <option value="test-a">Test A</option>
@@ -328,60 +337,60 @@
         </select>
       </div>
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-radio-test">Radio</label>
-        <label data-holder>
+        <label data-pm-holder>
           <input type="radio" name="input-radio-test" checked>
           Input Radio A
         </label>
-        <label data-holder>
+        <label data-pm-holder>
           <input type="radio" name="input-radio-test">
           Input Radio B
         </label>            
       </div>
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-checkbox-test">Checkbox</label>
-        <label data-holder>
+        <label data-pm-holder>
           <input type="checkbox" name="input-checkbox-test-a" checked>
           Input Checkbox A
         </label>
-        <label data-holder>
+        <label data-pm-holder>
           <input type="checkbox" name="input-checkbox-test-b">
           Input Checkbox B
         </label>            
       </div> 
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-toggle">Toggle</label>
-        <label data-holder>
-          <input type="checkbox" name="input-toggle" data-checkbox-toggle>
+        <label data-pm-holder>
+          <input type="checkbox" name="input-toggle" data-pm-checkbox-toggle>
           Input Toggle
         </label>
       </div> 
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-range">Input range</label>
-        <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-subs>
+        <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-pm-subs>
       </div> 
 
-      <div class="field">
+      <div class="pm-field">
         <label for="input-meter">Meter</label>
         <meter value="55.93" min="0" max="120.47" title="GB"></meter>
       </div>
       
-      <div class="field">
+      <div class="pm-field">
         <label for="input-progress">Progress</label>
         <progress value="70" max="100">70 %</progress>
       </div>
     </div>
     
-    <div class="field">
+    <div class="pm-field">
       <label for="input-textarea">Textarea</label>
       <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
     </div>
     
-    <div class="field" data-info="Wrap your input type file in a span.input-file.btn-primary">
+    <div class="pm-field" data-pm-info="Wrap your input type file in a span.input-file.btn-primary">
       <label for="input-file">Input file</label>
       <span class="input-file btn-primary">
         Upload File
@@ -389,7 +398,7 @@
       </span>
     </div>
     
-    <div class="field" data-info="These input types inherit from buttons, and follow the same rules.">      
+    <div class="pm-field" data-pm-info="These input types inherit from buttons, and follow the same rules.">      
       <label for="input-button">Input button</label>
       <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
       <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">
@@ -401,25 +410,25 @@
   <h2>Input States</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>     
+<div class="pm-ground pm-padded" data-toggle-source>     
   <form action="/">
     <div class="half">
-      <div class="field" data-success="Success message here">
+      <div class="pm-field" data-pm-success="Success message here">
         <label for="input-success">Input success</label>
         <input type="text" placeholder="Input placeholder" name="input-success">
       </div>
       
-      <div class="field" data-error="Error message here">
+      <div class="pm-field" data-pm-error="Error message here">
         <label for="input-error">Input error</label>
         <input type="text" placeholder="Input placeholder" name="input-error">
       </div>
       
-      <div class="field" data-warning="Warning message here">
+      <div class="pm-field" data-pm-warning="Warning message here">
         <label for="input-warning">Input warning</label>
         <input type="text" placeholder="Input placeholder" name="input-warning">
       </div>
       
-      <div class="field" data-info="Info message here">
+      <div class="pm-field" data-pm-info="Info message here">
         <label for="input-info">Input info</label>
         <input type="text" placeholder="Input placeholder" name="input-info">
       </div>
@@ -430,7 +439,7 @@
   <h2>Table</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>
+<div class="pm-ground pm-padded" data-toggle-source>
   <label>table</label>
   <table>
     <thead>
@@ -468,7 +477,7 @@
   <h2>Lists</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>
+<div class="pm-ground pm-padded" data-toggle-source>
   <label>ul</label>
   <ul>
     <li>List Example A</li>
@@ -501,7 +510,7 @@
   <h2>Pre & Code</h2>
 </div>
 
-<div class="bg-light padded" data-toggle-source>
+<div class="pm-ground pm-padded" data-toggle-source>
       
   <label>pre</label>
 <pre>This is a text on a pre tag
@@ -521,15 +530,15 @@ and another</pre>
   <h2>Utilities</h2>
 </div>
 
-<div class="bg-light padded">
+<div class="pm-ground pm-padded">
 
   <p>
     Plume has a large set of utilities that helps you to alter elements style and behavior, and are pretty useful to avoid code repetition. 
     You can check the complete list on the link below:
   </p>
 
-  <div is="el-accordion" data-summary="Click to see the Complete Utilities List">
-    <table>
+  <div is="el-accordion" data-summary="Complete Utilities List">
+    <table class="complete-utilities-list">
       <thead>
         <tr>
           <th>Attr</th>
@@ -538,57 +547,65 @@ and another</pre>
       </thead>   
       <tbody>
         <tr>
-          <td>.container</td>
+          <td>.pm-container</td>
           <td>Centered padded application container</td>
         </tr>
         <tr>
-          <td>.surface</td>
+          <td>.pm-surface</td>
           <td>Applies the application surface color (--pm-app-surface-color) as background-color</td>
         </tr> 
         <tr>
-          <td>.font-primary</td>
+          <td>.pm-ground</td>
+          <td>Applies the application ground color (--pm-app-ground-color) as background-color. Useful for divs, card, jumbotrons, etc</td>
+        </tr>         
+        <tr>
+          <td>.pm-font-primary</td>
           <td>Sets font-family to the application primary font (--pm-font-family-primary)</td>
         </tr>
         <tr>
-          <td>.font-secondary</td>
+          <td>.pm-font-secondary</td>
           <td>Sets font-family to the application secondary font (--pm-font-family-secondary)</td>
         </tr>            
         <tr>
-          <td>.padded</td>
+          <td>.pm-padded</td>
           <td>Applies padding: 16px</td>
         </tr>
         <tr>
-          <td>.stacked</td>
+          <td>.pm-stacked</td>
           <td>Applies margin-bottom: 32px</td>
         </tr>            
         <tr>
-          <td>.disabled</td>
+          <td>.pm-disabled</td>
           <td>Applies disabled style on element. Alias for [disabled], but with no semantic value</td>
         </tr>
         <tr>
-          <td>.is-hidden</td>
+          <td>.pm-is-hidden</td>
           <td>Applies display:none !important style on element. Alias for [hidden], but with no semantic value</td>
         </tr>
         <tr>
-          <td>.is-invisible</td>
+          <td>.pm-is-invisible</td>
           <td>Applies visibility: hidden !important; opacity: 0 !important;</td>
         </tr>
         <tr>
-          <td>.no-padding</td>
+          <td>.pm-no-padding</td>
           <td>Applies padding: 0px !important</td>
         </tr>
         <tr>
-          <td>.no-margin</td>
+          <td>.pm-no-margin</td>
           <td>Applies margin: 0px !important</td>
         </tr> 
         <tr>
-          <td>.no-border</td>
+          <td>.pm-no-border</td>
           <td>Applies border: none !important</td>
         </tr>
         <tr>
-          <td>.dont-print</td>
+          <td>.pm-hgroup</td>
+          <td>Must be applied on a div which holder 2+ Headings. Almost like the deprecated hgroup element</td>
+        </tr>
+        <tr>
+          <td>.pm-dont-print</td>
           <td>Will hide the element from @print layout</td>
-        </tr>        
+        </tr>
       </tbody>
     </table>
   
@@ -597,75 +614,79 @@ and another</pre>
     <table>
       <tbody>
         <tr>
-          <td>.text-black</td>
+          <td>.pm-nowrap</td>
+          <td>Forces white-space nowrap on text content</td>
+        </tr>
+        <tr>
+          <td>.pm-text-black</td>
           <td>Sets color to #000000 by default</td>
         </tr>
         <tr>
-          <td>.text-app</td>
-          <td>Sets color to the application font color (--pm-app-font-color)</td>
+          <td>.pm-text-app</td>
+          <td>Sets color to the application font color (--pm-app-text-color)</td>
         </tr>
         <tr>
-          <td>.text-white</td>
+          <td>.pm-text-white</td>
           <td>Sets color to #ffffff by default</td>
         </tr>
         <tr>
-          <td>.text-light</td>
+          <td>.pm-text-light</td>
           <td>Sets color to #cccccc by default</td>
         </tr>
         <tr>
-          <td>.text-dark</td>
+          <td>.pm-text-dark</td>
           <td>Sets color to #444444 by default</td>
         </tr>        
         <tr>
-          <td>.text-upper</td>
+          <td>.pm-text-upper</td>
           <td>Sets text transform to uppercase</td>
         </tr>
         <tr>
-          <td>.text-lower</td>
+          <td>.pm-text-lower</td>
           <td>Sets text transform to lowercase</td>
         </tr>
         <tr>
-          <td>.text-capitalize</td>
+          <td>.pm-text-capitalize</td>
           <td>Sets text transform to capitalize</td>
         </tr>
         <tr>
-          <td>.text-center</td>
+          <td>.pm-text-center</td>
           <td>Sets text align to center</td>
         </tr>
         <tr>
-          <td>.text-left</td>
+          <td>.pm-text-left</td>
           <td>Sets text align to left</td>
         </tr>
         <tr>
-          <td>.text-right</td>
+          <td>.pm-text-right</td>
           <td>Sets text align to right</td>
         </tr>
         <tr>
-          <td>.text-primary</td>
+          <td>.pm-text-primary</td>
           <td>Sets color to the application primary-color (--pm-primary-color)</td>
         </tr>
         <tr>
-          <td>.text-secondary</td>
+          <td>.pm-text-secondary</td>
           <td>Sets color to the application secondary-color (--pm-secondary-color)</td>
         </tr>
         <tr>
-          <td>.text-success</td>
+          <td>.pm-text-success</td>
           <td>Sets text-color to the application success-color (--pm-color-success)</td>
         </tr> 
         <tr>
-          <td>.text-error</td>
+          <td>.pm-text-error</td>
           <td>Sets text-color to the application error-color (--pm-color-error)</td>
         </tr> 
         <tr>
-          <td>.text-warning</td>
+          <td>.pm-text-warning</td>
           <td>Sets text-color to the application warning-color (--pm-color-warning)</td>
         </tr> 
         <tr>
-          <td>.text-info</td>
+          <td>.pm-text-info</td>
           <td>Sets text-color to the application info-color (--pm-color-info)</td>
         </tr>
         <tr>
-          <td>.link</td>
+          <td>.pm-link</td>
           <td>Applies the link style to the text</td>
         </tr>      
       </tbody> 
@@ -676,43 +697,43 @@ and another</pre>
     <table>
       <tbody>
         <tr>
-          <td>.bg-black</td>
+          <td>.pm-bg-black</td>
           <td>Sets background-color to #000000</td>
         </tr> 
         <tr>
-          <td>.bg-white</td>
+          <td>.pm-bg-white</td>
           <td>Sets background-color to #ffffff</td>
         </tr>
         <tr>
-          <td>.bg-dark</td>
+          <td>.pm-bg-dark</td>
           <td>Sets background-color to #444444</td>
         </tr>
         <tr>
-          <td>.bg-light</td>
+          <td>.pm-bg-light</td>
           <td>Sets background-color to rgba(200,200,200,.1)</td>
         </tr>      
         <tr>
-          <td>.bg-primary</td>
+          <td>.pm-bg-primary</td>
           <td>Sets background-color to the application primary-color (--pm-primary-color)</td>
         </tr>
         <tr>
-          <td>.bg-secondary</td>
+          <td>.pm-bg-secondary</td>
           <td>Sets background-color to the application secondary-color (--pm-secondary-color)</td>
         </tr>
         <tr>
-          <td>.bg-success</td>
+          <td>.pm-bg-success</td>
           <td>Sets background-color to the application success-color (--pm-color-success)</td>
         </tr> 
         <tr>
-          <td>.bg-error</td>
+          <td>.pm-bg-error</td>
           <td>Sets background-color to the application error-color (--pm-color-error)</td>
         </tr> 
         <tr>
-          <td>.bg-warning</td>
+          <td>.pm-bg-warning</td>
           <td>Sets background-color to the application warning-color (--pm-color-warning)</td>
         </tr> 
         <tr>
-          <td>.bg-info</td>
+          <td>.pm-bg-info</td>
           <td>Sets background-color to the application info-color (--pm-color-info)</td>
         </tr>
       </tbody>
@@ -723,27 +744,27 @@ and another</pre>
     <table>
       <tbody>
         <tr>
-          <td>.bc-primary</td>
+          <td>.pm-bc-primary</td>
           <td>Sets border-color to the application primary-color (--pm-primary-color)</td>
         </tr>
         <tr>
-          <td>.bc-secondary</td>
+          <td>.pm-bc-secondary</td>
           <td>Sets border-color to the application secondary-color (--pm-secondary-color)</td>
         </tr>      
         <tr>
-          <td>.bc-success</td>
+          <td>.pm-bc-success</td>
           <td>Sets border-color to the application success-color (--pm-color-success)</td>
         </tr> 
         <tr>
-          <td>.bc-error</td>
+          <td>.pm-bc-error</td>
           <td>Sets border-color to the application error-color (--pm-color-error)</td>
         </tr> 
         <tr>
-          <td>.bc-warning</td>
+          <td>.pm-bc-warning</td>
           <td>Sets border-color to the application warning-color (--pm-color-warning)</td>
         </tr> 
         <tr>
-          <td>.bc-info</td>
+          <td>.pm-bc-info</td>
           <td>Sets border-color to the application info-color (--pm-color-info)</td>
         </tr>
       </tbody>
@@ -754,59 +775,59 @@ and another</pre>
     <table>
       <tbody>
         <tr>
-          <td>.btn-block</td>
+          <td>.pm-btn-block</td>
           <td>Sets display block + width 100% on a button</td>
         </tr>
         <tr>
-          <td>.btn-primary</td>
+          <td>.pm-btn-primary</td>
           <td>Applies the primary button style</td>
         </tr>
         <tr>
-          <td>.btn-secondary</td>
+          <td>.pm-btn-secondary</td>
           <td>Applies the secondary button style</td>
         </tr>
         <tr>
-          <td>.btn-gradient</td>
+          <td>.pm-btn-gradient</td>
           <td>Applies the gradient button style</td>
         </tr>
         <tr>
-          <td>.btn-gradient</td>
+          <td>.pm-btn-gradient</td>
           <td>Applies the gradient button style</td>
         </tr>
         <tr>
-          <td>.btn-black</td>
+          <td>.pm-btn-black</td>
           <td>Applies the black button style</td>
         </tr>
         <tr>
-          <td>.btn-white</td>
+          <td>.pm-btn-white</td>
           <td>Applies the white button style</td>
         </tr>  
         <tr>
-          <td>.btn-light</td>
+          <td>.pm-btn-light</td>
           <td>Applies the light button style</td>
         </tr>
         <tr>
-          <td>.btn-success</td>
+          <td>.pm-btn-success</td>
           <td>Applies the success button style (--pm-color-success)</td>
         </tr>
         <tr>
-          <td>.btn-error</td>
+          <td>.pm-btn-error</td>
           <td>Applies the error button style (--pm-color-error)</td>
         </tr>
         <tr>
-          <td>.btn-danger</td>
+          <td>.pm-btn-danger</td>
           <td>Alias for btn-error</td>
         </tr>
         <tr>
-          <td>.btn-warning</td>
+          <td>.pm-btn-warning</td>
           <td>Applies the warning button style (--pm-color-warning)</td>
         </tr>   
         <tr>
-          <td>.btn-round</td>
+          <td>.pm-btn-round</td>
           <td>Applies the round button style (--pm-color-round)</td>
         </tr>  
         <tr>
-          <td>.btn-text</td>
+          <td>.pm-btn-text</td>
           <td>Applies the text button style</td>
         </tr>                         
       </tbody>      
@@ -817,40 +838,40 @@ and another</pre>
     <table>
       <tbody>
         <tr>
-          <td>.field</td>
+          <td>.pm-field</td>
           <td>Blocked level wrapper for form controls (fieldset inherits this style)</td>
         </tr>
         <tr>
-          <td>.required</td>
+          <td>.pm-required</td>
           <td>Must be applied on labels, .field or fieldsets to add a red asterisk (*) on text</td>
         </tr>
         <tr>
-          <td>.input-file</td>
+          <td>.pm-input-file</td>
           <td>Use this class in a span element with an input type file inside for prettify.</td>
         </tr>
         <tr>
-          <td>[data-holder]</td>
+          <td>[data-pm-holder]</td>
           <td>Must be applied on labels when wrapping elements</td>
         </tr>
         <tr>
-          <td>[data-subs]</td>
+          <td>[data-pm-subs]</td>
           <td>Must be applied on range elements to show range max/min as legend</td>
         </tr>
         <tr>
-          <td>[data-success]</td>
-          <td>Show a success message on the given element bottom. Use it like data-success="message"</td>
+          <td>[data-pm-success]</td>
+          <td>Show a success message on the given element bottom. Use it like data-pm-success="message"</td>
         </tr>
         <tr>
-          <td>[data-error]</td>
-          <td>Show a error message on the given element bottom. Use it like data-error="message"</td>
+          <td>[data-pm-error]</td>
+          <td>Show a error message on the given element bottom. Use it like data-pm-error="message"</td>
         </tr>
         <tr>
-          <td>[data-warning]</td>
-          <td>Show a warning message on the given element bottom. Use it like data-warning="message"</td>
+          <td>[data-pm-warning]</td>
+          <td>Show a warning message on the given element bottom. Use it like data-pm-warning="message"</td>
         </tr>
         <tr>
-          <td>[data-info]</td>
-          <td>Show a info message on the given element bottom. Use it like data-info="message"</td>
+          <td>[data-pm-info]</td>
+          <td>Show a info message on the given element bottom. Use it like data-pm-info="message"</td>
         </tr>                  
       </tbody>
     </table>
@@ -860,7 +881,7 @@ and another</pre>
   <h2>Theming</h2>
 </div>
 
-<div class="bg-light padded">
+<div class="pm-ground pm-padded">
 
   <p>
     Plume is builded with +100 CSS Custom Properties that can be overrided to construct a Custom Theme. 
@@ -893,15 +914,15 @@ and another</pre>
   <div>
     PlumeCSS by Felippe Regazio, under GPL License    
   </div>
-  <div><button class="btn-secondary">❤️ Donate</button></div>
+  <div>Version 1.0.0</div>
 </footer>
   </div>
 
-  <div is="el-sidebar" id="themeEditorSidebar" data-on:open="bodyClass" data-on:close="bodyClass" class="theme-editor-holder">
+  <div is="el-sidebar" id="themeEditorSidebar" data-on:open="themeEditorSidebarToggle" data-on:close="themeEditorSidebarToggle" class="theme-editor-holder">
   <section>
     
     <header>
-      <button onclick="themeEditorSidebar('close')" title="Hide theme editor sidebar">
+      <button type="button" onclick="themeEditorSidebar('close')" title="Hide theme editor sidebar">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 252 252" fill="#bbbbbb" xml:space="preserve">
           <g>
@@ -925,7 +946,7 @@ and another</pre>
             <label style="color: #33b5e5">Custom Theme Name</label>
             <span class="clear-theme-holder">
               <input type="text" class="static" name="plume-custom-theme-name" value="Default" maxlength="30" data-default-value="Default" onblur="if (!this.value) this.value='Default'">
-              <button class="clear-theme-state reload-app" title="Reset theme properties to default">
+              <button type="button" class="clear-theme-state reload-app" title="Reset theme properties to default">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
                   <g><g transform="matrix(1 0 0 -1 0 1536)"><path d="M377.5,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7C375.6,1148.9,377.5,1144,377.5,1138.1z M540.8,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7S540.8,1144,540.8,1138.1z M704.2,1138.1V770.6c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-40.8c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v367.5c0,6,1.9,10.8,5.7,14.7s8.7,5.7,14.7,5.7h40.8c6,0,10.8-1.9,14.7-5.7C702.3,1148.9,704.2,1144,704.2,1138.1z M785.8,676.2V1281H214.2V676.2c0-9.4,1.5-18,4.5-25.8c3-7.9,6.1-13.6,9.3-17.2c3.2-3.6,5.4-5.4,6.7-5.4h530.8c1.3,0,3.5,1.8,6.7,5.4c3.2,3.6,6.3,9.4,9.3,17.2C784.3,658.2,785.8,666.8,785.8,676.2z M357.1,1362.7h285.8l-30.6,74.6c-3,3.8-6.6,6.2-10.8,7H399.2c-4.3-0.9-7.9-3.2-10.8-7L357.1,1362.7z M949.2,1342.2v-40.8c0-6-1.9-10.8-5.7-14.7c-3.8-3.8-8.7-5.7-14.7-5.7h-61.3V676.2c0-35.3-10-65.8-30-91.6c-20-25.7-44-38.6-72.1-38.6H234.6c-28.1,0-52.1,12.4-72.1,37.3c-20,24.9-30,55-30,90.3V1281H71.3c-6,0-10.8,1.9-14.7,5.7c-3.8,3.8-5.7,8.7-5.7,14.7v40.8c0,6,1.9,10.8,5.7,14.7c3.8,3.8,8.7,5.7,14.7,5.7h197.1l44.7,106.5c6.4,15.7,17.9,29.1,34.5,40.2c16.6,11.1,33.4,16.6,50.4,16.6h204.2c17,0,33.8-5.5,50.4-16.6c16.6-11.1,28.1-24.5,34.5-40.2l44.7-106.5h197.2c6,0,10.8-1.9,14.7-5.7C947.3,1353.1,949.2,1348.2,949.2,1342.2z"/></g></g>
                 </svg>
@@ -942,7 +963,7 @@ and another</pre>
     </div>
     
     <footer>
-      <button class="preview-theme" onclick="themeSource('show')" title="Preview custom theme source code">
+      <button type="button" class="preview-theme" onclick="themeSource('show')" title="Preview custom theme source code">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
         <path style="fill:#25B6D2;" d="M0,260.908l174.648-81.136v38.568l-132.08,57.848v0.728l132.08,57.848v38.568L0,292.212V260.908z"/>
@@ -951,7 +972,7 @@ and another</pre>
         V293.284z"/>
       </svg>
       </button>
-      <button class="download-theme" title="Download current custom theme">⬇ Download Theme</button>
+      <button type="button" class="download-theme" title="Download current custom theme">⬇ Download Theme</button>
     </footer>
 
   </section>
@@ -959,22 +980,76 @@ and another</pre>
 
 <!-- fixed on bottom -->
 
-<button id="theme-editor-toggler" onclick="themeEditorSidebar('open')" title="Open custom theme sidebar">
-  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 -256 1792 1792" id="svg3025" version="1.1" inkscape:version="0.48.3.1 r9886" width="100%" height="100%" sodipodi:docname="cog_font_awesome.svg">
-    <g transform="matrix(1,0,0,-1,121.49153,1285.4237)" id="g3027">
-      <path d="m 1024,640 q 0,106 -75,181 -75,75 -181,75 -106,0 -181,-75 -75,-75 -75,-181 0,-106 75,-181 75,-75 181,-75 106,0 181,75 75,75 75,181 z m 512,109 V 527 q 0,-12 -8,-23 -8,-11 -20,-13 l -185,-28 q -19,-54 -39,-91 35,-50 107,-138 10,-12 10,-25 0,-13 -9,-23 -27,-37 -99,-108 -72,-71 -94,-71 -12,0 -26,9 l -138,108 q -44,-23 -91,-38 -16,-136 -29,-186 -7,-28 -36,-28 H 657 q -14,0 -24.5,8.5 Q 622,-111 621,-98 L 593,86 q -49,16 -90,37 L 362,16 Q 352,7 337,7 323,7 312,18 186,132 147,186 q -7,10 -7,23 0,12 8,23 15,21 51,66.5 36,45.5 54,70.5 -27,50 -41,99 L 29,495 Q 16,497 8,507.5 0,518 0,531 v 222 q 0,12 8,23 8,11 19,13 l 186,28 q 14,46 39,92 -40,57 -107,138 -10,12 -10,24 0,10 9,23 26,36 98.5,107.5 72.5,71.5 94.5,71.5 13,0 26,-10 l 138,-107 q 44,23 91,38 16,136 29,186 7,28 36,28 h 222 q 14,0 24.5,-8.5 Q 914,1391 915,1378 l 28,-184 q 49,-16 90,-37 l 142,107 q 9,9 24,9 13,0 25,-10 129,-119 165,-170 7,-8 7,-22 0,-12 -8,-23 -15,-21 -51,-66.5 -36,-45.5 -54,-70.5 26,-50 41,-98 l 183,-28 q 13,-2 21,-12.5 8,-10.5 8,-23.5 z" id="path3029" inkscape:connector-curvature="0" style="fill:currentColor"/>
-    </g>
-  </svg>
+<button type="button" id="theme-editor-toggler" onclick="themeEditorSidebar('open')" title="Open custom theme sidebar">
+  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paint-roller" class="svg-inline--fa fa-paint-roller fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 128V32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v96c0 17.67 14.33 32 32 32h352c17.67 0 32-14.33 32-32zm32-64v128c0 17.67-14.33 32-32 32H256c-35.35 0-64 28.65-64 64v32c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32v-32h160c53.02 0 96-42.98 96-96v-64c0-35.35-28.65-64-64-64z"></path></svg>  
 </button>
 
-<!-- body info -->
+<!-- sidebar state handle -->
 
 <script>
-  function bodyClass (el) {
-    document.body.classList[el.hasAttribute('data-visible') ? 'add' : 'remove']('theme-editor-visible');
+  window.addEventListener('DOMContentLoaded', function () {
+    var alreadyOpened = JSON.parse(localStorage.getItem('themeEditorSidebarState'));
+    if (alreadyOpened) themeEditorSidebar('open');
+  });
+
+  function themeEditorSidebarToggle (el) {
+    var isVisible = el.hasAttribute('data-visible');
+    localStorage.setItem('themeEditorSidebarState', JSON.stringify(isVisible));
+    document.body.classList[isVisible ? 'add' : 'remove']('sidebar-visible');
   }
 </script>
-  <button id="toggle-source" title="Toggle examples source code"></button>
+  <button id="toggle-source" title="Toggle examples source code">
+  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code" class="svg-inline--fa fa-code fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg>
+</button>
+  <div is="el-sidebar" id="premadeThemesSidebar" data-on:open="premadeThemesSidebarToggle" data-on:close="premadeThemesSidebarToggle" class="premade-themes-holder">
+  <section>
+    
+    <header>
+      <button type="button" onclick="premadeThemesSidebar('close')" title="Hide theme editor sidebar">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 252 252" fill="#bbbbbb" xml:space="preserve">
+          <g>
+            <path d="M126,0C56.523,0,0,56.523,0,126s56.523,126,126,126s126-56.523,126-126S195.477,0,126,0z M126,234
+              c-59.551,0-108-48.449-108-108S66.449,18,126,18s108,48.449,108,108S185.551,234,126,234z"/>
+            <path d="M164.612,87.388c-3.515-3.515-9.213-3.515-12.728,0L126,113.272l-25.885-25.885c-3.515-3.515-9.213-3.515-12.728,0
+              c-3.515,3.515-3.515,9.213,0,12.728L113.272,126l-25.885,25.885c-3.515,3.515-3.515,9.213,0,12.728
+              c1.757,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636L126,138.728l25.885,25.885c1.757,1.757,4.061,2.636,6.364,2.636
+              s4.606-0.879,6.364-2.636c3.515-3.515,3.515-9.213,0-12.728L138.728,126l25.885-25.885
+              C168.127,96.601,168.127,90.902,164.612,87.388z"/>
+          </g>
+        </svg>   
+      </button>
+      <div>
+        CUSTOM THEMES LIST
+      </div>
+    </header>
+    
+    <div id="premade-themes">
+      <ul class="premade-themes-list"></ul>
+    </div>
+  </section>
+</div>
+
+<!-- fixed on bottom -->
+
+<button type="button" id="premade-themes-toggler" onclick="premadeThemesSidebar('open')" title="Premade Themes List">
+  <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="list-alt" class="svg-inline--fa fa-list-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z"></path></svg>
+</button>
+
+<!-- sidebar state handle -->
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    var alreadyOpened = JSON.parse(localStorage.getItem('premadeThemesSidebarState'));
+    if (alreadyOpened) premadeThemesSidebar('open');
+  });
+
+  function premadeThemesSidebarToggle (el) {
+    var isVisible = el.hasAttribute('data-visible');
+    localStorage.setItem('premadeThemesSidebarState', JSON.stringify(isVisible));
+    document.body.classList[isVisible ? 'add' : 'remove']('sidebar-visible');
+  }
+</script>
   <div id="themeSource" is="el-lightbox" data-boxed>
   <section>
     <header>

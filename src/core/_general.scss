@@ -1,6 +1,7 @@
 @include cssvars((
 	app-surface-color: transparent,
-	app-font-color: #333,
+	app-ground-color: rgba(200,200,200,.1),
+	app-text-color: #333,
 	app-selection-color: cssvar(primary-color),
 	app-selection-text-color: #ffffff,
 	app-base-font-size: 18px,
@@ -13,7 +14,7 @@
 @include superclass () {
 	
 	box-sizing: border-box;
-	color: cssvar(app-font-color);
+	color: cssvar(app-text-color);
 	font-weight: cssvar(app-font-weight);
 	line-height: cssvar(app-line-height);
 	font-size: cssvar(app-base-font-size);

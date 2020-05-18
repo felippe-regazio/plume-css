@@ -1,13 +1,21 @@
 @include superclass() {
   
-  [disabled], .disabled {
+  [disabled], .disabled, .is-disabled {
 		cursor: default !important;
 		filter: opacity(0.4) !important;
 		pointer-events: none !important;
   }
   
+  [hidden], .is-hidden {
+    display: none !important;
+  }
+
   .surface {
     background-color: cssvar(app-surface-color) !important;
+  }
+
+  .ground {
+    background-color: cssvar(app-ground-color);
   }
 
   .padded {
@@ -16,11 +24,7 @@
 
   .stacked {
     margin-bottom: 32px !important;
-  }
-
-  .is-hidden, [hidden] {
-    display: none !important;
-  }
+  } 
 
   .is-invisible {
     visibility: hidden !important;
@@ -38,6 +42,17 @@
   .no-border {
     border: none !important;
   }
+
+  .nowrap {
+    white-space: nowrap !important;
+  }  
+
+	.hgroup {
+		margin: cssvar(all-headings-margin) !important;
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 8px !important;
+		}
+	}   
 
   // COLORS
 
@@ -143,5 +158,9 @@
     .dont-print {
       display: none !important;
     }
-  }  
+    #dont-print {
+      color: #fff;
+    }
+    --dont-print: 1;
+  }
 }

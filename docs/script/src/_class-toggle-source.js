@@ -31,7 +31,7 @@ class ToggleSource {
   _addTriggerClickListener () {
     this.TRIGGER.addEventListener('click', e => {
       e.preventDefault();
-      e.target.classList.toggle('active');
+      this.TRIGGER.classList.toggle('active');
       this.CODEHOLDERS.forEach(holder => {
         holder.$el.classList.toggle('visible')
         holder.$cm.refresh();

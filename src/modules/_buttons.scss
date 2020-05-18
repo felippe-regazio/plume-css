@@ -20,10 +20,10 @@
 @include superclass () {
 
 	button,
-	[class*="btn-"],
 	input[type="button"],
 	input[type="submit"],
-	input[type="reset"] {
+	input[type="reset"],
+	[class*="btn-"] {
 		user-select: none;
 		position: relative;
 		align-items: center;
@@ -47,87 +47,87 @@
 		letter-spacing: cssvar(button-letter-spacing);
 		text-transform: cssvar(button-text-transform);
 		justify-content: cssvar(button-justify-content);
-		&.btn-block {
-			display: flex;
-			width: 100%;
-		}
-		&.btn-primary {
-			color: cssvar(button-primary-text-color);
-			background-color: cssvar(primary-color);
-			border-color: cssvar(primary-color);
-		}
-		&.btn-secondary {
-			color: cssvar(button-secondary-text-color);
-			background-color: cssvar(secondary-color);
-			border-color: cssvar(secondary-color);
-		}
-		&.btn-gradient {
-			color: cssvar(button-primary-text-color);
-			border-color: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
-			background: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
-		}
-		&.btn-black {
-			color: #ffffff;
-			border-color: #ffffff;
-			background-color: #000000;
-			&:hover {
-				color: #000000;
-				border-color: #000000;
-				background-color: #ffffff;
-			}
-		}
-		&.btn-white {
+	}
+	.btn-block {
+		display: flex;
+		width: 100%;
+	}
+	.btn-primary {
+		color: cssvar(button-primary-text-color);
+		background-color: cssvar(primary-color);
+		border-color: cssvar(primary-color);
+	}
+	.btn-secondary {
+		color: cssvar(button-secondary-text-color);
+		background-color: cssvar(secondary-color);
+		border-color: cssvar(secondary-color);
+	}
+	.btn-gradient {
+		color: cssvar(button-primary-text-color);
+		border-color: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
+		background: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
+	}
+	.btn-black {
+		color: #ffffff;
+		border-color: #ffffff;
+		background-color: #000000;
+		&:hover {
 			color: #000000;
 			border-color: #000000;
 			background-color: #ffffff;
-			&:hover {
-				color: #ffffff;
-				border-color: #ffffff;
-				background-color: #000000;
-			}
-		}
-		&.btn-light {
-			color: cssvar(app-font-color);
-			border-color: rgba(200,200,200,.3);
-			background-color: rgba(200,200,200,.3);
-			&:hover {
-				background-color: rgba(200,200,200,.2)
-			}
-		}
-		&.btn-success {
-			color: #ffffff;
-			background-color: cssvar(color-success);
-			border-color: cssvar(color-success);		
-		}
-		&.btn-danger, &.btn-error {
-			color: #ffffff;
-			background-color: cssvar(color-error);
-			border-color: cssvar(color-error);		
-		}
-		&.btn-warning {
-			color: #ffffff;
-			background-color: cssvar(color-warning);
-			border-color: cssvar(color-warning);		
-		}
-		&.btn-round {
-			padding: 0;
-			min-width: unset;
-			min-height: unset;
-			align-items: center;
-			border-radius: 100%;
-			display: inline-flex;
-			justify-content: center;
-			width: cssvar(button-rounded-size);
-			height: cssvar(button-rounded-size);;
-		}
-		&.btn-text {
-			border: none;
-			background: none;
-			box-shadow: none;
-			min-width: unset;
-			min-height: unset;
-			color: cssvar(primary-color);
-			padding: cssvar(button-text-padding);
 		}
 	}
+	.btn-white {
+		color: #000000;
+		border-color: #000000;
+		background-color: #ffffff;
+		&:hover {
+			color: #ffffff;
+			border-color: #ffffff;
+			background-color: #000000;
+		}
+	}
+	.btn-light {
+		color: cssvar(app-text-color);
+		border-color: rgba(200,200,200,.3);
+		background-color: rgba(200,200,200,.3);
+		&:hover {
+			background-color: rgba(200,200,200,.2)
+		}
+	}
+	.btn-success {
+		color: #ffffff;
+		background-color: cssvar(color-success);
+		border-color: cssvar(color-success);		
+	}
+	.btn-warning {
+		color: #ffffff;
+		background-color: cssvar(color-warning);
+		border-color: cssvar(color-warning);		
+	}
+	.btn-round {
+		padding: 0;
+		min-width: unset;
+		min-height: unset;
+		align-items: center;
+		border-radius: 100%;
+		display: inline-flex;
+		justify-content: center;
+		width: cssvar(button-rounded-size);
+		height: cssvar(button-rounded-size);;
+	}
+	.btn-text {
+		border: none;
+		background: none;
+		box-shadow: none;
+		min-width: unset;
+		min-height: unset;
+		color: cssvar(primary-color);
+		padding: cssvar(button-text-padding);
+	}
+	.btn-danger, .btn-error {
+		color: #ffffff;
+		background-color: cssvar(color-error);
+		border-color: cssvar(color-error);		
+	}	
 }

@@ -21,7 +21,9 @@ class ThemeEditor {
     const propInputs = this._customPropsToInputs(this.CSS_CUSTOM_PROPS);
     
     this._renderPropsInputs(this.FORM, propInputs);
+    
     this.FORM.append(this._createPropsDataList());
+    this.FORM.addEventListener('submit', e => e.preventDefault());
     
     this._addThemePreviewAction('.preview-theme');
     this._addDownloadThemeAction('.download-theme');
@@ -109,7 +111,7 @@ class ThemeEditor {
       inputset.forEach(input => {
         holder.append(input);
       });
-      this.FORM.append(holder);
+      form.append(holder);
     });
   }
 
@@ -233,6 +235,10 @@ class ThemeEditor {
     });
   }
 
+  /**
+   * Adds search behavior to the given target
+   * @param {Element} target element to add events
+   */
   _addSearchPropBtnEvents (target) {
     target = document.querySelector(target)
     target.addEventListener('input', e => {
@@ -249,6 +255,10 @@ class ThemeEditor {
     });
   }
 
+  /**
+   * Filter inputs on theme editor by the given query (str)
+   * @param {String} query 
+   */
   _filterInputsByQuery (query) {
 
     this.FORM.classList.remove('searching');

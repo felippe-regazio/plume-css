@@ -28,7 +28,11 @@
 
 [is="el-sidebar"].theme-editor-holder {
   max-width: 400px;
+  transition: 200ms;
   background: transparent;
+  &:not([data-visible]) {
+    visibility: hidden;
+  }
   header,
   footer {
     padding: 0px;
@@ -36,6 +40,7 @@
     align-items: center;
     justify-content: center;
     button {
+      cursor: pointer;
       appearance: none;
       border: none;
       padding: none;
@@ -173,4 +178,3 @@
     }
   }
 }
-

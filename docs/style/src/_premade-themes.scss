@@ -1,0 +1,131 @@
+#premade-themes-toggler {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  padding: none;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background-color: #eeeeee;
+  color: #444;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+  opacity: .8;
+  z-index: 100;
+  svg {
+    width: 100%;
+    max-width: 56px;
+    max-height: 70%;
+  }   
+}
+
+[is="el-sidebar"].premade-themes-holder {
+  max-width: 400px;
+  transition: 200ms;
+  background: transparent;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  &:not([data-visible]) {
+    visibility: hidden;
+  }
+  header {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #cccccc;    
+    button {
+      cursor: pointer;
+      appearance: none;
+      border: none;
+      padding: none;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      border-right: solid 1px #cccccc;
+      background-color: #eeeeee;
+      color: #444;
+      text-align: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      svg {
+        width: 100%;
+        max-width: 56px;
+        max-height: 70%;
+      }      
+    }
+    > div {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      display: flex;
+      color: #888;
+      align-items: center;
+      font-weight: 600;
+    }
+  }
+  > section {
+    width: 100%;    
+    max-width: 400px;
+    border-right: solid 1px #cccccc;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;    
+    li {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 16px;
+      border-bottom: solid 1px #f1f1f1;
+      &:hover {
+        background-color: #fafafa;
+      }
+      span {
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+      }
+      .custom-theme-list-item {
+        &__name {
+          font-size: 20px;
+        }
+        &__description {
+          font-size: 14px;
+          color: #444;
+        }
+        &__palette {
+          display: flex;
+          padding: 0;
+          height: 14px;
+          justify-content: flex-end;
+          span {
+            padding: 0;
+            width: 14px;
+            margin: 0 10px;
+            box-shadow: 0 0px 0px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          }
+        }
+      }
+      a {
+        color: currentColor;
+        text-decoration: none;
+      }
+    }
+  }
+}

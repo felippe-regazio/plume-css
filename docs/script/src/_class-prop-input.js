@@ -130,6 +130,7 @@ class PropInput {
     }
     
     this._updateTheme(input);
+    this._updateBorderColor(input);
   }
 
   // -------------------------------------------

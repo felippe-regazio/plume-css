@@ -32,11 +32,6 @@
 		@media screen and (max-width: 980px) {
 			display: block;
 			overflow: auto;
-			&.nowrap {
-				th, td {
-					white-space: nowrap;
-				}
-			}
 		}
 	}
 }

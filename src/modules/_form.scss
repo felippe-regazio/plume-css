@@ -11,7 +11,7 @@
 	label-font-size: 1em,
 	label-font-weight: 600,
 	label-margin-bottom: 24px,
-	label-color: cssvar(app-font-color),
+	label-color: cssvar(app-text-color),
 	// input
 	input-height: 40px,
 	input-box-shadow: none,
@@ -231,7 +231,7 @@
 			&::after,
 			&::before {
 				font-weight: 600;
-				color: cssvar(app-font-color);
+				color: cssvar(app-text-color);
 			}
 			&::before {
 				content: attr(min);

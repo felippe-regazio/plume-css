@@ -7,19 +7,20 @@ html {
 body {
   margin: 0;
   overflow: auto !important;
-  &.theme-editor-visible > .plume.container {
+  &.sidebar-visible > .plume.pm-container {
     transform: translateX(200px);
   }
 }
 
-body > .plume.container {
+body > .plume.pm-container {
   padding-top: 60px;
+  transition: 200ms;
   .logo {
     max-width: 100px;
     margin: 0 auto;
     padding: 56px 0;
     svg {
-      fill: var(--pm-app-font-color);
+      fill: var(--pm-app-text-color);
     }
   }
   .half {
@@ -80,10 +81,13 @@ body > .plume.container {
       }
     }
   } 
+  .complete-utilities-list tr > td:first-child {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 1500px) {
-  body.theme-editor-visible > .plume.container {
+  body.sidebar-visible > .plume.pm-container {
     transform: none;
   }
 }

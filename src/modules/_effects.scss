@@ -1,5 +1,5 @@
 @include superclass() {
-  &:not(.plume-no-effects) {
+  &:not(.no-effects) {
 
     button, [class*="btn-"] {
       overflow: hidden;

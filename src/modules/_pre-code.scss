@@ -4,6 +4,7 @@
   pre-color: #ffffff,
   pre-font-size: 0.9em,
   pre-max-height: 760px,
+  pre-margin-bottom: 32px,
   pre-padding: 16px,
   code-padding: 0 4px,
   code-background-color: rgba(100,100,100,.1),
@@ -32,6 +33,7 @@
     word-wrap: break-word;
     font-family: monospace, monospace;
     color: cssvar(pre-color);
+    margin-bottom: cssvar(pre-margin-bottom);
     padding: cssvar(pre-padding);
     font-size: cssvar(pre-font-size);
     max-height: cssvar(pre-max-height);
