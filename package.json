@@ -8,7 +8,8 @@
     "dev": "gulp --watch",
     "build": "gulp",
     "dev-docs": "cd docs && gulp --watch",
-    "build-docs": "cd docs && gulp"
+    "build-docs": "cd docs && gulp",
+    "build-all": "npm run build && npm run build-docs"
   },
   "keywords": [
     "none"
@@ -24,6 +25,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-import": "0.0.2",
+    "gulp-mustache": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",

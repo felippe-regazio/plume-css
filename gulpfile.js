@@ -12,7 +12,7 @@ const sassVars = require('gulp-sass-variables');
 const cssPrefix = require('./prefixer/gulp-css-selector-prefixer.js');
 const plumeConfig = require('./plume.config.js');
 
-const SOURCE_PATH = './src';
+const SOURCE_PATH = './sass';
 const DIST_PATH = './dist';
 
 gulp.task('build', function() {
@@ -26,7 +26,6 @@ gulp.task('build', function() {
 		.pipe(clean_css())
 		.pipe(autoprefix())
 		.pipe(size())
-		.pipe(concat(plumeConfig.output || 'plume.min.css'));
 
 	if (plumeConfig.prefixer) {
 		stream = stream.pipe(cssPrefix(plumeConfig.prefixer))

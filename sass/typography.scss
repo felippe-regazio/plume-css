@@ -1,11 +1,15 @@
+@import 'core/helpers.scss';
+
 @include cssvars((
 	
 	paragraph-font-size: 1em,
 	paragraph-margin-bottom: 32px,
 	paragraph-font-family: cssvar(font-family-secondary),
 
+	link-color: cssvar(primary-color),
+	link-text-transform: none,
 	link-text-decoration: none,
-	link-color: cssvar(primary-color),	
+	link-font-weight: normal,
 
 	all-headings-margin: 0 0 32px 0,
 	all-headings-font-family: cssvar(--font-family-primary),
@@ -82,6 +86,8 @@
 	a, .link {
 		color: cssvar(link-color);
 		text-decoration: cssvar(link-text-decoration);
+		font-weight: cssvar(link-font-weight);
+		text-transform: cssvar(link-text-transform);
 		@media print {	
 			&:not([href^="#"]):not([href^="javascript"])::after{
 				content: " (" attr(href) ") ";

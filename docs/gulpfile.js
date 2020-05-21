@@ -8,6 +8,8 @@ const rename = require("gulp-rename");
 const sass = require('gulp-sass');
 const clean_css = require('gulp-clean-css');
 const prefix = require('gulp-autoprefixer');
+const mustache = require('gulp-mustache');
+const plumeConfig = require('../plume.config.js');
 
 gulp.task('build-js', function(){
 	return gulp.src('./script/src/**/*.js')
@@ -32,6 +34,10 @@ gulp.task('build-html', function () {
 	return gulp.src('./template.html')
 		.pipe(htmlImport('./html/'))
 		.pipe(rename("index.html"))
+		.pipe(mustache({
+			superclass: plumeConfig.superclass || '',
+			prefix: plumeConfig.prefixer ? plumeConfig.prefixer.prefix || '' : ''
+		}))
 		.pipe(gulp.dest('./')); 
 });
 

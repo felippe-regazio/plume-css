@@ -1,3 +1,5 @@
+@import 'core/helpers.scss';
+
 @include cssvars((
 	// general
 	placeholder-color: #999999,
@@ -112,9 +114,9 @@
 	input[type="color"] {
     border: none;
 		background: none;
-		--pm-input-padding: 0;
-		--pm-input-border-width: 0;
-		--pm-input-background-color: transparent;
+		--input-padding: 0;
+		--input-border-width: 0;
+		--input-background-color: transparent;
 	}
 	
 	// radio & checkbox
