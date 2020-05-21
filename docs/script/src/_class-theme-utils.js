@@ -62,7 +62,7 @@ class ThemeUtils {
     let wrapper = document.querySelector('[name="plume-custom-theme-scope"]').value || ':root';
     let theme = document.documentElement.style.cssText;
     
-    if (theme.indexOf('--pm-') < 0) {
+    if (theme.indexOf('--') < 0) {
       theme = "/* You didn't modified any default property. */";
     } else if (beautify) {
       theme = cssbeautify(`${wrapper} { ${theme} }`, {

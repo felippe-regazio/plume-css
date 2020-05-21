@@ -19,7 +19,7 @@
       content: "";
       width: 30px;
       height: 2px;
-      background-color: var(--pm-primary-color);
+      background-color: var(--#{$prefix}primary-color);
       position: absolute;
       top: 0;
       left: 0;

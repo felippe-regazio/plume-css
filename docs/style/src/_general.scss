@@ -7,12 +7,12 @@ html {
 body {
   margin: 0;
   overflow: auto !important;
-  &.sidebar-visible > .plume.pm-container {
+  &.sidebar-visible > #{$superclass}.#{$prefix}container {
     transform: translateX(200px);
   }
 }
 
-body > .plume.pm-container {
+body > #{$superclass}.#{$prefix}container {
   padding-top: 60px;
   transition: 200ms;
   .logo {
@@ -20,7 +20,7 @@ body > .plume.pm-container {
     margin: 0 auto;
     padding: 56px 0;
     svg {
-      fill: var(--pm-app-text-color);
+      fill: var(--#{$prefix}app-text-color);
     }
   }
   .half {
@@ -40,7 +40,7 @@ body > .plume.pm-container {
   .el-ac-summary {
     border: none;
     padding: 16px 0;
-    color: var(--pm-primary-color);
+    color: var(--#{$prefix}primary-color);
   }  
   @media (max-width: 768px) {
     .half {
@@ -87,7 +87,7 @@ body > .plume.pm-container {
 }
 
 @media screen and (max-width: 1500px) {
-  body.sidebar-visible > .plume.pm-container {
+  body.sidebar-visible > #{$superclass}.#{$prefix}container {
     transform: none;
   }
 }

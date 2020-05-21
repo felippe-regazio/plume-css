@@ -2,7 +2,7 @@
   <h2>Utilities</h2>
 </div>
 
-<div class="pm-ground pm-padded">
+<div class="{{prefix}}ground {{prefix}}padded">
 
   <p>
     Plume has a large set of utilities that helps you to alter elements style and behavior, and are pretty useful to avoid code repetition. 
@@ -19,63 +19,63 @@
       </thead>   
       <tbody>
         <tr>
-          <td>.pm-container</td>
+          <td>.{{prefix}}container</td>
           <td>Centered padded application container</td>
         </tr>
         <tr>
-          <td>.pm-surface</td>
-          <td>Applies the application surface color (--pm-app-surface-color) as background-color</td>
+          <td>.{{prefix}}surface</td>
+          <td>Applies the application surface color (--{{prefix}}app-surface-color) as background-color</td>
         </tr> 
         <tr>
-          <td>.pm-ground</td>
-          <td>Applies the application ground color (--pm-app-ground-color) as background-color. Useful for divs, card, jumbotrons, etc</td>
+          <td>.{{prefix}}ground</td>
+          <td>Applies the application ground color (--{{prefix}}app-ground-color) as background-color. Useful for divs, card, jumbotrons, etc</td>
         </tr>         
         <tr>
-          <td>.pm-font-primary</td>
-          <td>Sets font-family to the application primary font (--pm-font-family-primary)</td>
+          <td>.{{prefix}}font-primary</td>
+          <td>Sets font-family to the application primary font (--{{prefix}}font-family-primary)</td>
         </tr>
         <tr>
-          <td>.pm-font-secondary</td>
-          <td>Sets font-family to the application secondary font (--pm-font-family-secondary)</td>
+          <td>.{{prefix}}font-secondary</td>
+          <td>Sets font-family to the application secondary font (--{{prefix}}font-family-secondary)</td>
         </tr>            
         <tr>
-          <td>.pm-padded</td>
+          <td>.{{prefix}}padded</td>
           <td>Applies padding: 16px</td>
         </tr>
         <tr>
-          <td>.pm-stacked</td>
+          <td>.{{prefix}}stacked</td>
           <td>Applies margin-bottom: 32px</td>
         </tr>            
         <tr>
-          <td>.pm-disabled</td>
+          <td>.{{prefix}}disabled</td>
           <td>Applies disabled style on element. Alias for [disabled], but with no semantic value</td>
         </tr>
         <tr>
-          <td>.pm-is-hidden</td>
+          <td>.{{prefix}}is-hidden</td>
           <td>Applies display:none !important style on element. Alias for [hidden], but with no semantic value</td>
         </tr>
         <tr>
-          <td>.pm-is-invisible</td>
+          <td>.{{prefix}}is-invisible</td>
           <td>Applies visibility: hidden !important; opacity: 0 !important;</td>
         </tr>
         <tr>
-          <td>.pm-no-padding</td>
+          <td>.{{prefix}}no-padding</td>
           <td>Applies padding: 0px !important</td>
         </tr>
         <tr>
-          <td>.pm-no-margin</td>
+          <td>.{{prefix}}no-margin</td>
           <td>Applies margin: 0px !important</td>
         </tr> 
         <tr>
-          <td>.pm-no-border</td>
+          <td>.{{prefix}}no-border</td>
           <td>Applies border: none !important</td>
         </tr>
         <tr>
-          <td>.pm-hgroup</td>
+          <td>.{{prefix}}hgroup</td>
           <td>Must be applied on a div which holder 2+ Headings. Almost like the deprecated hgroup element</td>
         </tr>
         <tr>
-          <td>.pm-dont-print</td>
+          <td>.{{prefix}}dont-print</td>
           <td>Will hide the element from @print layout</td>
         </tr>
       </tbody>
@@ -86,79 +86,79 @@
     <table>
       <tbody>
         <tr>
-          <td>.pm-nowrap</td>
+          <td>.{{prefix}}nowrap</td>
           <td>Forces white-space nowrap on text content</td>
         </tr>
         <tr>
-          <td>.pm-text-black</td>
+          <td>.{{prefix}}text-black</td>
           <td>Sets color to #000000 by default</td>
         </tr>
         <tr>
-          <td>.pm-text-app</td>
-          <td>Sets color to the application font color (--pm-app-text-color)</td>
+          <td>.{{prefix}}text-app</td>
+          <td>Sets color to the application font color (--{{prefix}}app-text-color)</td>
         </tr>
         <tr>
-          <td>.pm-text-white</td>
+          <td>.{{prefix}}text-white</td>
           <td>Sets color to #ffffff by default</td>
         </tr>
         <tr>
-          <td>.pm-text-light</td>
+          <td>.{{prefix}}text-light</td>
           <td>Sets color to #cccccc by default</td>
         </tr>
         <tr>
-          <td>.pm-text-dark</td>
+          <td>.{{prefix}}text-dark</td>
           <td>Sets color to #444444 by default</td>
         </tr>        
         <tr>
-          <td>.pm-text-upper</td>
+          <td>.{{prefix}}text-upper</td>
           <td>Sets text transform to uppercase</td>
         </tr>
         <tr>
-          <td>.pm-text-lower</td>
+          <td>.{{prefix}}text-lower</td>
           <td>Sets text transform to lowercase</td>
         </tr>
         <tr>
-          <td>.pm-text-capitalize</td>
+          <td>.{{prefix}}text-capitalize</td>
           <td>Sets text transform to capitalize</td>
         </tr>
         <tr>
-          <td>.pm-text-center</td>
+          <td>.{{prefix}}text-center</td>
           <td>Sets text align to center</td>
         </tr>
         <tr>
-          <td>.pm-text-left</td>
+          <td>.{{prefix}}text-left</td>
           <td>Sets text align to left</td>
         </tr>
         <tr>
-          <td>.pm-text-right</td>
+          <td>.{{prefix}}text-right</td>
           <td>Sets text align to right</td>
         </tr>
         <tr>
-          <td>.pm-text-primary</td>
-          <td>Sets color to the application primary-color (--pm-primary-color)</td>
+          <td>.{{prefix}}text-primary</td>
+          <td>Sets color to the application primary-color (--{{prefix}}primary-color)</td>
         </tr>
         <tr>
-          <td>.pm-text-secondary</td>
-          <td>Sets color to the application secondary-color (--pm-secondary-color)</td>
+          <td>.{{prefix}}text-secondary</td>
+          <td>Sets color to the application secondary-color (--{{prefix}}secondary-color)</td>
         </tr>
         <tr>
-          <td>.pm-text-success</td>
-          <td>Sets text-color to the application success-color (--pm-color-success)</td>
+          <td>.{{prefix}}text-success</td>
+          <td>Sets text-color to the application success-color (--{{prefix}}color-success)</td>
         </tr> 
         <tr>
-          <td>.pm-text-error</td>
-          <td>Sets text-color to the application error-color (--pm-color-error)</td>
+          <td>.{{prefix}}text-error</td>
+          <td>Sets text-color to the application error-color (--{{prefix}}color-error)</td>
         </tr> 
         <tr>
-          <td>.pm-text-warning</td>
-          <td>Sets text-color to the application warning-color (--pm-color-warning)</td>
+          <td>.{{prefix}}text-warning</td>
+          <td>Sets text-color to the application warning-color (--{{prefix}}color-warning)</td>
         </tr> 
         <tr>
-          <td>.pm-text-info</td>
-          <td>Sets text-color to the application info-color (--pm-color-info)</td>
+          <td>.{{prefix}}text-info</td>
+          <td>Sets text-color to the application info-color (--{{prefix}}color-info)</td>
         </tr>
         <tr>
-          <td>.pm-link</td>
+          <td>.{{prefix}}link</td>
           <td>Applies the link style to the text</td>
         </tr>      
       </tbody> 
@@ -169,44 +169,44 @@
     <table>
       <tbody>
         <tr>
-          <td>.pm-bg-black</td>
+          <td>.{{prefix}}bg-black</td>
           <td>Sets background-color to #000000</td>
         </tr> 
         <tr>
-          <td>.pm-bg-white</td>
+          <td>.{{prefix}}bg-white</td>
           <td>Sets background-color to #ffffff</td>
         </tr>
         <tr>
-          <td>.pm-bg-dark</td>
+          <td>.{{prefix}}bg-dark</td>
           <td>Sets background-color to #444444</td>
         </tr>
         <tr>
-          <td>.pm-bg-light</td>
+          <td>.{{prefix}}bg-light</td>
           <td>Sets background-color to rgba(200,200,200,.1)</td>
         </tr>      
         <tr>
-          <td>.pm-bg-primary</td>
-          <td>Sets background-color to the application primary-color (--pm-primary-color)</td>
+          <td>.{{prefix}}bg-primary</td>
+          <td>Sets background-color to the application primary-color (--{{prefix}}primary-color)</td>
         </tr>
         <tr>
-          <td>.pm-bg-secondary</td>
-          <td>Sets background-color to the application secondary-color (--pm-secondary-color)</td>
+          <td>.{{prefix}}bg-secondary</td>
+          <td>Sets background-color to the application secondary-color (--{{prefix}}secondary-color)</td>
         </tr>
         <tr>
-          <td>.pm-bg-success</td>
-          <td>Sets background-color to the application success-color (--pm-color-success)</td>
+          <td>.{{prefix}}bg-success</td>
+          <td>Sets background-color to the application success-color (--{{prefix}}color-success)</td>
         </tr> 
         <tr>
-          <td>.pm-bg-error</td>
-          <td>Sets background-color to the application error-color (--pm-color-error)</td>
+          <td>.{{prefix}}bg-error</td>
+          <td>Sets background-color to the application error-color (--{{prefix}}color-error)</td>
         </tr> 
         <tr>
-          <td>.pm-bg-warning</td>
-          <td>Sets background-color to the application warning-color (--pm-color-warning)</td>
+          <td>.{{prefix}}bg-warning</td>
+          <td>Sets background-color to the application warning-color (--{{prefix}}color-warning)</td>
         </tr> 
         <tr>
-          <td>.pm-bg-info</td>
-          <td>Sets background-color to the application info-color (--pm-color-info)</td>
+          <td>.{{prefix}}bg-info</td>
+          <td>Sets background-color to the application info-color (--{{prefix}}color-info)</td>
         </tr>
       </tbody>
     </table>
@@ -216,28 +216,28 @@
     <table>
       <tbody>
         <tr>
-          <td>.pm-bc-primary</td>
-          <td>Sets border-color to the application primary-color (--pm-primary-color)</td>
+          <td>.{{prefix}}bc-primary</td>
+          <td>Sets border-color to the application primary-color (--{{prefix}}primary-color)</td>
         </tr>
         <tr>
-          <td>.pm-bc-secondary</td>
-          <td>Sets border-color to the application secondary-color (--pm-secondary-color)</td>
+          <td>.{{prefix}}bc-secondary</td>
+          <td>Sets border-color to the application secondary-color (--{{prefix}}secondary-color)</td>
         </tr>      
         <tr>
-          <td>.pm-bc-success</td>
-          <td>Sets border-color to the application success-color (--pm-color-success)</td>
+          <td>.{{prefix}}bc-success</td>
+          <td>Sets border-color to the application success-color (--{{prefix}}color-success)</td>
         </tr> 
         <tr>
-          <td>.pm-bc-error</td>
-          <td>Sets border-color to the application error-color (--pm-color-error)</td>
+          <td>.{{prefix}}bc-error</td>
+          <td>Sets border-color to the application error-color (--{{prefix}}color-error)</td>
         </tr> 
         <tr>
-          <td>.pm-bc-warning</td>
-          <td>Sets border-color to the application warning-color (--pm-color-warning)</td>
+          <td>.{{prefix}}bc-warning</td>
+          <td>Sets border-color to the application warning-color (--{{prefix}}color-warning)</td>
         </tr> 
         <tr>
-          <td>.pm-bc-info</td>
-          <td>Sets border-color to the application info-color (--pm-color-info)</td>
+          <td>.{{prefix}}bc-info</td>
+          <td>Sets border-color to the application info-color (--{{prefix}}color-info)</td>
         </tr>
       </tbody>
     </table>
@@ -247,59 +247,59 @@
     <table>
       <tbody>
         <tr>
-          <td>.pm-btn-block</td>
+          <td>.{{prefix}}btn-block</td>
           <td>Sets display block + width 100% on a button</td>
         </tr>
         <tr>
-          <td>.pm-btn-primary</td>
+          <td>.{{prefix}}btn-primary</td>
           <td>Applies the primary button style</td>
         </tr>
         <tr>
-          <td>.pm-btn-secondary</td>
+          <td>.{{prefix}}btn-secondary</td>
           <td>Applies the secondary button style</td>
         </tr>
         <tr>
-          <td>.pm-btn-gradient</td>
+          <td>.{{prefix}}btn-gradient</td>
           <td>Applies the gradient button style</td>
         </tr>
         <tr>
-          <td>.pm-btn-gradient</td>
+          <td>.{{prefix}}btn-gradient</td>
           <td>Applies the gradient button style</td>
         </tr>
         <tr>
-          <td>.pm-btn-black</td>
+          <td>.{{prefix}}btn-black</td>
           <td>Applies the black button style</td>
         </tr>
         <tr>
-          <td>.pm-btn-white</td>
+          <td>.{{prefix}}btn-white</td>
           <td>Applies the white button style</td>
         </tr>  
         <tr>
-          <td>.pm-btn-light</td>
+          <td>.{{prefix}}btn-light</td>
           <td>Applies the light button style</td>
         </tr>
         <tr>
-          <td>.pm-btn-success</td>
-          <td>Applies the success button style (--pm-color-success)</td>
+          <td>.{{prefix}}btn-success</td>
+          <td>Applies the success button style (--{{prefix}}color-success)</td>
         </tr>
         <tr>
-          <td>.pm-btn-error</td>
-          <td>Applies the error button style (--pm-color-error)</td>
+          <td>.{{prefix}}btn-error</td>
+          <td>Applies the error button style (--{{prefix}}color-error)</td>
         </tr>
         <tr>
-          <td>.pm-btn-danger</td>
+          <td>.{{prefix}}btn-danger</td>
           <td>Alias for btn-error</td>
         </tr>
         <tr>
-          <td>.pm-btn-warning</td>
-          <td>Applies the warning button style (--pm-color-warning)</td>
+          <td>.{{prefix}}btn-warning</td>
+          <td>Applies the warning button style (--{{prefix}}color-warning)</td>
         </tr>   
         <tr>
-          <td>.pm-btn-round</td>
-          <td>Applies the round button style (--pm-color-round)</td>
+          <td>.{{prefix}}btn-round</td>
+          <td>Applies the round button style (--{{prefix}}color-round)</td>
         </tr>  
         <tr>
-          <td>.pm-btn-text</td>
+          <td>.{{prefix}}btn-text</td>
           <td>Applies the text button style</td>
         </tr>                         
       </tbody>      
@@ -310,40 +310,40 @@
     <table>
       <tbody>
         <tr>
-          <td>.pm-field</td>
+          <td>.{{prefix}}field</td>
           <td>Blocked level wrapper for form controls (fieldset inherits this style)</td>
         </tr>
         <tr>
-          <td>.pm-required</td>
+          <td>.{{prefix}}required</td>
           <td>Must be applied on labels, .field or fieldsets to add a red asterisk (*) on text</td>
         </tr>
         <tr>
-          <td>.pm-input-file</td>
+          <td>.{{prefix}}input-file</td>
           <td>Use this class in a span element with an input type file inside for prettify.</td>
         </tr>
         <tr>
-          <td>[data-pm-holder]</td>
+          <td>[data-{{prefix}}holder]</td>
           <td>Must be applied on labels when wrapping elements</td>
         </tr>
         <tr>
-          <td>[data-pm-subs]</td>
+          <td>[data-{{prefix}}subs]</td>
           <td>Must be applied on range elements to show range max/min as legend</td>
         </tr>
         <tr>
-          <td>[data-pm-success]</td>
-          <td>Show a success message on the given element bottom. Use it like data-pm-success="message"</td>
+          <td>[data-{{prefix}}success]</td>
+          <td>Show a success message on the given element bottom. Use it like data-{{prefix}}success="message"</td>
         </tr>
         <tr>
-          <td>[data-pm-error]</td>
-          <td>Show a error message on the given element bottom. Use it like data-pm-error="message"</td>
+          <td>[data-{{prefix}}error]</td>
+          <td>Show a error message on the given element bottom. Use it like data-{{prefix}}error="message"</td>
         </tr>
         <tr>
-          <td>[data-pm-warning]</td>
-          <td>Show a warning message on the given element bottom. Use it like data-pm-warning="message"</td>
+          <td>[data-{{prefix}}warning]</td>
+          <td>Show a warning message on the given element bottom. Use it like data-{{prefix}}warning="message"</td>
         </tr>
         <tr>
-          <td>[data-pm-info]</td>
-          <td>Show a info message on the given element bottom. Use it like data-pm-info="message"</td>
+          <td>[data-{{prefix}}info]</td>
+          <td>Show a info message on the given element bottom. Use it like data-{{prefix}}info="message"</td>
         </tr>                  
       </tbody>
     </table>
