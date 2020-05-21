@@ -87,8 +87,12 @@ class URLHandler {
       .forEach(pair => {
         if (pair.name && pair.value) {
           const input = this.FORM.querySelector(`input[name="${pair.name}"]`);
-          input.value = pair.value;
-          input.dispatchEvent(new Event('input'));
+          if (input) {
+            input.value = pair.value;
+            input.dispatchEvent(new Event('input'));
+          } else {
+            console.warn(`There is no input for "${pair.name}". Property skipped.`);
+          }
         }
       });    
   }

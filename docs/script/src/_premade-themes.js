@@ -55,6 +55,17 @@
         text: 'transparent',
       },
       themeURL: 'A4GwrgtgpgtAxmAzgFwPYRsgFlaMB2AhtALwDKA1gJb74CeApAEwAMAKjtAGSiSwIp0mTrERxUwKCQYBmAIIAnVKmRcYMYBmAKqEQgrrxUIVAulMZAFiYATSzYCsajRkRRx+G-sPiTZ5jIARnBQNgBmUM6aMITAwDCIYAphhCFGfiTICoT4iMD6UPiq6tGx8QDmSmCe6aaZ2bn5CoXFLjBYAIwwYahFMADuUFTlWMgkliwsURhYTN29yANDI2MTUyUzMvN9g8Oj45PT7Zbbi7srB+ttWA6nS3urhxvtAGx35-trRzTAYIuBphsUAUMGyNioSHGwAAHt98L9-oDgQMqDZsCQOjCgA+G-sPiTZhiwAnMwyAEZwUDYAZlDOmjCEwMAwiGAKUYQRRn4kyAqE+IjA+lD4qurxickA5kpgntmmufmFxQql5S4wWACMMFGoZTAA7lBU1VjIJJYsLHEYWEz9g8gjYxNTM3MVCzLLQ6Pjk9Oz892W+6uHGyfbXVgOl2tHm6c73QBsT9fHW2c0wDAq1CphsUAUMHyNioSGmwAAHv98IDgaDwSMqDZsCQegigA'
+    },
+    {
+      name: 'Black & White',
+      description: 'The beautiful basic',
+      palette: {
+        primary: '#000000',
+        secondary: '#f0f0f0',
+        surface: 'transparent',
+        text: '#333'
+      },
+      themeURL: 'A4GwrgtgpgtAxmAzgFwPYRsgFlaMB2AhtALwBCIhcA1gKQBMADAGSiSwIrqY56JypgUErQDMAQQBOqVMmYwYwDADNU+ZDGXEAliACeMRFAH4AJoUl6SACSggAblGTa4hAHJQwUBgGFbDpxdCBkYPL19-R2dXXyltQhBfREJ8REMoSW1leUUMYEyICwMBEFRJEXpRRmqanKV0k3NLeFRS8oZRZUYurrqMErLDMDg4KERECqqAFgAOACMpub6YQmBgIcktUZa2kmRJFMRgCyh1ZdX1gHNpMDMdsr2D1OPJU7kFermwZDR8BrUmgZkFAAB4aAbtSpTaHLbT4YDfGA4bSXLDIEizYAgoA'
     }
   ];
 
