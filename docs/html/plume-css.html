@@ -28,62 +28,57 @@
   <p>
     Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. Plume is meant to be the lowest design layer on your app, 
     helping you to grow solid and change easily. You should use Plume if you don't want to bring all the larger frameworks features to your application, 
-    or if you want to code everything by yourself and need a solid and highly customizable start point. Plume was inspired by projects such as Skeleton, Milligram, 
-    MiniCss and Material, encompassing some practices found in all of them. On this page you'll find an interactive Theme Editor, features overview, 
-    visual reference and a list of utilities and custom properties. Here are some of Plume's coolest characteristics:
+    or if you want to code everything by yourself. Plume offers a solid, highly customizable and extendable start point. Plume was inspired by projects 
+    such as Skeleton, Milligram, MiniCss and Material, encompassing some practices found in all of them. On this page you'll find an interactive 
+    Theme Editor, features overview, visual reference and a list of utilities and custom properties. Here are some of Plume's coolest characteristics:
   <p></p>
     
     <dl>
       <dt>📦 &nbsp; Pretty small</dt>
         <dd>
-          The complete source has ~ 5.5 kb gzipped, or 25 kb inflated. You can also load only the modules that you'll need, as buttons or form elements, for example.
+          The complete source has ~5kb gzipped, or 28 kb inflated. You can also load only the modules that you'll need, as buttons.css or form.css elements, for example.
         </dd>
 
       <dt>⛔ &nbsp; No JavaScript</dt>
         <dd>
-          Completly javascript free. Is just the pure and simple CSS. You can test it by disabling javascript and reloading this page. The theme editor wont be available, but Plume will be intact.
+          Completly javascript free. Is just pure and simple CSS. You can test it by disabling javascript and reloading this page. The theme editor wont be available, but Plume will be intact.
         </dd>        
   
       <dt>🔌 &nbsp; Plug and play</dt>
         <dd>
-          Load the lib, load your custom theme if you have one, and you're ready to go. Plume is already normalized. You can start to build your application with a minimal and solid design foundation.
+          Load the lib, load your custom theme if you have one, and you're ready to go. Plume is already normalized. You can start to build your application with a minimal and solid CSS foundation.
         </dd>
 
       <dt>🖌 &nbsp; Highly themeble</dt>
         <dd>
-         Builded with 70+ CSS custom properties (vars). Minimal and easy to extend and customize. Theme constructor with imediate visual feedback available (Button on the top left corner).
+         70+ CSS custom properties available. Easily customizable from CSS or SCSS. Theme constructor with imediate visual feedback available (Button on the top left corner).
         </dd>
   
       <dt>∈ &nbsp; Completely scoped</dt>
         <dd>
-          Styles are applied under the <code>plume</code> class, and custom properties are prefixed. 
+          Styles are applied under the <code>{{superclass}}</code> class, and custom properties are prefixed. 
           You can add plume on an existent project with no harm and no side effects on the outer scope.
         </dd>
   
       <dt>💎 &nbsp; Decoupled themes</dt>
         <dd>
-          Custom themes are just a set of CSS Custom properties. You can load them dinamically or scope them to have multiple themes on the same application - even same page.
+          Custom themes are just a set of CSS Custom properties. You can load them dinamically or scope them to have multiple themes on the same application - even same page (change this page theme on the bottom left button).
         </dd>
-  
-      <dt>⟷ &nbsp; Fluid typography</dt>
-        <dd>
-          Typography is based on Material guidelines, and scales with the viewport width. The typography global definitions are pretty easy to tune. 
-        </dd>
-  
+    
       <dt>📐 &nbsp; No grid system</dt>
         <dd>
-          You can easily build any kind of layout with CSS Flexbox and/or Grid. If you still prefer to use a grid system lib, 
-          there are a plenty of them avaible out there, there is no need to reinvent the wheel.
+          You can easily build any kind of layout with CSS Flexbox and/or Grid. If you still prefer to use a grid system, 
+          there are a plenty of them avaible out there (bootstrap grid, flebox grid, etc), you choose.
         </dd>
   
       <dt>🎯 &nbsp; No bunch of classes</dt>
         <dd>
-          Despite a large set of utilities, Plume applies the style on bare elements. Classes and custom attributes are used to alter the default style and behavior.
+          Despite a large set of utilities, Plume applies the style on bare elements. Classes and custom attributes are used to alter the default styles and behavior.
         </dd>
 
       <dt>💡 &nbsp; Lib, framework or boilerplate</dt>
         <dd>
-          You can use plume as a lib, by adding it on your application as a base design layer. As a framework, by growing from Plume, 
+          You can use plume as a lib, by adding it on your application as a base design. As a framework, by growing from Plume, 
           or as a boilerplate, by cloning Plume's source code and starting from there.
         </dd>
 
@@ -103,8 +98,8 @@
     <h4>Getting Started</h4>
 
     <p>
-      You can download Plume on the button below, then add the plume.min.css file on the dist folder to your project. 
-      Or you can add via NPM, then import Plume on your project. For examples and advanced load methods, please check the Documentation.
+      You can download Plume dist package on the button below or you can add via NPM or Yarn, then import Plume on your project.<br/>
+      For advanced load methods, usage, customization and development, please read the comple documentation on GitHub.
     </p>
 
     <pre><code>npm install plume-css</code></pre>
