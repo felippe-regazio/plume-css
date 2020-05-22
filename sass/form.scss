@@ -3,7 +3,7 @@
 @include cssvars((
 	// general
 	placeholder-color: #999999,
-	form-field-margin-bottom: 24px,
+	form-field-margin-bottom: 32px,
 	form-caption-font-size: .8em, 
 	// fieldset
 	fieldset-border-style: solid,
@@ -13,7 +13,6 @@
 	label-font-size: 1em,
 	label-font-weight: 600,
 	label-margin-bottom: 24px,
-	label-color: cssvar(app-text-color),
 	// input
 	input-height: 40px,
 	input-box-shadow: none,
@@ -23,18 +22,12 @@
 	input-border-width: 0 0 2px 0,
 	input-border-color: rgba(127,127,127,.4),
 	input-background-color: rgba(200,200,200,.1),
-	// radio & checkbox
-	radio-and-checkbox-size: 24px,
-	radio-and-checkbox-border-width: 2px,
-	// toggle
-	toggle-size: 28px,
-	toggle-cursor: pointer,
+	// switches
+	input-switch-size: 24px,
+	input-switch-border-width: 2px,
 	// textarea
-	textarea-padding: 10px,
+	textarea-padding: 16px,
 	textarea-min-height: 100px,
-	// progress & meter
-	progress-and-meter-height: 12px,
-	progress-and-meter-border-radius: 25px,
 ));
 
 @include superclass () {
@@ -59,12 +52,12 @@
 	
 	label, legend {
 		display: block;
-		color: cssvar(label-color);
+		color: cssvar(app-text-color);
 		font-weight: cssvar(label-font-weight);
 		margin-bottom: cssvar(label-margin-bottom);
 		&[data-holder] {
 			font-weight: 300;
-			margin-bottom: 0;
+			margin: 0 4px;
 			align-items: center;
 			display: inline-flex;
 			height: cssvar(input-height);
@@ -124,12 +117,14 @@
 	input[type="radio"],
 	input[type="checkbox"] {
 		margin: 0 8px;
+		cursor: pointer;
 		appearance: none;
 		position: relative;
 		display: inline-block;
-		width: cssvar(radio-and-checkbox-size);
-		height: cssvar(radio-and-checkbox-size);
-		border: solid cssvar(radio-and-checkbox-border-width) cssvar(input-border-color);
+		width: cssvar(input-switch-size);
+		height: cssvar(input-switch-size);
+		border: solid cssvar(input-switch-border-width); 
+		border-color: cssvar(input-border-color);
 		&::before {
 			top: 2px;
 			left: 2px;
@@ -138,8 +133,8 @@
 			visibility: hidden;
 			position: absolute;
 			background-color: cssvar(primary-color);
-			width: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
-			height: calc(#{cssvar(radio-and-checkbox-size)} - 8px);
+			height: calc(100% - 4px);
+			width: calc(100% - 4px);
 		}
 		&:checked {
 			border-color: cssvar(primary-color);
@@ -159,9 +154,9 @@
 	
 	input[type="checkbox"][data-checkbox-toggle] {
 		border-radius: 25px;
-		height: cssvar(toggle-size);
-		cursor: cssvar(toggle-cursor);
-		width: calc(#{cssvar(toggle-size)} * 2);
+		height: cssvar(input-switch-size);
+		cursor: pointer;
+		width: calc(#{cssvar(input-switch-size)} * 2);
 		&::before {
 			top: 2px;
 			left: 2px;
@@ -170,8 +165,8 @@
 			visibility: visible;
 			position: absolute;
 			border-radius: 100%;
-			width: calc(#{cssvar(toggle-size)} - 8px);
-			height: calc(#{cssvar(toggle-size)} - 8px);
+			height: calc(100% - 4px);
+			width: calc( #{cssvar(input-switch-size)} - (#{cssvar(input-switch-border-width)} * 2) - 4px );
 			background-color: cssvar(input-border-color);
 		}
 		&:checked {
@@ -179,7 +174,7 @@
 			&::before {
 				content: "";
 				top: 2px;
-				left: calc(#{cssvar(toggle-size)} + 2px);
+				left: calc(#{cssvar(input-switch-size)} + 2px);
 				background-color: cssvar(primary-color);
 			}
 		}
@@ -192,6 +187,9 @@
 		appearance: none;
 		position: relative;
 		background: transparent;
+		display: flex;
+		align-items: center;
+		height: cssvar(input-switch-size);
 		line-height: cssvar(input-height);
 		&::-moz-focus-outer {
 			border: 0;
@@ -199,9 +197,9 @@
 		@each $vendor in (-ms-track, -moz-range-track, -webkit-slider-runnable-track) {
 			&::#{$vendor} {
 				cursor: default;
-				height: 2px;
 				width: 100%;
 				background: transparent;
+				height: cssvar(input-switch-border-width);
 				background-color: cssvar(input-border-color);
 			}
 			&:focus {
@@ -213,13 +211,13 @@
 		}
 		@each $vendor in (-ms-thumb, -moz-range-thumb, -webkit-slider-thumb) {
 			&::#{$vendor} {
-				width: 24px;
-				height: 24px;
+				width: cssvar(input-switch-size);
+				height: cssvar(input-switch-size);
 				cursor: default;
 				appearance: none;
-				margin-top: -12px;
 				border-radius: 100%;
-				border: 2px solid #eceff1;
+				margin-top: calc(((#{cssvar(input-switch-size)} / 2) - #{cssvar(input-switch-border-width)} / 2 ) * -1);
+				border: 2px solid rgba(100,100,100,.1);
 				background: cssvar(primary-color);
 			}
 		}
@@ -256,13 +254,13 @@
 	
 	progress, meter {
 		width: 100%;
+		height: 12px;
 		display: block;
 		overflow: hidden;
-		height: cssvar(progress-and-meter-height);
-		border-radius: cssvar(progress-and-meter-border-radius);
+		border-radius: 25px;
 		@each $vendor in (-webkit-meter-optimum-value, -moz-meter-optimum, -webkit-progress-value) {
 			&::#{$vendor} {
-				border-radius: cssvar(progress-and-meter-border-radius);
+				border-radius: 25px;
 				background: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
 			}
 		}
@@ -294,7 +292,8 @@
 		
 		[data-#{$state}] {
 			@include cssvar(input-border-color, cssvar(color-#{$state}));
-			label {
+			@include cssvar(primary-color, cssvar(color-#{$state}));
+			label:not([data-holder]) {
 				color: cssvar(color-#{$state});
 			}
 		}
@@ -312,7 +311,7 @@
 	}
 
 	[data-info]:not([data-info=""]) label {
-		color: cssvar(label-color);
+		color: cssvar(app-text-color);
 	}
 	
 	::placeholder {

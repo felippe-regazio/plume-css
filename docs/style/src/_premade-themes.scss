@@ -50,7 +50,7 @@
       border: none;
       padding: none;
       width: 56px;
-      height: 56px;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,17 +81,19 @@
     width: 100%;    
     max-width: 400px;
     border-right: solid 1px #cccccc;
+    #premade-themes {
+      overflow: auto;
+    }
   }
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;    
+    margin: 0;
     li {
       display: block;
       width: 100%;
       height: auto;
       margin: 0;
-      padding: 16px;
       border-bottom: solid 1px #f1f1f1;
       &:hover {
         background-color: #fafafa;
@@ -123,6 +125,8 @@
         }
       }
       a {
+        padding: 16px;
+        display: block;
         color: currentColor;
         text-decoration: none;
       }

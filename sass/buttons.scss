@@ -3,18 +3,13 @@
 @include cssvars((
 	button-primary-text-color: #ffffff,
 	button-secondary-text-color: #ffffff,
-	button-height: auto,
-	button-cursor: pointer,
 	button-padding: 0 32px,
 	button-font-size: 14px,
 	button-min-width: 140px,
 	button-min-height: 40px,
 	button-font-weight: 600,
+	button-box-shadow: none,
 	button-margin-bottom: 24px,
-	button-letter-spacing: 0.30px,
-	button-justify-content: center,
-	button-text-transform: uppercase,
-	button-text-padding: 0 2ch,
 	button-border-radius: 4px,
 	button-border-style: solid,
 	button-border-width: 1px,	
@@ -28,31 +23,31 @@
 	input[type="submit"],
 	input[type="reset"],
 	[class*="btn-"] {
+		height: auto;
+		cursor: pointer;
+		line-height: auto;
 		user-select: none;
 		position: relative;
 		align-items: center;
 		white-space: nowrap;
 		display: inline-flex;
 		text-decoration: none;
+		letter-spacing: 0.30px;
+		justify-content: center;
+		text-transform: uppercase;
 		background-color: transparent;
-		height: cssvar(button-height);
-		cursor: cssvar(button-cursor);
 		color: cssvar(primary-color);
 		padding: cssvar(button-padding);
-		line-height: cssvar(button-height);
 		font-size: cssvar(button-font-size);
 		min-width: cssvar(button-min-width);
+		box-shadow: cssvar(button-box-shadow);
 		min-height: cssvar(button-min-height);
 		font-weight: cssvar(button-font-weight);
-		letter-spacing: cssvar(button-font-weight);
 		border-style: cssvar(button-border-style);
 		border-width: cssvar(button-border-width);
 		border-color: cssvar(button-border-color);
 		border-radius: cssvar(button-border-radius);
 		margin-bottom: cssvar(button-margin-bottom);
-		letter-spacing: cssvar(button-letter-spacing);
-		text-transform: cssvar(button-text-transform);
-		justify-content: cssvar(button-justify-content);
 	}
 	.btn-block {
 		display: flex;
@@ -69,8 +64,10 @@
 		border-color: cssvar(secondary-color);
 	}
 	.btn-gradient {
+		border: none;
 		color: cssvar(button-primary-text-color);
-		border-color: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
+		min-width: calc(#{cssvar(button-min-width)} + #{cssvar(button-border-width)});
+		min-height: calc(#{cssvar(button-min-height)} + #{cssvar(button-border-width)});
 		background: linear-gradient(30deg, #{cssvar(primary-color)} 0%, #{cssvar(secondary-color)} 100%);
 	}
 	.btn-black {
@@ -115,21 +112,18 @@
 		padding: 0;
 		min-width: unset;
 		min-height: unset;
-		align-items: center;
 		border-radius: 100%;
-		display: inline-flex;
-		justify-content: center;
 		width: cssvar(button-rounded-size);
-		height: cssvar(button-rounded-size);;
+		height: cssvar(button-rounded-size);
 	}
 	.btn-text {
 		border: none;
+		padding: 0 2ch;
 		background: none;
 		box-shadow: none;
 		min-width: unset;
 		min-height: unset;
 		color: cssvar(primary-color);
-		padding: cssvar(button-text-padding);
 	}
 	.btn-danger, .btn-error {
 		color: #ffffff;

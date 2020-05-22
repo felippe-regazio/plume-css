@@ -1,0 +1,34 @@
+<div class="doc-title">
+  <h2>Other Inputs</h2>
+</div>
+
+<div class="{{prefix}}ground {{prefix}}padded" data-toggle-source>
+  <form action="/">
+    <div class="{{prefix}}field" data-{{prefix}}info="Wrap your input type file in a span.{{prefix}}input-file.{{prefix}}btn-primary">
+      <label for="{{prefix}}input-file">Input file</label>
+      <span class="{{prefix}}input-file {{prefix}}btn-primary">
+        Upload File
+        <input type="file" placeholder="Input placeholder" name="{{prefix}}input-file">
+      </span>
+    </div>
+    
+    <div class="{{prefix}}field" data-{{prefix}}info="These input types inherit from buttons, and follow the same rules.">      
+      <label for="input-button">Input button</label>
+      <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
+      <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">
+      <input type="reset" placeholder="Input placeholder" name="input-button" value="Reset">
+    </div>    
+    
+    <div class="half">
+      <div class="{{prefix}}field">
+        <label for="input-meter">Meter</label>
+        <meter value="55.93" min="0" max="120.47" title="GB"></meter>
+      </div>
+      
+      <div class="{{prefix}}field">
+        <label for="input-progress">Progress</label>
+        <progress value="70" max="100">70 %</progress>
+      </div>      
+    </div>
+  </form>
+</div>

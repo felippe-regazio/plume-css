@@ -68,7 +68,7 @@
 
       <dt>🖌 &nbsp; Highly themeble</dt>
         <dd>
-         Builded with 100+ CSS custom properties (vars). Minimal and easy to extend and customize. Theme constructor with imediate visual feedback available (Button on the top left corner).
+         Builded with 70+ CSS custom properties (vars). Minimal and easy to extend and customize. Theme constructor with imediate visual feedback available (Button on the top left corner).
         </dd>
   
       <dt>∈ &nbsp; Completely scoped</dt>
@@ -230,9 +230,9 @@
 <div class="pm-ground pm-padded" data-toggle-source>
   
   <label>.pm-btn-text</label>
-  <button class="pm-btn-text pm-btn-primary">Button Text</button>
-  <button class="pm-btn-text text-secondary">Button Text</button>
-  <button class="pm-btn-text text-success">Button Text</button>  
+  <button class="pm-btn-text pm--text-primary">Button Text</button>
+  <button class="pm-btn-text pm-text-secondary">Button Text</button>
+  <button class="pm-btn-text pm-text-success">Button Text</button>  
 
   <label>.pm-btn-round</label>
   <button class="pm-btn-round">A</button>
@@ -246,7 +246,7 @@
   </p>
 </div>
     <div class="doc-title">
-  <h2>Form Controls</h2>
+  <h2>Input Text</h2>
 </div>
 
 <div class="pm-ground pm-padded" data-toggle-source>
@@ -336,7 +336,23 @@
           <option value="test-e">Test E</option>
         </select>
       </div>
-      
+    </div>
+    
+    <div class="pm-field">
+      <label for="input-textarea">Textarea</label>
+      <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
+    </div>
+    
+  </form>
+</div>
+    <div class="doc-title">
+  <h2>Switches</h2>
+</div>
+
+<div class="pm-ground pm-padded" data-toggle-source>
+  <form action="/">
+    <div class="half">
+
       <div class="pm-field">
         <label for="input-radio-test">Radio</label>
         <label data-pm-holder>
@@ -348,7 +364,7 @@
           Input Radio B
         </label>            
       </div>
-      
+
       <div class="pm-field">
         <label for="input-checkbox-test">Checkbox</label>
         <label data-pm-holder>
@@ -360,7 +376,7 @@
           Input Checkbox B
         </label>            
       </div> 
-      
+
       <div class="pm-field">
         <label for="input-toggle">Toggle</label>
         <label data-pm-holder>
@@ -368,28 +384,20 @@
           Input Toggle
         </label>
       </div> 
-      
+
       <div class="pm-field">
         <label for="input-range">Input range</label>
         <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-pm-subs>
-      </div> 
+      </div>
+    </div>
+  </form>
+</div>
+    <div class="doc-title">
+  <h2>Other Inputs</h2>
+</div>
 
-      <div class="pm-field">
-        <label for="input-meter">Meter</label>
-        <meter value="55.93" min="0" max="120.47" title="GB"></meter>
-      </div>
-      
-      <div class="pm-field">
-        <label for="input-progress">Progress</label>
-        <progress value="70" max="100">70 %</progress>
-      </div>
-    </div>
-    
-    <div class="pm-field">
-      <label for="input-textarea">Textarea</label>
-      <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
-    </div>
-    
+<div class="pm-ground pm-padded" data-toggle-source>
+  <form action="/">
     <div class="pm-field" data-pm-info="Wrap your input type file in a span.pm-input-file.pm-btn-primary">
       <label for="pm-input-file">Input file</label>
       <span class="pm-input-file pm-btn-primary">
@@ -403,6 +411,18 @@
       <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
       <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">
       <input type="reset" placeholder="Input placeholder" name="input-button" value="Reset">
+    </div>    
+    
+    <div class="half">
+      <div class="pm-field">
+        <label for="input-meter">Meter</label>
+        <meter value="55.93" min="0" max="120.47" title="GB"></meter>
+      </div>
+      
+      <div class="pm-field">
+        <label for="input-progress">Progress</label>
+        <progress value="70" max="100">70 %</progress>
+      </div>      
     </div>
   </form>
 </div>
@@ -413,6 +433,7 @@
 <div class="pm-ground pm-padded" data-toggle-source>     
   <form action="/">
     <div class="half">
+      
       <div class="pm-field" data-pm-success="Success message here">
         <label for="input-success">Input success</label>
         <input type="text" placeholder="Input placeholder" name="input-success">
@@ -432,6 +453,31 @@
         <label for="input-info">Input info</label>
         <input type="text" placeholder="Input placeholder" name="input-info">
       </div>
+
+      <div class="pm-field" data-pm-success="Success modifier applied on group">
+        <label for="input-radio-test">Radio</label>
+        <label data-pm-holder>
+          <input type="radio" name="input-radio-test-a" checked>
+          Input Radio A
+        </label>
+        <label data-pm-holder>
+          <input type="radio" name="input-radio-test-a">
+          Input Radio B
+        </label>            
+      </div>
+
+      <div class="pm-field">
+        <label for="input-radio-test">Radio</label>
+        <label data-pm-holder data-pm-warning>
+          <input type="radio" name="input-radio-test-b" checked>
+          Input Radio A
+        </label>
+        <label data-pm-holder data-pm-error>
+          <input type="radio" name="input-radio-test-b">
+          Input Radio B
+        </label>            
+      </div>
+
     </div>
   </form>
 </div>
@@ -510,7 +556,7 @@
   <h2>Pre & Code</h2>
 </div>
 
-<div class="pm-ground pm-padded" data-toggle-source>
+<div class="pm-ground pm-padded">
       
   <label>pre</label>
 <pre>This is a text on a pre tag
@@ -912,7 +958,7 @@ and another</pre>
 </div>
     <footer>
   <div>
-    PlumeCSS by Felippe Regazio, under GPL License    
+    Plume CSS by Felippe Regazio, under GPL License    
   </div>
   <div>Version 1.0.0</div>
 </footer>

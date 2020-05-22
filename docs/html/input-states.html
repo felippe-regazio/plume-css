@@ -5,6 +5,7 @@
 <div class="{{prefix}}ground {{prefix}}padded" data-toggle-source>     
   <form action="/">
     <div class="half">
+      
       <div class="{{prefix}}field" data-{{prefix}}success="Success message here">
         <label for="input-success">Input success</label>
         <input type="text" placeholder="Input placeholder" name="input-success">
@@ -24,6 +25,31 @@
         <label for="input-info">Input info</label>
         <input type="text" placeholder="Input placeholder" name="input-info">
       </div>
+
+      <div class="{{prefix}}field" data-{{prefix}}success="Success modifier applied on group">
+        <label for="input-radio-test">Radio</label>
+        <label data-{{prefix}}holder>
+          <input type="radio" name="input-radio-test-a" checked>
+          Input Radio A
+        </label>
+        <label data-{{prefix}}holder>
+          <input type="radio" name="input-radio-test-a">
+          Input Radio B
+        </label>            
+      </div>
+
+      <div class="{{prefix}}field">
+        <label for="input-radio-test">Radio</label>
+        <label data-{{prefix}}holder data-{{prefix}}warning>
+          <input type="radio" name="input-radio-test-b" checked>
+          Input Radio A
+        </label>
+        <label data-{{prefix}}holder data-{{prefix}}error>
+          <input type="radio" name="input-radio-test-b">
+          Input Radio B
+        </label>            
+      </div>
+
     </div>
   </form>
 </div>

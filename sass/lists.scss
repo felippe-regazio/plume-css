@@ -1,11 +1,9 @@
 @import 'core/helpers.scss';
 
 @include cssvars((
-	lists-font-size: 1em,
 	ul-list-style: circle inside,
 	ol-list-style: decimal inside,
-	li-margin-bottom: 24px,
-	dl-margin-bottom: 24px,
+	list-item-margin-bottom: 24px,
 ));
 
 @include superclass () {
@@ -21,7 +19,7 @@
 	ol, ul {
 		padding-left: 0;
 		margin-top: 0;
-		font-size: cssvar(lists-font-size);
+		font-size: 1em;
 	}
 	
 	ul ul,
@@ -33,13 +31,13 @@
 	}
 	
 	li {
-		margin-bottom: cssvar(li-margin-bottom);
+		margin-bottom: cssvar(list-item-margin-bottom);
 	}
 	
 	dl {
 		width: 100%;
 		word-break: break-word;
-		margin-bottom: cssvar(dl-margin-bottom);
+		margin-bottom: cssvar(list-item-margin-bottom);
 		dt, dd {
 			padding: 16px;
 			text-align: left;
@@ -61,7 +59,7 @@
 				left: 24px;
 				width: 6px;
 				height: 6px;
-				font-size: cssvar(lists-font-size);
+				font-size: 1em;
 				position: absolute;
 				border-radius: 100%;
 				transform: translateY(-50%);

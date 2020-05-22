@@ -1,5 +1,5 @@
 <div class="doc-title">
-  <h2>Form Controls</h2>
+  <h2>Input Text</h2>
 </div>
 
 <div class="{{prefix}}ground {{prefix}}padded" data-toggle-source>
@@ -89,53 +89,6 @@
           <option value="test-e">Test E</option>
         </select>
       </div>
-      
-      <div class="{{prefix}}field">
-        <label for="input-radio-test">Radio</label>
-        <label data-{{prefix}}holder>
-          <input type="radio" name="input-radio-test" checked>
-          Input Radio A
-        </label>
-        <label data-{{prefix}}holder>
-          <input type="radio" name="input-radio-test">
-          Input Radio B
-        </label>            
-      </div>
-      
-      <div class="{{prefix}}field">
-        <label for="input-checkbox-test">Checkbox</label>
-        <label data-{{prefix}}holder>
-          <input type="checkbox" name="input-checkbox-test-a" checked>
-          Input Checkbox A
-        </label>
-        <label data-{{prefix}}holder>
-          <input type="checkbox" name="input-checkbox-test-b">
-          Input Checkbox B
-        </label>            
-      </div> 
-      
-      <div class="{{prefix}}field">
-        <label for="input-toggle">Toggle</label>
-        <label data-{{prefix}}holder>
-          <input type="checkbox" name="input-toggle" data-{{prefix}}checkbox-toggle>
-          Input Toggle
-        </label>
-      </div> 
-      
-      <div class="{{prefix}}field">
-        <label for="input-range">Input range</label>
-        <input type="range" placeholder="Input range" name="input-range" min="0" max="100" data-{{prefix}}subs>
-      </div> 
-
-      <div class="{{prefix}}field">
-        <label for="input-meter">Meter</label>
-        <meter value="55.93" min="0" max="120.47" title="GB"></meter>
-      </div>
-      
-      <div class="{{prefix}}field">
-        <label for="input-progress">Progress</label>
-        <progress value="70" max="100">70 %</progress>
-      </div>
     </div>
     
     <div class="{{prefix}}field">
@@ -143,19 +96,5 @@
       <textarea name="textarea" placeholder="Textarea placeholder"></textarea>
     </div>
     
-    <div class="{{prefix}}field" data-{{prefix}}info="Wrap your input type file in a span.{{prefix}}input-file.{{prefix}}btn-primary">
-      <label for="{{prefix}}input-file">Input file</label>
-      <span class="{{prefix}}input-file {{prefix}}btn-primary">
-        Upload File
-        <input type="file" placeholder="Input placeholder" name="{{prefix}}input-file">
-      </span>
-    </div>
-    
-    <div class="{{prefix}}field" data-{{prefix}}info="These input types inherit from buttons, and follow the same rules.">      
-      <label for="input-button">Input button</label>
-      <input type="button" placeholder="Input placeholder" name="input-button" value="Button">
-      <input type="submit" placeholder="Input placeholder" name="input-button" value="Submit">
-      <input type="reset" placeholder="Input placeholder" name="input-button" value="Reset">
-    </div>
   </form>
 </div>
