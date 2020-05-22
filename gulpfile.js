@@ -3,7 +3,6 @@ const sass = require('gulp-sass');
 const clean_css = require('gulp-clean-css');
 const autoprefix = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
-const concat = require('gulp-concat');
 const rimraf = require("rimraf");
 const path = require('path');
 const size = require('gulp-size');
