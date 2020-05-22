@@ -8,7 +8,7 @@
     "dev": "gulp --watch",
     "build": "gulp",
     "dev-docs": "cd docs && gulp --watch",
-    "build-docs": "cd docs && gulp",
+    "build-docs": "npm run build && cd docs && gulp",
     "build-all": "npm run build && npm run build-docs"
   },
   "keywords": [

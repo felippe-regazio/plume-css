@@ -46,13 +46,18 @@ gulp.task('build-html', function () {
 		.pipe(gulp.dest('./')); 
 });
 
+gulp.task('get-plume-css', function() {
+  return gulp.src('../dist/plume-all.css')
+    .pipe(gulp.dest('./style'));
+});
+
 gulp.task('watch', function(done) {
 	if (process.argv.includes('--watch')) {
 		console.log(`Watching docs directory, press Ctrl+C to exit`);
-		gulp.watch(['./style/src/**/*.scss', './script/src/**/*.js', './html/**/*.html'], gulp.series('build-js', 'build-css', 'build-html'));
+		gulp.watch(['./style/src/**/*.scss', './script/src/**/*.js', './html/**/*.html'], gulp.series('build-js', 'build-css', 'build-html', 'get-plume-css'));
 	} else {
 		done();
 	}
 });
 
-gulp.task('default', gulp.series('build-js', 'build-css', 'build-html', 'watch'));
+gulp.task('default', gulp.series('build-js', 'build-css', 'build-html', 'get-plume-css', 'watch'));
