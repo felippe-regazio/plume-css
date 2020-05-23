@@ -12,7 +12,7 @@ const cssPrefix = require('./prefixer/gulp-css-selector-prefixer.js');
 const plumeConfig = require('./plume.config.js');
 
 const SOURCE_PATH = './sass';
-const DIST_PATH = './dist';
+const DIST_PATH = './lib';
 
 gulp.task('build', function() {
 

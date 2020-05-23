@@ -21,7 +21,7 @@ yarn add plume-css
 Then on your app
 
 ```javascript
-import 'plume-css/plume-all'
+import 'plume-css'
 ```
 
 ### Browser Instalation
@@ -79,9 +79,9 @@ Now you can load the modules that you want. The following modules are available
 So, if you want to add only typography and buttons, for example, you can do:
 
 ```javascript
-import 'plume-css/plume-core';
-import 'plume-css/typography';
-import 'plume-css/buttons';
+import 'plume-css/lib/plume-core';
+import 'plume-css/lib/typography';
+import 'plume-css/lib/buttons';
 ```
 
 Or
