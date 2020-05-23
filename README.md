@@ -30,7 +30,7 @@ Clone or download this repository, or download the dist package on the github pa
 Now just add it on your page:
 
 ```html
-<link rel="stylesheet" href="dist/plume-all.css">
+<link rel="stylesheet" href="lib/plume-all.css">
 ```
 
 # Getting Started
@@ -62,7 +62,7 @@ import 'plume-css/plume-core'
 or
 
 ```html
-<link rel="stylesheet" href="dist/plume-core.css">
+<link rel="stylesheet" href="lib/plume-core.css">
 ```
 
 Now you can load the modules that you want. The following modules are available
@@ -87,9 +87,9 @@ import 'plume-css/lib/buttons';
 Or
 
 ```html
-<link rel="stylesheet" href="dist/plume-core.css">
-<link rel="stylesheet" href="dist/typography.css">
-<link rel="stylesheet" href="dist/buttons.css">
+<link rel="stylesheet" href="lib/plume-core.css">
+<link rel="stylesheet" href="lib/typography.css">
+<link rel="stylesheet" href="lib/buttons.css">
 ```
 
 # Custom Themes
