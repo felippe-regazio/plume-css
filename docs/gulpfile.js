@@ -47,7 +47,7 @@ gulp.task('build-html', function () {
 });
 
 gulp.task('get-plume-css', function() {
-  return gulp.src('../lib/plume-all.css')
+  return gulp.src(`../${plumeConfig.targetDirName}/plume-all.css`)
     .pipe(gulp.dest('./style'));
 });
 
