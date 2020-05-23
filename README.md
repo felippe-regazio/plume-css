@@ -6,13 +6,13 @@ Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. No
 
 # Installing
 
-### Npm or Yarn Instalation
+With NPM
 
 ```bash
 npm install plume-css
 ```
 
-Or
+With yarn
 
 ```bash
 yarn add plume-css
