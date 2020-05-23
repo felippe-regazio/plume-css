@@ -35,7 +35,7 @@ Now just add it on your page:
 
 # Getting Started
 
-Plume is completly scoped, so you must add the `plume` class on a wrapper div to apply local styles, or must add it on the `body` tag to apply the styles on the entire page. You can also add the `pm-container` class to have a containerized wrapper.
+Since Plume is scoped, after installing it, you must add the `plume` class on a wrapper div to apply local styles, or add it on the `body` tag to style the entire page. You can also add the `pm-container` class to have a containerized wrapper.
 
 ```html
   <div class="plume">
