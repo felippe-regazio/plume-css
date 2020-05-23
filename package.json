@@ -1,21 +1,25 @@
 {
-  "name": "little-wing",
+  "name": "plume-css",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp --watch",
     "build": "gulp",
     "dev-docs": "cd docs && gulp --watch",
     "build-docs": "npm run build && cd docs && gulp",
     "build-all": "npm run build && npm run build-docs"
   },
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md"
+  ],
   "keywords": [
     "none"
   ],
-  "author": "Mlabs Front End Engineering",
-  "license": "ISC",
+  "author": "Felippe Regazio",
+  "license": "GPL",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
