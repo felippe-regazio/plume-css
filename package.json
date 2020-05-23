@@ -1,6 +1,8 @@
 {
   "name": "plume-css",
   "version": "0.0.1",
+  "author": "Felippe Regazio",
+  "license": "GPL",
   "description": "A lightweight and highly themeable CSS Micro-Framework",
   "main": "./lib/plume-all.css",
   "scripts": {
@@ -26,8 +28,6 @@
     "framework",
     "plume-css"
   ],
-  "author": "Felippe Regazio",
-  "license": "GPL",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
