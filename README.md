@@ -12,7 +12,7 @@ With NPM
 npm install plume-css
 ```
 
-With yarn
+With Yarn
 
 ```bash
 yarn add plume-css
@@ -51,9 +51,9 @@ Plume is completly scoped, so you must add the `plume` class on a wrapper div to
   </div>
 ```
 
-# By Modules
+# Loading Modules
 
-When you loading `plume-all.css` or adding by `import 'plume-all'`, you bring the entire Plume lib to your app. Thats ok since the complete lib has only 5kb gziped. But you may want to load only some modules, as Buttons, or Form styles for example. You just need to load the `plume-core` module, then load the modules you want:
+When you load `plume-all.css` or `import 'plume-all'`, you bring the entire Plume lib to your app. Thats ok since the complete lib has only 5kb gziped. But you may want to load only some modules, as Buttons, or Form styles for example. You just need to load the `plume-core` module, then load the modules you want:
 
 ```javascript
 import 'plume-css/plume-core'
