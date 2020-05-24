@@ -27,10 +27,11 @@
 
   <p>
     Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. Plume is meant to be the lowest design layer on your app, 
-    helping you to grow solid and change easily. You should use Plume if you don't want to bring all the larger frameworks features to your application, 
-    or if you want to code everything by yourself. Plume offers a solid, highly customizable and extendable start point. Plume was inspired by projects 
-    such as Skeleton, Milligram, MiniCss and Material, encompassing some practices found in all of them. On this page you'll find an interactive 
-    Theme Editor, features overview, visual reference and a list of utilities and custom properties. Here are some of Plume's coolest characteristics:
+    styling native HTML. You should use Plume if you are working on a small to medium project, if you don't want to bring all the larger 
+    frameworks features to your application, or if you want to code and grow your style by yourself. Plume offers a solid, highly customizable 
+    and extendable start point. Plume was inspired by projects such as Skeleton, Milligram, MiniCss and Material, encompassing some practices 
+    found in all of them. On this page you'll find features overview, an Tnteractive Theme Editor, visual reference and a list of utilities 
+    and custom properties. Here are some of Plume's coolest characteristics:
   </p>
     
   <dl>
@@ -56,7 +57,7 @@
 
     <dt>∈ &nbsp; Completely scoped</dt>
       <dd>
-        Styles are applied under the <code>{{superclass}}</code> class, and custom properties are prefixed. 
+        Styles are applied under the <code>{{superclass}}</code> class, and all classes and properties are prefixed. 
         You can add plume on an existent project with no harm and no side effects on the outer scope.
       </dd>
 
@@ -71,44 +72,40 @@
         there are a plenty of them avaible out there (bootstrap grid, flebox grid, etc), you choose.
       </dd>
 
-    <dt>🎯 &nbsp; No bunch of classes</dt>
+    <dt>🎯 &nbsp; Bare Elements Styled</dt>
       <dd>
-        Despite a large set of utilities, Plume applies the style on bare elements. Classes and custom attributes are used to alter the default styles and behavior.
+        Despite a large set of utilities, Plume applies the style on bare elements. Classes and custom attributes are used to alter the default styles and behavior. Since Plume its scoped, this wont harm your page.
       </dd>
-
-    <dt>💡 &nbsp; Lib, framework or boilerplate</dt>
-      <dd>
-        You can use plume as a lib, by adding it on your application as a base design. As a framework, by growing from Plume, 
-        or as a boilerplate, by cloning Plume's source code and starting from there.
-      </dd>
-
-    <dt>♿ &nbsp; Accessible</dt>
-      <dd>
-        The outlines were preserved. The open architecture lets you freely to apply accessible best pratices and semantic HTML, 
-        and Plume has a ready made Accessible Custom Theme that you can toggle on your apps. 
-      </dd>
-
-    <dt>✪ &nbsp; Unopinionated architecture</dt>
-      <dd>
-        There is no html imposition, just pure and simple elements style. You decide your html architecture.
-        You decide how to code your design. You have all the responsability, also all the freedom.
-      </dd>
+      
   </dl>
 
   <h4>Getting Started</h4>
 
   <p>
-    You can download Plume dist package on the button below or you can add via NPM or Yarn, then import Plume on your project.<br/>
-    For advanced load methods, please read the complete documentation on GitHub  
+    Install with NPM or Yarn
   </p>
-
+  
   <pre><code>npm install plume-css</code></pre>
+
+  <p>
+    Then in your app
+  </p>
+  
+  <pre><code>import 'plume-css'</code></pre>
   
   <p>
-    <span class="{{prefix}}text-info">Atention:</span> Plume is completly scoped, so you must add the <code>{{superclass}}</code> class on a wrapper div to apply local styles, 
-    or must add it on the <code>body</code> tag to apply the styles on the entire page. You can also add the <code>{{prefix}}container</code> class to have a containerized wrapper.
+    Or download the package and add the css on your document:
   </p>
+  
+  <pre><code>&lt;link rel="stylesheet" href="plume-css/lib/plume-all.css"&gt;</code></pre>
 
+  <p>
+    <span class="{{prefix}}text-info"><strong>Atention:</strong></span> Plume is completly scoped! So, after loading it, 
+    you must add the <code>{{superclass}}</code> class on a wrapper div to apply local styles
+    or on the <code>body</code> tag to apply the styles on the entire page. You can also add the <code>{{prefix}}container</code> class to have a containerized wrapper.
+    For advanced loading and usage, please check the Github Documentation.
+  </p>
+  
   <pre><code>&lt;div class="{{superclass}}"&gt; ... &lt;/div&gt;</code></pre>
 
   <div class="actions">

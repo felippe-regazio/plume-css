@@ -44,10 +44,11 @@
 
   <p>
     Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. Plume is meant to be the lowest design layer on your app, 
-    helping you to grow solid and change easily. You should use Plume if you don't want to bring all the larger frameworks features to your application, 
-    or if you want to code everything by yourself. Plume offers a solid, highly customizable and extendable start point. Plume was inspired by projects 
-    such as Skeleton, Milligram, MiniCss and Material, encompassing some practices found in all of them. On this page you'll find an interactive 
-    Theme Editor, features overview, visual reference and a list of utilities and custom properties. Here are some of Plume's coolest characteristics:
+    styling native HTML. You should use Plume if you are working on a small to medium project, if you don't want to bring all the larger 
+    frameworks features to your application, or if you want to code and grow your style by yourself. Plume offers a solid, highly customizable 
+    and extendable start point. Plume was inspired by projects such as Skeleton, Milligram, MiniCss and Material, encompassing some practices 
+    found in all of them. On this page you'll find features overview, an Tnteractive Theme Editor, visual reference and a list of utilities 
+    and custom properties. Here are some of Plume's coolest characteristics:
   </p>
     
   <dl>
@@ -98,34 +99,36 @@
         You can use plume as a lib, by adding it on your application as a base design. As a framework, by growing from Plume, 
         or as a boilerplate, by cloning Plume's source code and starting from there.
       </dd>
-
-    <dt>♿ &nbsp; Accessible</dt>
-      <dd>
-        The outlines were preserved. The open architecture lets you freely to apply accessible best pratices and semantic HTML, 
-        and Plume has a ready made Accessible Custom Theme that you can toggle on your apps. 
-      </dd>
-
-    <dt>✪ &nbsp; Unopinionated architecture</dt>
-      <dd>
-        There is no html imposition, just pure and simple elements style. You decide your html architecture.
-        You decide how to code your design. You have all the responsability, also all the freedom.
-      </dd>
+      
   </dl>
 
   <h4>Getting Started</h4>
 
   <p>
-    You can download Plume dist package on the button below or you can add via NPM or Yarn, then import Plume on your project.<br/>
-    For advanced load methods, please read the complete documentation on GitHub  
+    Install with NPM or Yarn
   </p>
-
+  
   <pre><code>npm install plume-css</code></pre>
+
+  <p>
+    Then in your app
+  </p>
+  
+  <pre><code>import 'plume-css'</code></pre>
   
   <p>
-    <span class="pm-text-info">Atention:</span> Plume is completly scoped, so you must add the <code>plume</code> class on a wrapper div to apply local styles, 
-    or must add it on the <code>body</code> tag to apply the styles on the entire page. You can also add the <code>pm-container</code> class to have a containerized wrapper.
+    Or download the package and add the css on your document:
   </p>
+  
+  <pre><code>&lt;link rel="stylesheet" href="plume-css/lib/plume-all.css"&gt;</code></pre>
 
+  <p>
+    <span class="pm-text-info"><strong>Atention:</strong></span> Plume is completly scoped! So, after loading it, 
+    you must add the <code>plume</code> class on a wrapper div to apply local styles
+    or on the <code>body</code> tag to apply the styles on the entire page. You can also add the <code>pm-container</code> class to have a containerized wrapper.
+    For advanced loading and usage, please check the Github Documentation.
+  </p>
+  
   <pre><code>&lt;div class="plume"&gt; ... &lt;/div&gt;</code></pre>
 
   <div class="actions">
@@ -932,13 +935,13 @@ and another</pre>
 <div class="pm-ground pm-padded">
 
   <p>
-    Plume is builded with +70 CSS Custom Properties that can be overrided to build a Custom Theme. 
-    To start experimenting, open the Theme Editor on the home page (by clicking on the fixed top left button on this page). 
-    Now try to change the <code>App Surface Color</code> to <code>#000000</code> and  the <code>App Font Color</code> to  
-    <code>#ffffff</code> on the editor, and voilá: you have a Dark Theme. Click on the link below to know more about 
-    Plume's Custom Properties and Themes:
+    Plume has a very flexible CSS Custom Properties collection that you can override to change its default appearance.
+    You can use the Theme Editor by clicking on the Top left Button of this page or do it directly on your styles.
+    To start experimenting, open the theme editor and try to change the <code>App Surface Color</code> to <code>#000000</code> 
+    and  the <code>App Font Color</code> to  <code>#ffffff</code> on the editor, and voilá: you have a Dark Theme. Click 
+    on the link below to know more about:
   </p>
-
+  
   <div class="no-js-hidden">
     <div is="el-accordion" data-summary="Theming & Custom Properties List">
 
