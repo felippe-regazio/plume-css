@@ -86,26 +86,58 @@ Or
 <link rel="stylesheet" href="lib/buttons.css">
 ```
 
+This method is specially useful if you want to import Plume styles on your SCSS projects.
+
+```scss
+@import 'plume-css/lib/plume-core.css';
+@import 'plume-css/lib/typography.css';
+
+h1 {
+  // this will override plume's H1 default style
+}
+```
+
 # Utilities
 
 Plume apply styles on bare components, but there is a large set of functional utilities - classes and data properties - that you can apply on your elements to alter its behavior. You can check the complete list of Utilities on this link: https://felippe-regazio.github.io/plume-css/.
 
-NOTE: Plume is scoped under a main class - `.plume` by default - and also by prefixing all other classes and properties with a `pm-` by default. If you are interested in change Plume's main class and prefix, please read the `Building from Source` section of this README.
+NOTE: Plume is scoped under a main class `plume` by default, and all the classes and properties are prefixed with `pm-` by default. This garantee highly compatibility and Collision Free CSS. If you are interested in change Plume's main class and prefix, please read the `Building from Source` section of this README.
 
 # Theming
 
-Plume is written using a lot of custom properties (70+) that controls important style aspects. It will be good for yout to be familiarized with "CSS Custom Properties". You can override those properties to alter the elements style, or to create your own custom Theme. So, a custom theme is nothing more
+Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more
 then a set of CSS Custom Properties overridings. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
 
 1. Creating and downloading or Theme using the theme editor on Plume's Github Page.
-2. Manually overriding the variables on your code
-3. Loading a pre made custom theme from Plume's package *
 
-If you want details about the Theme Editor source code and how to change it or build it, please read the `Building from Source` section of this README.
+2. Manually overriding the variables on your code
+
+3. Loading a pre made custom theme from Plume's package.
+
+# HTML & Body Normalizing
+
+Plume is already nomalized, but since its scoped, it cant access the HMTL and Body directly. So, to completly normalize the entire APP you must also normalize the HTML and Body. To do it, just use this snippet:
+
+```
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+```
 
 # Building from Source
 
-Plume follows a very simple and solid architecture. If you want to know how Plume works under the hood, its architecture, building process, automation etc, please read the README.md on the `sass` directory on this repository. The common building scripts are:  
+Plume has a very simple and solid architecture. You can tune and modify most of its basic aspects in a very simple manner. Its possible to change the main class, prefixes,  If you want to know how Plume works under the hood, its architecture, building process, automation etc, please read the `developing.md` on this repository. The building npm basic scripts are:
+
+Starting
+
+```
+npm install
+```
 
 Developing
 
@@ -127,7 +159,7 @@ npm run build-all
 
 # Building Docs
 
-The front matter documentation is also the Plume's github pages. It holds the Theme Editor, Description, Visual Reference, Custom Themes Collection and Code Reference. The documentation information as Utilities, prefixes, classes, custom properties as the Theme Editor information and editable properties are automatically generated via Javascript. If you change Plume Defaults, the documentation references must automatically change. To know more about the documentation structure and code, please see the README.md file on the `docs` directory of this repository. Common scripts are:  
+The documentation lives on the "docs" folder of this repository. It is automatically generating by reading the plume dist package .
 
 Developing
 
