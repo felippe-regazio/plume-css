@@ -99,14 +99,11 @@ NOTE: Plume is scoped under a main class `plume` by default, and all the classes
 
 # Theming
 
-Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more
-then a set of CSS Custom Properties overridings. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
+Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more then a set of CSS Custom Properties overridings. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
 
 1. Creating and downloading or Theme using the theme editor on Plume's Github Page.
 
 2. Manually overriding the variables on your code
-
-3. Loading a pre made custom theme from Plume's package.
 
 # HTML & Body Normalizing
 
