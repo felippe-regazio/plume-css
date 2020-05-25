@@ -4,7 +4,7 @@ Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. No
 
 # Compatibility
 
-Tested with the following Browsers:
+Full compatibility with the following Browsers:
 
 - Google Chrome 80.0.3987.132 
 - Mozilla Firefox 76.0.1
