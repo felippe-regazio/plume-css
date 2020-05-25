@@ -11,7 +11,7 @@ Full compatibility with the following Browsers:
 - Opera 68.0.3618.125
 - Safari 11.1.2
 
-Found an issue? Please open a PR :)
+Tested in a browser thats isn't here? Send a PR with the results. Found an issue? Send a PR describing it :)
 
 # Installing
 
