@@ -6,16 +6,10 @@ Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. No
 
 # Installing
 
-With NPM
+With NPM (Also available with Yarn)
 
 ```bash
 npm install plume-css
-```
-
-With Yarn
-
-```bash
-yarn add plume-css
 ```
 
 Then on your app
