@@ -39,7 +39,7 @@ Since Plume is scoped, after installing it, you must add the `plume` class on a 
   <div class="plume"> ... </div>
 ```
 
-# Loading Modules
+# Loading by Modules
 
 When you load `plume-all.css` or `import 'plume-all'`, you bring the entire Plume lib to your app. Thats ok since the complete lib has only 5kb gziped. But you may want to load only some modules, as Buttons, or Form styles for example. You just need to load the `plume-core` module, then load the modules you want:
 
