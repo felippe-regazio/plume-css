@@ -1,7 +1,5 @@
 # Plume CSS
 
-UNDER CONSTRUCTION - PLEASE DONT USE IT YET
-
 Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. No JS, no Dependencies. This is the Plume's repository and technical documentation. If you want to know exactly what Plume is, what it does and its main characteristics, please visit: https://felippe-regazio.github.io/plume-css/. For usage and technical information, please follow the README:
 
 # Installing
@@ -38,6 +36,8 @@ Since Plume is scoped, after installing it, you must add the `plume` class on a 
   <!-- wrapper with plume local style -->
   <div class="plume"> ... </div>
 ```
+
+Now you're ready to go
 
 # Loading by Modules
 
@@ -95,11 +95,11 @@ h1 {
 
 Plume apply styles on bare components, but there is a large set of functional utilities - classes and data properties - that you can apply on your elements to alter its behavior. You can check the complete list of Utilities on this link: https://felippe-regazio.github.io/plume-css/.
 
-NOTE: Plume is scoped under a main class `plume` by default, and all the classes and properties are prefixed with `pm-` by default. This garantee highly compatibility and Collision Free CSS. If you are interested in change Plume's main class and prefix, please read the `Building from Source` section of this README.
+NOTE: Plume is scoped under a main class `plume` by default, and all the classes and properties are prefixed with `pm-` by default. This guarantee highly compatibility and Collision Free CSS. If you are interested in change Plume's main class and prefix, please read the `Building from Source` section of this README.
 
 # Theming
 
-Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more then a set of CSS Custom Properties overridings. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
+Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more then a set of CSS Custom Properties overriding. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
 
 1. Creating and downloading or Theme using the theme editor on Plume's Github Page.
 
@@ -107,7 +107,7 @@ Plume is written using a lot of custom properties (70+) that controls important 
 
 # HTML & Body Normalizing
 
-Plume is already nomalized, but since its scoped, it cant access the HMTL and Body directly. So, to completly normalize the entire APP you must also normalize the HTML and Body. To do it, just use this snippet:
+Plume is already normalized, but since its scoped, it cant access the HMTL and Body directly. So, to completely normalize the entire APP you must also normalize the HTML and Body. To do it, just use this snippet:
 
 ```css
 html {
@@ -148,7 +148,7 @@ npm run build-all
 
 # Building Docs
 
-The documentation and the Theme Editor is automatically generatated. New properties, prefixe and base configuration changes will be automatically updated.
+The documentation and the Theme Editor is automatically generated. New properties, prefixes and base configuration changes will be automatically updated.
 
 Developing
 

@@ -1,6 +1,6 @@
 # Architecture
 
-Plume source lives in the `sass` dir. The architechture is pretty simple:
+Plume source lives in the `sass` dir. The architecture is pretty simple:
 
 ```
 ├── sass
@@ -10,7 +10,7 @@ Plume source lives in the `sass` dir. The architechture is pretty simple:
 
 # plume.config.js
 
-Plume is compiled using Gulp. Is minified, vendor autoprefixed, and scoped at compile time. You can use the file `plume.config.js` to recompile plume with different configurations. The file contains:
+Plume is compiled using Gulp. Is minified, vendor auto-prefixed, and scoped at compile time. You can use the file `plume.config.js` to recompile plume with different configurations. The file contains:
 
 ```js
 module.exports = {
@@ -55,7 +55,7 @@ prefixer: {
 }
 ```
 
-This kind of deeping prefixing will completly avoid conflicts when dealing with Plume. Anyway, iff you set the `prefix` key to false, Plume wont be prefixed.
+This kind of deep prefixing will completely avoid conflicts when dealing with Plume. Anyway, iff you set the `prefix` key to false, Plume wont be prefixed.
 
 # The Core Dir
 
@@ -71,7 +71,7 @@ _helpers.scss: The base functions and mixins that builds Plume's plumbers.
 _normalize.scss: A simple normalizer
 ```
 
-The core is compiled on the `plume-core.scss` and the `plume-all.scss` files. All the other modules as Buttons or Tables, for example, will depend and consume for what is setted on the `core`, but you dont need to import it on the modules since Plume's CSS variables are on :root, they are global. When working on a Plume module, you will need onnly the `_helpers.scss`. When loading a module, the `plume-core.scss` will be always a dependency. So, code your module as the plume-core.scss was always present, be it must be.
+The core is compiled on the `plume-core.scss` and the `plume-all.scss` files. All the other modules as Buttons or Tables, for example, will depend of and consume the the `core`, but you dont need to import it on every module since Plume's CSS variables are on :root, they are global. When working on a Plume module, you will need only the `_helpers.scss`. Load the `plume-core.scss` as a dependency, then load the modules.
 
 # Theming
 
@@ -86,7 +86,7 @@ A theme can be scoped, in order to create classes to theme your application or e
 }
 ```
 
-In the example above, the calss `my-custom-theme` changes overrides the css Props. Use it along the page to themefy some document local sections.
+In the example above, the class `my-custom-theme` changes overrides the css Props. Use it along the page to themefy some document local sections.
 You can also do:
 
 ```
@@ -127,7 +127,7 @@ npm run build-all
 
 # Docs
 
-The documenentation is Automatically generated based on your new configuartions and styles on Plume. You can rebuild the docs with:
+The documentation is Automatically generated based on your new configurations and styles on Plume. You can rebuild the docs with:
 
 ```
 npm run build-docs
