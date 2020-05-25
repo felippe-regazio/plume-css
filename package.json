@@ -46,5 +46,7 @@
     "gulp-uglify": "^3.0.2",
     "rimraf": "^3.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-zip": "^5.0.1"
+  }
 }

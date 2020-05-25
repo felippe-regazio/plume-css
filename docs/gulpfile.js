@@ -10,6 +10,7 @@ const clean_css = require('gulp-clean-css');
 const sassVars = require('gulp-sass-variables');
 const prefix = require('gulp-autoprefixer');
 const mustache = require('gulp-mustache');
+const zip = require('gulp-zip');
 const plumeConfig = require('../plume.config.js');
 
 gulp.task('build-js', function(){
@@ -51,13 +52,32 @@ gulp.task('get-plume-css', function() {
     .pipe(gulp.dest('./style'));
 });
 
+gulp.task('plume-zip', function () {
+	return gulp.src('./../lib/*')
+		.pipe(zip('plume-css.zip'))
+		.pipe(gulp.dest('./'))
+})
+
 gulp.task('watch', function(done) {
 	if (process.argv.includes('--watch')) {
 		console.log(`Watching docs directory, press Ctrl+C to exit`);
-		gulp.watch(['./style/src/**/*.scss', './script/src/**/*.js', './html/**/*.html'], gulp.series('build-js', 'build-css', 'build-html', 'get-plume-css'));
+		gulp.watch(['./style/src/**/*.scss', './script/src/**/*.js', './html/**/*.html'], gulp.series(
+			'build-js', 
+			'build-css', 
+			'build-html', 
+			'get-plume-css',
+			'plume-zip'
+		));
 	} else {
 		done();
 	}
 });
 
-gulp.task('default', gulp.series('build-js', 'build-css', 'build-html', 'get-plume-css', 'watch'));
+gulp.task('default', gulp.series(
+	'build-js', 
+	'build-css', 
+	'build-html', 
+	'get-plume-css', 
+	'plume-zip',
+	'watch'
+));
