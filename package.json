@@ -9,8 +9,9 @@
     "build": "gulp",
     "dev": "gulp --watch",
     "dev-docs": "cd docs && gulp --watch",
-    "build-docs": "npm run build && cd docs && gulp",
-    "build-all": "npm run build && npm run build-docs"
+    "build-docs": "cd docs && gulp && npm run pack-zip",
+    "build-all": "npm run build && npm run build-docs",
+    "pack-zip": "npm-pack-zip --destination ./docs"
   },
   "files": [
     "lib/",
@@ -47,6 +48,7 @@
     "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "gulp-zip": "^5.0.1"
+    "gulp-zip": "^5.0.1",
+    "npm-pack-zip": "^1.2.7"
   }
 }
