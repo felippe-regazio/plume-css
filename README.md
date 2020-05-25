@@ -123,9 +123,7 @@ body {
 }
 ```
 
-# Building from Source
-
-Plume has a very simple and solid architecture. You can tune and modify most of its basic aspects in a very simple manner. Its possible to change the main class, prefixes,  If you want to know how Plume works under the hood, its architecture, building process, automation etc, please read the `developing.md` on this repository. The building npm basic scripts are:
+# Building
 
 Starting
 
@@ -153,7 +151,7 @@ npm run build-all
 
 # Building Docs
 
-The documentation lives on the "docs" folder of this repository. It is automatically generating by reading the plume dist package .
+The documentation and the Theme Editor is automatically generatated. New properties, prefixe and base configuration changes will be automatically updated.
 
 Developing
 
@@ -166,3 +164,7 @@ Building
 ```
 npm run build-docs
 ```
+
+# Developing from Sources
+
+Plume has a very simple and solid architecture. You can tune and modify most of its basic aspects in a very simple manner. Its possible to change the main classes, prefixes, and other characteristics. If you want to know how Plume works under the hood, please read the `developing.md`.
