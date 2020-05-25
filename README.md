@@ -109,7 +109,7 @@ Plume is written using a lot of custom properties (70+) that controls important 
 
 Plume is already nomalized, but since its scoped, it cant access the HMTL and Body directly. So, to completly normalize the entire APP you must also normalize the HTML and Body. To do it, just use this snippet:
 
-```
+```css
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
