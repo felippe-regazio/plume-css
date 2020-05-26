@@ -1,10 +1,15 @@
 {
   "name": "plume-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Felippe Regazio",
   "license": "GPL",
   "description": "A lightweight and highly themeable CSS Micro-Framework",
+  "homepage": "https://felippe-regazio.github.io/plume-css/",
   "main": "./lib/plume-all.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felippe-regazio/plume-css"
+  },  
   "scripts": {
     "build": "gulp",
     "dev": "gulp --watch",
