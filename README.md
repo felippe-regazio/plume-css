@@ -2,17 +2,6 @@
 
 Welcome to Plume CSS, a lightweight and highly themeable CSS Micro-Framework. No JS, no Dependencies. This is the Plume's repository and technical documentation. If you want to know exactly what Plume is, what it does and its main characteristics, please visit: https://felippe-regazio.github.io/plume-css/. For usage and technical information, please follow the README:
 
-# Compatibility
-
-Full compatibility with the following Browsers:
-
-- Google Chrome 80.0.3987.132 
-- Mozilla Firefox 76.0.1
-- Opera 68.0.3618.125
-- Safari 11.1.2
-
-Tested in a browser thats isn't here? Send a PR with the results. Found an issue? Send a PR describing it :)
-
 # Installing
 
 With NPM (Also available with Yarn)
@@ -35,6 +24,17 @@ Now just add it on your page:
 ```html
 <link rel="stylesheet" href="plume-css/lib/plume-all.css">
 ```
+
+# Compatibility
+
+Full compatibility with the following Browsers:
+
+- Google Chrome 80.0.3987.132 
+- Mozilla Firefox 76.0.1
+- Opera 68.0.3618.125
+- Safari 11.1.2
+
+Tested in a browser thats isn't here? Send a PR with the results. Found an issue? Send a PR describing it :)
 
 # Getting Started
 
