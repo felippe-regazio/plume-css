@@ -1,1 +1,2 @@
 - A Guide demonstrating Techniques of Override and Theming with Custom Props
+- Some docs styles are broken when superclass and prefixes are removed
