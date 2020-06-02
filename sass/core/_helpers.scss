@@ -6,11 +6,16 @@
  */
 @mixin superclass () {
 
-	$superclass: 'plume' !default;
-
-	.#{$superclass} {
-		@content;
+	@if $superclass and str-length($superclass) > 0 {
+		.#{$superclass} {
+			@content;
+		}
+	} @else {
+		body {
+			@content;
+		}
 	}
+
 }
 
 /**

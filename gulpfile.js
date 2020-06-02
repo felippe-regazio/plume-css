@@ -20,7 +20,7 @@ gulp.task('build', function() {
 	
 	let stream = gulp.src(`${SOURCE_PATH}/**/*.scss`)
 		.pipe(plumber(true))
-		.pipe(sassVars({$superclass: plumeConfig.superclass || 'plume'}))
+		.pipe(sassVars({$superclass: plumeConfig.superclass || ''}))
 		.pipe(sass({outputStyle: plumeConfig.outputStyle || 'compressed'}))
 		.pipe(clean_css())
 		.pipe(autoprefix())
