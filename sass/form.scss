@@ -50,7 +50,7 @@
 		margin-bottom: cssvar(form-field-margin-bottom);
 	}
 	
-	label, legend {
+	label, legend, .label, .legend {
 		display: block;
 		color: cssvar(app-text-color);
 		font-weight: cssvar(label-font-weight);
