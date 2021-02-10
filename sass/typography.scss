@@ -19,15 +19,12 @@
 ));
 
 @include superclass () {
-
-	h1, h2, h3, h4, h5, h6 {
-		margin-top: 0;
-		margin: cssvar(headings-margin);
-		font-family: cssvar(headings-font-family);
-	}
 	
 	@each $h in (h1, h2, h3, h4, h5, h6) {
-		#{$h} {
+		#{$h}, .#{$h} {
+			margin-top: 0;
+			margin: cssvar(headings-margin);
+			font-family: cssvar(headings-font-family);
 			font-size: cssvar(#{$h}-font-size);
 			line-height: cssvar(#{$h}-line-height);
 			font-weight: cssvar(#{$h}-font-weight);
