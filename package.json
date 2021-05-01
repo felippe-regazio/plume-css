@@ -51,6 +51,8 @@
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "rimraf": "^3.0.2",
-    "npm-pack-zip": "^1.2.7"
+    "npm-pack-zip": "^1.2.7",
+    "lodash.template": ">=4.5.0",
+    "lodash.template": ">=4.5.0"
   }
 }
