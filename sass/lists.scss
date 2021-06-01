@@ -7,7 +7,6 @@
 ));
 
 @include superclass () {
-
 	ul {
 		list-style: cssvar(ul-list-style);
 	}

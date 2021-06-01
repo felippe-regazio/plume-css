@@ -1,7 +1,6 @@
 @import 'core/helpers.scss';
 
 @include superclass() {
-  
   [disabled], .disabled, .is-disabled {
 		cursor: default !important;
 		filter: opacity(0.4) !important;
