@@ -38,7 +38,7 @@
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
@@ -50,9 +50,8 @@
     "gulp-sass-variables": "^1.2.0",
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "rimraf": "^3.0.2",
-    "npm-pack-zip": "^1.2.7",
     "lodash.template": ">=4.5.0",
-    "lodash.template": ">=4.5.0"
+    "npm-pack-zip": "^1.2.7",
+    "rimraf": "^3.0.2"
   }
 }
