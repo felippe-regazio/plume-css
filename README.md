@@ -122,8 +122,9 @@ Plume is already normalized, but since its scoped, it cant access the HMTL and B
 
 ```css
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  margin: 0;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
