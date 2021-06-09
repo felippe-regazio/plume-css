@@ -42,6 +42,7 @@
     line-height: calc(#{cssvar(pre-font-size)} + 10px);
     background-color: cssvar(pre-code-background-color);
     code {
+      padding: 0;
       background-color: transparent;
     }
   }
