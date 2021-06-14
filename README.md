@@ -36,6 +36,20 @@ Now just add it on your page:
 
 Tested in a browser thats isn't here? Send a PR with the results. Found an issue? Send a PR describing it :)
 
+### CDN
+
+You can also use Plume via CDN using a link tag:
+
+```html
+<link href="https://unpkg.com/plume-css@1.0.11/lib/plume-all.css" rel="stylesheet" rel="preload" as="style" media="all" defer>
+```
+
+Or via CSS:
+
+```css
+@import "https://unpkg.com/plume-css@1.0.11/lib/plume-all.css";
+``` 
+
 # Getting Started
 
 Since Plume is scoped, after installing it, you must add the `plume` class on a wrapper div to apply local styles, or add it on the `body` tag to style the entire page. You can also add the `pm-container` class to have a containerized wrapper.
@@ -102,20 +116,6 @@ h1 {
 }
 ```
 
-# Utilities
-
-Plume apply styles on bare components, but there is a large set of functional utilities - classes and data properties - that you can apply on your elements to alter its behavior. You can check the complete list of Utilities on this link: https://felippe-regazio.github.io/plume-css/.
-
-NOTE: Plume is scoped under a main class `plume` by default, and all the classes and properties are prefixed with `pm-` by default. This guarantee highly compatibility and Collision Free CSS. If you are interested in change Plume's main class and prefix, please read the `Building from Source` section of this README.
-
-# Theming
-
-Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more then a set of CSS Custom Properties overriding. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
-
-1. Creating and downloading or Theme using the theme editor on Plume's Github Page.
-
-2. Manually overriding the variables on your code
-
 # HTML & Body Normalizing
 
 Plume is already normalized, but since its scoped, it cant access the HMTL and Body directly. So, to completely normalize the entire APP you must also normalize the HTML and Body. To do it, just use this snippet:
@@ -131,6 +131,20 @@ body {
   margin: 0;
 }
 ```
+
+# Utilities
+
+Plume apply styles on bare components, but there is a large set of functional utilities - classes and data properties - that you can apply on your elements to alter its behavior. You can check the complete list of Utilities on this link: https://felippe-regazio.github.io/plume-css/.
+
+NOTE: Plume is scoped under a main class `plume` by default, and all the classes and properties are prefixed with `pm-` by default. This guarantee highly compatibility and Collision Free CSS. If you are interested in change Plume's main class and prefix, please read the `Building from Source` section of this README.
+
+# Theming
+
+Plume is written using a lot of custom properties (70+) that controls important aspects of the default style. Here we assume that you are familiarized with "CSS Custom Properties". You can override these properties to alter default elements style, or to create your own custom Theme. So, a custom theme is nothing more then a set of CSS Custom Properties overriding. You can check the complete Plume's Custom Properties List on the Github Page. You can add a theme by:
+
+1. Creating and downloading or Theme using the theme editor on Plume's Github Page.
+
+2. Manually overriding the variables on your code
 
 # Building
 
