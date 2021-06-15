@@ -40,6 +40,7 @@ gulp.task('build-html', function () {
 		.pipe(htmlImport('./html/'))
 		.pipe(rename("index.html"))
 		.pipe(mustache({
+			plumeVersion: plumeConfig.plumeVersion,
 			superclass: plumeConfig.superclass || '',
 			prefix: plumeConfig.prefixer ? plumeConfig.prefixer.prefix || '' : ''
 		}))
