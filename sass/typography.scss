@@ -111,6 +111,13 @@
 		font-family: cssvar(font-family-primary);
 		border-left: solid 4px cssvar(primary-color);
 		background-color: rgba(180,180,180,.1);
+
+		p {
+			margin-bottom: 0;
+			& + p {
+				margin-bottom: cssvar(paragraph-margin-bottom);
+			}
+		}
 	}
 
 	mark, .mark {
