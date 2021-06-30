@@ -66,11 +66,8 @@
 			margin-top: 0;
 			font-weight: 300;
 			margin: cssvar(headings-margin);
-			font-family: cssvar(headings-font-family);
 			font-size: cssvar(#{$h}-font-size);
-			line-height: cssvar(#{$h}-line-height);
-			font-weight: cssvar(#{$h}-font-weight);
-			letter-spacing: cssvar(#{$h}-letter-spacing);
+			font-family: cssvar(headings-font-family);
 			@media screen and (max-width: 1023px) {
 				font-size: calc((#{cssvar(#{$h}-font-size)} / 1.8) + 1.5vw);
 			}
